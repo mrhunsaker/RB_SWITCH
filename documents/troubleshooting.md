@@ -5,83 +5,52 @@ title: Troubleshooting
 
 # Troubleshooting
 
-## The device does not appear in Bluetooth
+## RB Switch does not appear in Bluetooth
 
-1. Confirm the PCB is powered.
-2. Disconnect/reconnect USB-C or power-cycle the battery supply.
-3. Wait several seconds for BLE advertising to begin.
-4. Search for **RB Switch**.
-5. If it was previously paired, try disconnecting/reconnecting it from the host.
-6. If necessary, remove/forget the old pairing and pair again.
+1. Confirm the RB Switch is powered.
+2. Power-cycle the RB Switch.
+3. Wait several seconds.
+4. Search for **RB Switch** again.
+5. If it was previously paired, remove/forget the old pairing and pair again.
 
-## A button does nothing
+## RB Switch is connected but a button does nothing
 
-First determine whether the failure is electrical or Bluetooth-related.
-
-### Check Bluetooth
-
-Confirm the host shows **RB Switch** as connected.
-
-### Check the button
-
-The expected mapping is:
+Test all three buttons:
 
 - SW1 → Left Arrow
 - SW2 → Enter
 - SW3 → Right Arrow
 
-Try all three buttons. If two work and one does not, the problem is likely isolated to that switch/input.
+If only one button fails, the problem may be isolated to that switch or input circuit.
 
-### Check serial diagnostics
+If the buttons work in a normal text field but not in an accessibility feature, check the host's Switch Control or Switch Access configuration.
 
-Connect the PCB to a computer and open the Serial Monitor at 115200 baud. A button event should produce a line similar to:
+## Button repeats unexpectedly
 
-```text
-SW GPIO10 -> HID 0x50
-```
+The production firmware sends one key press/release when a button changes from released to pressed and uses 35 ms debounce. A held button should not repeat.
 
-The expected diagnostic codes are:
+If it does, inspect the switch, solder joints, input capacitor, ground connection, and PCB for damage or contamination.
 
-- GPIO10 / `0x50` = SW1 / Left Arrow
-- GPIO11 / `0x28` = SW2 / Enter
-- GPIO12 / `0x4F` = SW3 / Right Arrow
+## USB powers the board but firmware upload fails
 
-If the GPIO event is not logged, inspect the corresponding switch, solder joints, capacitor, trace, and ground connection.
+Use a known data-capable USB-C cable. If necessary, use BOOT and RESET to enter the ESP32-S3 bootloader and retry.
 
-If the event is logged but the host does not respond, investigate BLE pairing/HID behavior.
+## Charging LED
 
-## The key repeats unexpectedly
+D1 is controlled by the MCP73831 charger, not the BLE firmware.
 
-The production firmware is edge-triggered and uses a 35 ms debounce interval. A held switch should not continuously generate events.
+## Battery
 
-If repeated events occur, inspect:
+Before connecting or replacing a battery:
 
-- switch mechanical condition
-- switch solder joints
-- switch-input capacitor
-- ground connection
-- PCB contamination or damage
+- Verify connector polarity.
+- Verify nominal cell voltage.
+- Verify appropriate battery protection.
+- Verify physical fit.
+- Verify compatibility with the MCP73831 charging circuit.
 
-## USB works for power but uploading fails
+A JST-PH connector alone does not guarantee compatible polarity.
 
-Use a known data-capable USB-C cable.
+## Technical support
 
-If the ESP32-S3 does not enter download mode automatically, use `SW_BOOT` and `SW_RST` to manually enter the bootloader, then retry the upload.
-
-## Charging LED behavior
-
-D1 is the charger status indicator. It is controlled by the MCP73831 charger, not by the firmware.
-
-If D1 behaves unexpectedly while charging, troubleshoot the charging circuit and battery independently of the BLE firmware.
-
-## Battery concerns
-
-The BOM leaves the exact purchased Li-Po battery SKU as an open item. Before connecting an unknown battery:
-
-- verify connector polarity
-- verify the nominal cell voltage
-- verify the pack has appropriate protection
-- verify the battery physically fits the enclosure
-- verify the battery is suitable for the MCP73831 charging circuit
-
-Do not assume a JST-PH connector guarantees compatible polarity.
+For firmware or hardware issues, use the [Firmware](firmware.md) and [Hardware](hardware.md) pages and the production source files.
