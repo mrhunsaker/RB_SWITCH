@@ -20,7 +20,7 @@ If installing or replacing a battery, verify its polarity, nominal voltage, prot
 
 1. Open Bluetooth settings on the device you want to use.
 2. Turn Bluetooth on.
-3. Find **RB Switch**.
+3. Find **RB Switch** followed by a 3 digit number, it should match the number ont he sticker ont he bottom of the RB Switch enclosure.
 4. Select **RB Switch**.
 5. Wait until it shows as connected.
 
