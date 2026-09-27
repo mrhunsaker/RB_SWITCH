@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Setup & Pairing
+permalink: /setup.html
 ---
 
 # Setup & Pairing

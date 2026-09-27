@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Switch Operation
+permalink: /use.html
 ---
 
 # Switch Operation
