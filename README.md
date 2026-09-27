@@ -1,34 +1,62 @@
 # RB Switch
 
-Three-button BLE accessibility switch based on the RevD/RevD2 mechanical-switch PCB.
+The RB Switch is a three-button Bluetooth Low Energy (BLE) accessibility switch. It presents itself to a computer, tablet, or phone as a standard Bluetooth keyboard.
 
 ## Production firmware
 
+The production firmware is:
+
 `firmware/RB_SWITCH_firmware/RB_SWITCH_firmware.ino`
 
-| Switch | GPIO | BLE HID key |
+### Button mapping
+
+| Switch | GPIO | Keyboard key |
 |---|---:|---|
 | SW1 | GPIO10 | Left Arrow |
 | SW2 | GPIO11 | Enter |
 | SW3 | GPIO12 | Right Arrow |
 
-The production firmware intentionally contains no code for TTP223 touch sensors, proximity sensors, NeoPixels, mono-jack inputs, or legacy F-key mappings.
+Each button press produces one key press followed by one key release. Holding a button does not repeat the key.
 
-## Documentation
+## Getting started
 
-The GitHub Pages source is in `docs/`.
+For normal setup and classroom use, start with [Setup & Pairing](docs/setup.md).
 
-A duplicate documentation source set is in `documents/` for packaging/authoring workflows.
+The documentation covers:
 
-## Hardware source
+- [Setup & Pairing](docs/setup.md)
+- [Switch Operation](docs/use.md)
+- [Firmware](docs/firmware.md)
+- [Hardware](docs/hardware.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [QR Code](docs/qr-code.md)
 
-- BOM: `bom/BT_Switch_Mechanical_BOM.xlsx`
-- Schematic: `electrical/mechanical_switch/BT_Switch_Mechanical_RevD.kicad_sch`
-- PCB: `electrical/mechanical_switch/BT_Switch_Mechanical_RevD.kicad_pcb`
-- Net table: `electrical/mechanical_switch/net_table.json`
-- Gerbers: `electrical/mechanical_switch/gerbers/`
-- Mechanical source: `mechanical/enclosure_mechanical_RevD2.scad`
+## Hardware
 
-## GitHub Pages
+The current board uses:
 
-Enable GitHub Pages for the repository using the `docs/` directory as the publishing source. Once the repository URL is known, create a QR code pointing to the published home page. See `docs/qr-code.md`.
+- ESP32-S3-MINI-1-N4R2
+- Three Omron B3F-series tactile switches
+- USB-C power/programming connection
+- Single-cell Li-Po battery connection and charger
+- TPS63001 3.3 V buck-boost regulator
+- Battery-voltage sensing
+- MCP73831 charge-status LED
+
+Hardware source files are in `electrical/`, `bom/`, and `mechanical/`.
+
+## Production scope
+
+The production design has three mechanical switch inputs only. It does not implement touch sensors, proximity sensors, NeoPixel/RGB indicators, mono-jack inputs, or the earlier F-key input mapping.
+
+The charge-status LED (D1) is controlled by the battery charger and is not a programmable RGB LED.
+
+## Documentation source
+
+`docs/` is the published GitHub Pages source.
+
+`documents/` contains the same documentation in a packaging-friendly directory. Keep the two documentation sets synchronized when documentation changes.
+
+## GitHub Pages and enclosure QR code
+
+Publish `docs/` with GitHub Pages. The enclosure QR code should point to the published documentation home page. See [QR Code](docs/qr-code.md).
