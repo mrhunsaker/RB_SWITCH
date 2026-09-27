@@ -38,4 +38,11 @@ Pressing a switch sends one key press followed by one key release. Holding a swi
 
 The firmware does **not** use touch sensors, proximity sensors, NeoPixels, mono-jack inputs, or other expansion hardware because those functions are not present in the RevD/RevD2 PCB/BOM.
 
-See [Setup & Pairing](setup.md), [Switch Operation](use.md), [Firmware](firmware.md), and [Troubleshooting](troubleshooting.md).
+## Documentation Table of Contents
+
+- [Setup & Pairing]({{ '/setup.html' | relative_url }})
+- [Switch Operation]({{ '/use.html' | relative_url }})
+- [Firmware]({{ '/firmware.html' | relative_url }})
+- [Hardware]({{ '/hardware.html' | relative_url }})
+- [Troubleshooting]({{ '/troubleshooting.html' | relative_url }})
+- [QR Code]({{ '/qr-code.html' | relative_url }})
