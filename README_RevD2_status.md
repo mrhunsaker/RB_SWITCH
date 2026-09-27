@@ -1,29 +1,27 @@
-# RB Switch — firmware/hardware reconciliation
+# RB Switch — Production Hardware and Firmware
 
-## Current production mapping
+## Production mapping
 
 - SW1 / GPIO10 → Left Arrow
 - SW2 / GPIO11 → Enter
 - SW3 / GPIO12 → Right Arrow
 
-The mapping is taken from `electrical/mechanical_switch/net_table.json` and the RevD schematic.
-
-## Firmware scope
+## Production firmware
 
 `firmware/RB_SWITCH_firmware/RB_SWITCH_firmware.ino` is the production firmware.
 
-Removed from the prior scaffold:
+It provides three mechanical switch inputs using BLE HID keyboard reports. Each activation sends one key press followed by one key release. A held button does not repeat.
 
-- TTP223 touch input support
-- proximity/I2C sensor support
-- NeoPixel support
-- five-switch legacy input map
-- F1–F13 legacy key mapping
-- `types_expanded.h` dependency
-- unused `HIDKeyboardTypes.h` dependency
+The production firmware does not implement touch sensors, proximity sensors, NeoPixels, mono-jack inputs, or legacy F-key mappings.
 
-The PCB does contain D1, but D1 is the MCP73831 charger status LED, not a firmware-controlled RGB LED.
+## Hardware status
 
-## Hardware/BOM note
+The current PCB is the RevD/RevD2 three-switch design.
 
-The BOM and schematic specify an ESP32-S3-MINI-1-N4R2. The PCB footprint value text says `ESP32-S2-MINI-1`, consistent with the project's use of the shared S2/S3 MINI-1 land pattern. Confirm the actual MCU module being populated before production.
+D1 is the MCP73831 charger-status LED. It is not a programmable RGB LED.
+
+The BOM and schematic identify U1 as ESP32-S3-MINI-1-N4R2. The PCB footprint uses the shared S2/S3 MINI-1 land pattern and may display ESP32-S2-MINI-1 as its footprint value.
+
+## Source of truth
+
+For current behavior, use the production firmware, schematic, PCB, BOM, and net table in this repository. The documentation in `docs/` and `documents/` describes that production design.
