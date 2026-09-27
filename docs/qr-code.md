@@ -1,6 +1,7 @@
 ---
 layout: default
 title: QR Code
+permalink: /qr-code.html
 ---
 
 # QR Code for the Instructions

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Firmware
+permalink: /firmware.html
 ---
 
 # Firmware

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Hardware Reference
+permalink: /hardware.html
 ---
 
 # Hardware Reference
