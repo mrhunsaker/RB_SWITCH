@@ -5,37 +5,38 @@ title: RB Switch
 
 # RB Switch
 
-The **RB Switch** is a three-button Bluetooth Low Energy (BLE) accessibility switch interface. It presents itself to a computer, tablet, or phone as a standard Bluetooth keyboard.
+The **RB Switch** is a three-button Bluetooth Low Energy (BLE) accessibility switch. It presents itself to a computer, tablet, or phone as a standard Bluetooth keyboard.
 
-## Switch functions
+## Button functions
 
-| Physical switch | MCU GPIO | HID key |
+| Physical switch | MCU GPIO | Keyboard key |
 |---|---:|---|
 | **SW1** | GPIO10 | **Left Arrow** |
 | **SW2** | GPIO11 | **Enter** |
 | **SW3** | GPIO12 | **Right Arrow** |
 
-Pressing a switch sends one key press followed by one key release. Holding a switch does not generate repeated key events.
+Each button press sends one key press followed by one key release. Holding a button does not repeat the key.
 
 ## Quick start
 
-1. Power the RB Switch through USB-C or the installed Li-Po battery.
-2. On the host device, open Bluetooth settings.
-3. Pair with **RB Switch**.
-4. Confirm the device appears as a Bluetooth keyboard.
-5. Press SW1, SW2, and SW3 to verify the expected keys.
-6. For accessibility software, configure the three inputs as external switches if required by the host platform.
+1. Power the RB Switch using USB-C or the installed single-cell Li-Po battery.
+2. Open Bluetooth settings on the device you want to use.
+3. Select **RB Switch**.
+4. Complete pairing if prompted.
+5. Test SW1, SW2, and SW3.
+6. If using Switch Control or Switch Access, add the buttons as external switches.
 
-## Hardware at a glance
+## Current hardware
 
-- ESP32-S3 BLE-capable MCU module
-- Three Omron B3F-series tactile switches
-- USB-C power/programming connector
-- Li-Po battery connector and charging circuit
-- 3.3 V buck-boost regulation
-- Battery-voltage sensing
-- Charge-status LED
+The current board uses an ESP32-S3-MINI-1-N4R2, three Omron B3F-series tactile switches, USB-C, a Li-Po battery connection and charger, a 3.3 V buck-boost regulator, battery-voltage sensing, and a charger-status LED.
 
-The firmware does **not** use touch sensors, proximity sensors, NeoPixels, mono-jack inputs, or other expansion hardware because those functions are not present in the RevD/RevD2 PCB/BOM.
+The production design has three mechanical switch inputs. Touch sensors, proximity sensors, NeoPixel/RGB indicators, mono-jack inputs, and legacy F-key mappings are not part of the production design.
 
-See [Setup & Pairing](setup.md), [Switch Operation](use.md), [Firmware](firmware.md), and [Troubleshooting](troubleshooting.md).
+## Documentation
+
+- [Setup & Pairing](setup.md)
+- [Switch Operation](use.md)
+- [Firmware](firmware.md)
+- [Hardware](hardware.md)
+- [Troubleshooting](troubleshooting.md)
+- [QR Code](qr-code.md)
