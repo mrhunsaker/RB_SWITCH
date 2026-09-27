@@ -3,43 +3,23 @@ layout: default
 title: QR Code
 ---
 
-# QR Code for the Instructions
+# QR Code for the RB Switch
 
-The documentation is designed to be opened from a QR code placed on the RB Switch enclosure or instruction card.
+The enclosure QR code should open the published RB Switch documentation home page.
 
-## GitHub Pages URL
+## QR destination
 
-After the repository is published with GitHub Pages, use the final Pages URL as the QR-code destination.
+Use the final GitHub Pages URL for this repository.
 
-For a repository named `RB_SWITCH`, a typical project-site URL is:
+The QR code should point to the published home page, not a local development address or temporary file.
 
-`https://<github-username>.github.io/RB_SWITCH/`
+## Home page contents
 
-The exact URL depends on the GitHub account/organization and repository settings.
+The home page links to Setup & Pairing, Switch Operation, Firmware, Hardware, Troubleshooting, and this QR Code page.
 
-## Recommended QR destination
+## Enclosure label
 
-Use the site's home page:
-
-`/RB_SWITCH/`
-
-That page links to:
-
-- Setup & Pairing
-- Switch Operation
-- Firmware
-- Hardware Reference
-- Troubleshooting
-
-## Generating the QR code
-
-After the GitHub Pages URL is known, generate a QR code for the complete URL using the QR-code generator approved by your organization.
-
-Do not print a QR code containing a temporary local development URL.
-
-## Physical label suggestion
-
-The enclosure label can use:
+A suitable label is:
 
 **RB Switch**  
 **Scan for instructions**
