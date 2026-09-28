@@ -90,4 +90,4 @@ See [CHANGES.md](CHANGES.md) for a history of notable changes.
 
 ## License
 
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for the full text, including a note on hardware-specific licensing alternatives.
+This project is licensed under the APACHE 2.0 License— see [LICENSE](LICENSE) for the full text, including a note on hardware-specific licensing alternatives.
