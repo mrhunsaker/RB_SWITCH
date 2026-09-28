@@ -22,14 +22,21 @@ Each button press produces one key press followed by one key release. Holding a 
 
 For normal setup and classroom use, start with [Setup & Pairing](docs/setup.md).
 
+**Important for Android users:** Android's Switch Access is a separate app you install/update from the Google Play Store, and its setup wizard only offers a one-switch or two-switch configuration — it does not offer a third switch by default. Using the RB Switch's third button on Android requires one extra step beyond the wizard. This is different from iOS/iPadOS, where all three buttons can be assigned directly in the normal setup flow. See [Android Switch Access](docs/switch-access-android.md) and [iOS/iPadOS Switch Control](docs/switch-control-ios.md) for the full explanation before you configure a device.
+
 The documentation covers:
 
 - [Setup & Pairing](docs/setup.md)
+- [Android Switch Access](docs/switch-access-android.md)
+- [iOS/iPadOS Switch Control](docs/switch-control-ios.md)
 - [Switch Operation](docs/use.md)
 - [Firmware](docs/firmware.md)
+- [Firmware Customization](docs/firmware-customization.md)
 - [Hardware](docs/hardware.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [QR Code](docs/qr-code.md)
+
+A printable classroom quick-reference is also available: `RB_Switch_Paraprofessional_Setup_Guide.docx`.
 
 ## Hardware
 
@@ -60,3 +67,20 @@ The charge-status LED (D1) is controlled by the battery charger and is not a pro
 ## GitHub Pages and enclosure QR code
 
 Publish `docs/` with GitHub Pages. The enclosure QR code should point to the published documentation home page. See [QR Code](docs/qr-code.md).
+
+## Contributing
+
+Contributions to firmware, hardware, and documentation are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for project structure, how to propose a change, and pull request expectations, and [CODE_STYLE.md](CODE_STYLE.md) for formatting and naming conventions. Please review [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before participating.
+
+## Security
+
+To report a suspected security or safety issue, see [SECURITY.md](SECURITY.md) rather than opening a public issue.
+
+## Changelog
+
+See [CHANGES.md](CHANGES.md) for a history of notable changes.
+
+## License
+
+This project is licensed under the MIT License — see [LICENSE](LICENSE) for the full text, including a note on hardware-specific licensing alternatives.
+

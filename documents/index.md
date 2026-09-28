@@ -24,7 +24,7 @@ Each button press sends one key press followed by one key release. Holding a but
 3. Select **RB Switch**.
 4. Complete pairing if prompted.
 5. Test SW1, SW2, and SW3.
-6. If using Switch Control or Switch Access, add the buttons as external switches.
+6. If using Switch Control (iOS/iPadOS) or Switch Access (Android), add the buttons as external switches. **Android and iOS/iPadOS handle a 3-button switch differently** — see [Setup & Pairing](setup.md) before you configure scanning.
 
 ## Current hardware
 
@@ -35,8 +35,11 @@ The production design has three mechanical switch inputs. Touch sensors, proximi
 ## Documentation
 
 - [Setup & Pairing](setup.md)
+- [Android Switch Access](switch-access-android.md)
+- [iOS/iPadOS Switch Control](switch-control-ios.md)
 - [Switch Operation](use.md)
 - [Firmware](firmware.md)
+- [Firmware Customization](firmware-customization.md)
 - [Hardware](hardware.md)
 - [Troubleshooting](troubleshooting.md)
 - [QR Code](qr-code.md)

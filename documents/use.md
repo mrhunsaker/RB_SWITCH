@@ -43,6 +43,10 @@ Each switch input has a 100 nF capacitor for hardware filtering.
 
 D1 is the charge-status LED controlled by the MCP73831 charger. It is not a programmable RGB LED.
 
+## Using these buttons with accessibility scanning
+
+The three buttons above are ordinary keyboard keys; how a host device turns them into scanning actions (Next/Previous/Select and similar) is configured on the host, not the RB Switch. **Android and iOS/iPadOS configure this differently** — see [Setup & Pairing](setup.md), [Android Switch Access](switch-access-android.md), and [iOS/iPadOS Switch Control](switch-control-ios.md).
+
 ## Production scope
 
 The current production design contains only the three mechanical switch inputs above. It does not contain or implement touch sensors, proximity sensors, NeoPixel/WS2812 RGB control, mono-jack inputs, eleven-input operation, or F1–F13 legacy mappings.

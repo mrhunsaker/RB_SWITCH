@@ -25,6 +25,14 @@ If only one button fails, the problem may be isolated to that switch or input ci
 
 If the buttons work in a normal text field but not in an accessibility feature, check the host's Switch Control or Switch Access configuration.
 
+## Only two of three buttons do anything in Android Switch Access
+
+This is expected behavior, not a fault. Android's Switch Access setup wizard only ever asks for **one or two** switches; a third switch (Previous) must be assigned separately under **Settings → Accessibility → Switch Access → Settings → Assign switches for scanning**. See [Android Switch Access](switch-access-android.md) for the full walkthrough. This does not affect iOS/iPadOS, Windows, macOS, Linux, or Chromebook, where all three buttons work through their normal setup flow.
+
+## Switch Access doesn't appear on an Android device at all
+
+Switch Access is distributed as a standalone app on the **Google Play Store**, separate from Android Accessibility Suite. Install or update it from the Play Store, then check **Settings → Accessibility** again. See [Android Switch Access](switch-access-android.md).
+
 ## Button repeats unexpectedly
 
 The production firmware sends one key press/release when a button changes from released to pressed and uses 35 ms debounce. A held button should not repeat.

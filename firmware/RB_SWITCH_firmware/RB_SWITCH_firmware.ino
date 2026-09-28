@@ -25,6 +25,11 @@
  *   ESP32-S3 module used by the project (select "ESP32S3 Dev Module"
  *   in Arduino IDE unless your board package/project build process specifies
  *   an equivalent ESP32-S3 target).
+ *
+ * Modifying this file (remapping keys, changing debounce timing, renaming
+ * the BLE device, etc.)? See docs/firmware-customization.md for a guided
+ * walkthrough and a HID Usage ID reference table before editing the
+ * constants below.
  */
 
 #include <Arduino.h>

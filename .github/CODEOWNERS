@@ -1,0 +1,5 @@
+# Default owner for everything in the repository, unless a later, more
+# specific rule below overrides it. See CONTRIBUTING.md for review
+# expectations by area.
+
+*       @mrhunsaker

@@ -57,3 +57,7 @@ Open the Serial Monitor at **115200 baud**. The firmware reports the three butto
 ## Bluetooth name
 
 The advertised Bluetooth name is **RB Switch**.
+
+## Modifying the firmware
+
+For remapping keys, changing debounce timing, renaming the device, or other customization of `RB_SWITCH_firmware.ino`, see [Firmware Customization](firmware-customization.md).
