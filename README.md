@@ -6,7 +6,7 @@
 [![Documentation](https://img.shields.io/badge/docs-RB_SWITCH-blue)](https://mrhunsaker.github.io/RB_SWITCH/)
 [![Last commit](https://img.shields.io/github/last-commit/mrhunsaker/RB_SWITCH)](https://github.com/mrhunsaker/RB_SWITCH/commits/main)
 ![GitHub Release](https://img.shields.io/github/v/release/mrhunsaker/RB_SWITCH)
-[![Contributors](https://img.shields.io/github/contributors/mrhunsaker/RB_SWITCH)](https://github.com/mrhunsaker/notepadia-theia/graphs/contributors)
+[![Contributors](https://img.shields.io/github/contributors/mrhunsaker/RB_SWITCH)](https://github.com/mrhunsaker/RB_SWITCH/graphs/contributors)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 The RB Switch is a three-button Bluetooth Low Energy (BLE) accessibility switch. It presents itself to a computer, tablet, or phone as a standard Bluetooth keyboard.
