@@ -2,7 +2,6 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 ![GitHub top language](https://img.shields.io/github/languages/top/mrhunsaker/RB_SWITCH)
-[![Docs](https://img.shields.io/github/actions/workflow/status/mrhunsaker/RB_SWITCH/docs.yml?label=docs)](https://github.com/mrhunsaker/RB_SWITCH/actions/workflows/static.yml)
 [![Documentation](https://img.shields.io/badge/docs-RB_SWITCH-blue)](https://mrhunsaker.github.io/RB_SWITCH/)
 [![Last commit](https://img.shields.io/github/last-commit/mrhunsaker/RB_SWITCH)](https://github.com/mrhunsaker/RB_SWITCH/commits/main)
 ![GitHub Release](https://img.shields.io/github/v/release/mrhunsaker/RB_SWITCH)
