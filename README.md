@@ -1,5 +1,14 @@
 # RB Switch
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+![GitHub top language](https://img.shields.io/github/languages/top/mrhunsaker/RB_SWITCH)
+[![Docs](https://img.shields.io/github/actions/workflow/status/mrhunsaker/RB_SWITCH/docs.yml?label=docs)](https://github.com/mrhunsaker/RB_SWITCH/actions/workflows/static.yml)
+[![Documentation](https://img.shields.io/badge/docs-RB_SWITCH-blue)](https://mrhunsaker.github.io/RB_SWITCH/)
+[![Last commit](https://img.shields.io/github/last-commit/mrhunsaker/RB_SWITCH)](https://github.com/mrhunsaker/RB_SWITCH/commits/main)
+![GitHub Release](https://img.shields.io/github/v/release/mrhunsaker/RB_SWITCH)
+[![Contributors](https://img.shields.io/github/contributors/mrhunsaker/RB_SWITCH)](https://github.com/mrhunsaker/notepadia-theia/graphs/contributors)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 The RB Switch is a three-button Bluetooth Low Energy (BLE) accessibility switch. It presents itself to a computer, tablet, or phone as a standard Bluetooth keyboard.
 
 ## Production firmware
@@ -10,11 +19,11 @@ The production firmware is:
 
 ### Button mapping
 
-| Switch | GPIO | Keyboard key |
-|---|---:|---|
-| SW1 | GPIO10 | Left Arrow |
-| SW2 | GPIO11 | Enter |
-| SW3 | GPIO12 | Right Arrow |
+| Switch | GPIO   | Keyboard key |
+| ------ | ------:| ------------ |
+| SW1    | GPIO10 | Left Arrow   |
+| SW2    | GPIO11 | Enter        |
+| SW3    | GPIO12 | Right Arrow  |
 
 Each button press produces one key press followed by one key release. Holding a button does not repeat the key.
 
@@ -83,4 +92,3 @@ See [CHANGES.md](CHANGES.md) for a history of notable changes.
 ## License
 
 This project is licensed under the MIT License — see [LICENSE](LICENSE) for the full text, including a note on hardware-specific licensing alternatives.
-

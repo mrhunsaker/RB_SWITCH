@@ -51,8 +51,8 @@ static constexpr uint8_t SW3_PIN = 12;
 //   0x4F = Keyboard Right Arrow
 //   0x50 = Keyboard Left Arrow
 //   0x28 = Keyboard Return (Enter)
-static constexpr uint8_t LEFT_ARROW  = 0x50;
-static constexpr uint8_t ENTER_KEY   = 0x28;
+static constexpr uint8_t LEFT_ARROW = 0x50;
+static constexpr uint8_t ENTER_KEY = 0x28;
 static constexpr uint8_t RIGHT_ARROW = 0x4F;
 
 static constexpr uint32_t DEBOUNCE_MS = 35;
@@ -95,9 +95,9 @@ struct SwitchState {
   uint32_t lastChangeMs;
 };
 
-SwitchState sw1{SW1_PIN, LEFT_ARROW, HIGH, HIGH, 0};
-SwitchState sw2{SW2_PIN, ENTER_KEY, HIGH, HIGH, 0};
-SwitchState sw3{SW3_PIN, RIGHT_ARROW, HIGH, HIGH, 0};
+SwitchState sw1{ SW1_PIN, LEFT_ARROW, HIGH, HIGH, 0 };
+SwitchState sw2{ SW2_PIN, ENTER_KEY, HIGH, HIGH, 0 };
+SwitchState sw3{ SW3_PIN, RIGHT_ARROW, HIGH, HIGH, 0 };
 
 // -----------------------------------------------------------------------------
 // BLE HID keyboard
@@ -111,18 +111,18 @@ void sendKey(uint8_t keycode) {
 
   // Report ID 1 + modifier + reserved + six key slots.
   uint8_t pressReport[9] = {
-      0x01,  // Report ID
-      0x00,  // No modifier
-      0x00,  // Reserved
-      keycode,
-      0x00, 0x00, 0x00, 0x00, 0x00
+    0x01,  // Report ID
+    0x00,  // No modifier
+    0x00,  // Reserved
+    keycode,
+    0x00, 0x00, 0x00, 0x00, 0x00
   };
 
   uint8_t releaseReport[9] = {
-      0x01,  // Report ID
-      0x00,  // No modifier
-      0x00,  // Reserved
-      0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+    0x01,  // Report ID
+    0x00,  // No modifier
+    0x00,  // Reserved
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00
   };
 
   inputReport->setValue(pressReport, sizeof(pressReport));
@@ -154,34 +154,34 @@ void setupBLE() {
   //   1 reserved byte
   //   6 keycode bytes
   static const uint8_t reportMap[] = {
-      0x05, 0x01,        // Usage Page (Generic Desktop)
-      0x09, 0x06,        // Usage (Keyboard)
-      0xA1, 0x01,        // Collection (Application)
-      0x85, 0x01,        //   Report ID (1)
+    0x05, 0x01,  // Usage Page (Generic Desktop)
+    0x09, 0x06,  // Usage (Keyboard)
+    0xA1, 0x01,  // Collection (Application)
+    0x85, 0x01,  //   Report ID (1)
 
-      0x05, 0x07,        //   Usage Page (Keyboard/Keypad)
-      0x19, 0xE0,        //   Usage Minimum (Left Control)
-      0x29, 0xE7,        //   Usage Maximum (Right GUI)
-      0x15, 0x00,        //   Logical Minimum (0)
-      0x25, 0x01,        //   Logical Maximum (1)
-      0x75, 0x01,        //   Report Size (1)
-      0x95, 0x08,        //   Report Count (8)
-      0x81, 0x02,        //   Input (Data, Variable, Absolute)
+    0x05, 0x07,  //   Usage Page (Keyboard/Keypad)
+    0x19, 0xE0,  //   Usage Minimum (Left Control)
+    0x29, 0xE7,  //   Usage Maximum (Right GUI)
+    0x15, 0x00,  //   Logical Minimum (0)
+    0x25, 0x01,  //   Logical Maximum (1)
+    0x75, 0x01,  //   Report Size (1)
+    0x95, 0x08,  //   Report Count (8)
+    0x81, 0x02,  //   Input (Data, Variable, Absolute)
 
-      0x75, 0x08,        //   Report Size (8)
-      0x95, 0x01,        //   Report Count (1)
-      0x81, 0x01,        //   Input (Constant)
+    0x75, 0x08,  //   Report Size (8)
+    0x95, 0x01,  //   Report Count (1)
+    0x81, 0x01,  //   Input (Constant)
 
-      0x75, 0x08,        //   Report Size (8)
-      0x95, 0x06,        //   Report Count (6)
-      0x15, 0x00,        //   Logical Minimum (0)
-      0x25, 0x73,        //   Logical Maximum (115)
-      0x05, 0x07,        //   Usage Page (Keyboard/Keypad)
-      0x19, 0x00,        //   Usage Minimum (0)
-      0x29, 0x73,        //   Usage Maximum (115)
-      0x81, 0x00,        //   Input (Data, Array)
+    0x75, 0x08,  //   Report Size (8)
+    0x95, 0x06,  //   Report Count (6)
+    0x15, 0x00,  //   Logical Minimum (0)
+    0x25, 0x73,  //   Logical Maximum (115)
+    0x05, 0x07,  //   Usage Page (Keyboard/Keypad)
+    0x19, 0x00,  //   Usage Minimum (0)
+    0x29, 0x73,  //   Usage Maximum (115)
+    0x81, 0x00,  //   Input (Data, Array)
 
-      0xC0               // End Collection
+    0xC0  // End Collection
   };
 
   hid->setReportMap((uint8_t*)reportMap, sizeof(reportMap));
@@ -191,7 +191,7 @@ void setupBLE() {
   NimBLEAdvertisementData advertisementData;
   advertisementData.setFlags(0x06);
   advertisementData.setName("RB Switch");
-  advertisementData.addServiceUUID(NimBLEUUID("1812")); // HID service
+  advertisementData.addServiceUUID(NimBLEUUID("1812"));  // HID service
   advertising->setAdvertisementData(advertisementData);
   advertising->setMinInterval(32);
   advertising->setMaxInterval(48);
@@ -214,8 +214,7 @@ void updateSwitch(SwitchState& sw) {
     sw.lastChangeMs = now;
   }
 
-  if ((now - sw.lastChangeMs) >= DEBOUNCE_MS &&
-      sw.stableState != sw.rawState) {
+  if ((now - sw.lastChangeMs) >= DEBOUNCE_MS && sw.stableState != sw.rawState) {
 
     sw.stableState = sw.rawState;
 

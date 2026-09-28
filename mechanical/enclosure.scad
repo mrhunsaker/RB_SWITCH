@@ -13,7 +13,7 @@
  */
 
 /*
- * BT Switch Enclosure - Mechanical Switch Variant
+ * RB Switch Enclosure - Mechanical Switch Variant
  *
  * OpenSCAD design for a 3D-printable enclosure for a Bluetooth switch device with mechanical buttons.
  * Features:
@@ -29,11 +29,14 @@
  * and press-fit (right side) to prevent accidental removal by students.
  */
 
+// ---------------------------------------------------------------------
+// VARIABLES
+// ---------------------------------------------------------------------
+ 
 $fn = 128;
 
 // Box Dimensions
 L = 127; W = 50.8; H = 24.0;   
-
 WALL = 2.0; BOTTOM = 1.8; LID_T = 3.5;
 
 // PCB Dimensions
@@ -80,8 +83,10 @@ PCB_OFFSET = [WALL + ((L-2*WALL)-PCB_L)/2, WALL + ((W-2*WALL)-PCB_W)/2];  // = [
 // ---- Real PCB-local coordinates (from build_mech_pcb.py) -- do not hand-edit
 // without updating the PCB to match. ----
 PCB_SWITCH_XY = [[22,19], [47,19], [72,19]];   // SW1, SW2, SW3 centers
-PCB_M4_XY     = [[12,4], [103,4]];              // MH1, MH2 (front edge)
-PCB_USB_XY    = [5,19];                          // J_USB origin (rot=180, nose -> PCB x=0)
+PCB_M4_XY     = [[12,4], [103,4]];             // MH1, MH2 (front edge)
+PCB_USB_XY    = [5,19];                        // J_USB origin (rot=180, nose -> PCB x=0)
+
+FONT = "Arial";
 
 function to_case(p) = [p[0]+PCB_OFFSET[0], p[1]+PCB_OFFSET[1]];
 
@@ -111,6 +116,10 @@ USB_CUT_H = 6.5;   // vertical (Z)
 USB_CUT_Z = PCB_TOP_Z + 1.7;   // approx. USB-C mating-face center above PCB
 USB_FUNNEL = 1.5;  // outer-face lead-in flare, each side
 
+// ---------------------------------------------------------------------
+// ENCLOSURE
+// ---------------------------------------------------------------------
+
 module rounded_box(x,y,z,r=4){
     hull(){
         translate([r,r,0]) cylinder(r=r,h=z);
@@ -136,7 +145,6 @@ module standoff(x, y, pilot_d=0, pilot_from_top=6){
     }
 }
 
-
 // Four solid corner captures.  Each is tied into the case walls and floor, with
 // an upward-open hex pocket for a standard M4 hex nut.  The lid screw passes
 // through the lid into the captured nut.
@@ -156,19 +164,23 @@ LID_CORNER_XY = [
     [L-LID_BOSS_X/2,     W-LID_BOSS_Y/2]
 ];
 
+// ---------------------------------------------------------------------
+// Enclosure Base
+// ---------------------------------------------------------------------
+
 module base() {
     difference() {
         // Main base shape
         rounded_box(L, W, H - LID_T, 5);
-
+        // Side Branding
+            translate([5,1,15])rotate([90,0,0])linear_extrude(h=5,center=false)text("RB Switch", size = 5, font=FONT);
+       
         // Inner cavity
         translate([WALL, WALL, BOTTOM])
             rounded_box(L - 2 * WALL, W - 2 * WALL, H - LID_T - BOTTOM + 0.1, 3.5);
-
         // Battery cutout
         translate([L - BAT_L - 7, (W - BAT_W) / 2, BOTTOM - 0.01])
             cube([BAT_L, BAT_W, BAT_H + BAT_CLR]);
-
         // USB-C cutout (unchanged)
         translate([-0.1, CASE_USB_XY[1] - USB_CUT_W / 2, USB_CUT_Z - USB_CUT_H / 2])
             cube([WALL + 0.2, USB_CUT_W, USB_CUT_H]);
@@ -179,7 +191,6 @@ module base() {
                        USB_CUT_Z - USB_CUT_H / 2 - USB_FUNNEL])
                 cube([0.1, USB_CUT_W + 2 * USB_FUNNEL, USB_CUT_H + 2 * USB_FUNNEL]);
         }
-
         // --- Add slots in the base (on the INSIDE half of the walls) ---
         // Long side slots (top/bottom)
         for (y = LONG_TAB_Y) {
@@ -191,9 +202,9 @@ module base() {
             cube([SHORT_SLOT_W, SHORT_SLOT_L, SHORT_SLOT_H]);  // SHORT_SLOT_W = 1.0mm
 
       for (y = LONG_TAB_Y) {
-       translate([LONG_TAB_X - SLOT_L / 2+4, y+30, H - LID_T - SLOT_H+1.5])rotate([90,0,0])color("yellow"){cylinder(55,.5,.5);}
+       translate([LONG_TAB_X - SLOT_L / 2+5, y+30, H - LID_T - SLOT_H+2.25])rotate([90,0,0])cylinder(55,1.2,1.2);
        }
-       
+
     }
 
     // Existing standoffs (unchanged)
@@ -202,6 +213,12 @@ module base() {
     standoff(WALL + 6, W - WALL - 6);
     standoff(L - WALL - 6, W - WALL - 6);
 }
+
+// ---------------------------------------------------------------------
+// Lid Variations
+// ---------------------------------------------------------------------
+
+// Default Lid with 3 Openings for buttons
 
 module lid() {
     difference() {
@@ -215,6 +232,9 @@ module lid() {
         for (x = BAR_X)
             translate([x + (BAR_L - STEM_L) / 2 - 1, BAR_Y + (BAR_W - STEM_W) / 2 - 1, -0.1])
                 cube([STEM_L + 2, STEM_W + 2, LID_BOSS_H + 0.1]);
+                     // Add text to lid
+    translate([95,20,3])cube([25,25,1]);
+    translate([85,5,2])linear_extrude(h=5,center=false)text("Three Switch", size = 5, font=FONT);
     }
 
     // --- Add tabs as protrusions on the underside of the lid ---
@@ -225,14 +245,235 @@ module lid() {
             cube([TAB_L, TAB_W_LONG, TAB_HEIGHT]);  // TAB_W_LONG = 1.0mm
     }
     for (y = LONG_TAB_Y) {
-     translate([LONG_TAB_X - SLOT_L / 2+4, y+30, H - LID_T - SLOT_H-19])rotate([90,0,0])color("yellow"){cylinder(55,.5,.5);}
+     translate([LONG_TAB_X - SLOT_L / 2+5, y+30, H - LID_T - SLOT_H+2.25-20.5])rotate([90,0,0])cylinder(55,1.2,1.2);
        }
        }
     // Vertical tab (right side, opposite USB-C)
     translate([SHORT_TAB_X, SHORT_TAB_Y - TAB_L / 2, -TAB_HEIGHT])
         cube([WALL, TAB_L, TAB_HEIGHT]);  // WALL = 2.0mm
+        
+
 }
 
+// Lid with Only 1 opening for a button
+
+module lid_oneswitch() {
+    difference() {
+        rounded_box(L, W, LID_T, 5);
+
+        // Center switch only
+        x = BAR_X[1];
+
+        translate([x, BAR_Y, -0.1])
+            cube([OPEN_L, OPEN_W, LID_T + 0.2]);
+
+        translate([
+            x + (BAR_L - STEM_L)/2 - 1,
+            BAR_Y + (BAR_W - STEM_W)/2 - 1,
+            -0.1
+        ])
+            cube([STEM_L + 2, STEM_W + 2, LID_BOSS_H + 0.1]);
+        translate([95,20,3])cube([25,25,1]);
+    translate([90,5,2])linear_extrude(h=5,center=false)text("One Switch", size = 5, font=FONT);
+    }
+
+    // Existing tabs
+    difference(){
+        for (y = LONG_TAB_Y)
+            translate([LONG_TAB_X - TAB_L/2, y, -TAB_HEIGHT])
+                cube([TAB_L, TAB_W_LONG, TAB_HEIGHT]);
+        for (y = LONG_TAB_Y) {
+     translate([LONG_TAB_X - SLOT_L / 2+5, y+30, H - LID_T - SLOT_H+2.25-20.5])rotate([90,0,0])cylinder(55,1.2,1.2);
+       }
+    }
+
+    translate([SHORT_TAB_X, SHORT_TAB_Y - TAB_L/2, -TAB_HEIGHT])
+        cube([WALL, TAB_L, TAB_HEIGHT]);
+}
+
+// Lid with Only 2 openings for buttons
+
+
+module lid_twoswitch() {
+    difference() {
+        rounded_box(L, W, LID_T, 5);
+
+        // Left and right switches only
+        for (i = [0,2]) {
+            x = BAR_X[i];
+
+            translate([x, BAR_Y, -0.1])
+                cube([OPEN_L, OPEN_W, LID_T + 0.2]);
+
+            translate([
+                x + (BAR_L - STEM_L)/2 - 1,
+                BAR_Y + (BAR_W - STEM_W)/2 - 1,
+                -0.1
+            ])
+                cube([STEM_L + 2, STEM_W + 2, LID_BOSS_H + 0.1]);
+        }
+                translate([95,20,3])cube([25,25,1]);
+        translate([90,5,2])linear_extrude(h=5,center=false)text("Two Switch", size = 5, font=FONT);
+    }
+
+    difference(){
+        for (y = LONG_TAB_Y)
+            translate([LONG_TAB_X - TAB_L/2, y, -TAB_HEIGHT])
+                cube([TAB_L, TAB_W_LONG, TAB_HEIGHT]);
+        for (y = LONG_TAB_Y) {
+     translate([LONG_TAB_X - SLOT_L / 2+5, y+30, H - LID_T - SLOT_H+2.25-20.5])rotate([90,0,0])cylinder(55,1.2,1.2);
+       }
+    }
+
+    translate([SHORT_TAB_X, SHORT_TAB_Y - TAB_L/2, -TAB_HEIGHT])
+        cube([WALL, TAB_L, TAB_HEIGHT]);
+}
+
+// ---------------------------------------------------------------------
+// Finger trap / tactile well parameters
+// ---------------------------------------------------------------------
+
+DIVIDER_W = 4;          // thickness
+DIVIDER_H = 8;         // height above lid surface
+DIVIDER_R = 2;          // rounded cap radius
+DIVIDER_OVERHANG = 5;   // extend beyond button opening
+
+// ---------------------------------------------------------------------
+// Tactile divider rail
+// ---------------------------------------------------------------------
+
+module finger_divider(x,y)
+{
+    divider_len = OPEN_W + (2 * DIVIDER_OVERHANG);
+
+    union()
+    {
+        // vertical wall
+
+        translate([
+            x - DIVIDER_W/2+1.1,
+            y - DIVIDER_OVERHANG,
+            LID_T
+        ])
+        cube([
+            DIVIDER_W,
+            divider_len,
+            DIVIDER_H - DIVIDER_R
+        ]);
+
+        // rounded top
+
+        translate([
+            x+1.1,
+            y + OPEN_W/2,
+            LID_T + DIVIDER_H - DIVIDER_R
+        ])
+        rotate([90,0,0])
+        cylinder(
+            r = DIVIDER_R,
+            h = divider_len,
+            center = true
+        );
+    }
+}
+
+// Lid with tactile finger wells
+
+module lid_fingertrap()
+{
+    union()
+    {
+        difference()
+        {
+            rounded_box(L, W, LID_T, 5);
+
+            // All three switch openings unchanged
+
+            for (x = BAR_X)
+                translate([x, BAR_Y, -0.1])
+                    cube([
+                        OPEN_L,
+                        OPEN_W,
+                        LID_T + 0.2
+                    ]);
+
+            // All stem clearances unchanged
+
+            for (x = BAR_X)
+                translate([
+                    x + (BAR_L - STEM_L)/2 - 1,
+                    BAR_Y + (BAR_W - STEM_W)/2 - 1,
+                    -0.1
+                ])
+                cube([
+                    STEM_L + 2,
+                    STEM_W + 2,
+                    LID_BOSS_H + 0.1
+                ]);
+                        translate([95,20,3])cube([25,25,1]);
+                translate([90,5,2])linear_extrude(h=5,center=false)text("Finger Trap", size = 5, font=FONT);
+        }
+
+        // Outer Divider Switch 1
+                finger_divider(
+            (BAR_X[0]-50 + OPEN_L + BAR_X[1]) / 2,
+            BAR_Y
+        );
+        // Outer Divider Switch 3        
+                finger_divider(
+            (BAR_X[2]+50 + OPEN_L + BAR_X[1]) / 2,
+            BAR_Y
+        );
+        // Divider between switch 1 and switch 2
+
+        finger_divider(
+            (BAR_X[0] + OPEN_L + BAR_X[1]) / 2,
+            BAR_Y
+        );
+
+        // Divider between switch 2 and switch 3
+
+        finger_divider(
+            (BAR_X[1] + OPEN_L + BAR_X[2]) / 2,
+            BAR_Y
+        );
+    }
+
+    // Existing long-side tabs
+
+    difference()
+    {
+        for (y = LONG_TAB_Y)
+        {
+            translate([
+                LONG_TAB_X - TAB_L/2,
+                y,
+                -TAB_HEIGHT
+            ])
+            cube([
+                TAB_L,
+                TAB_W_LONG,
+                TAB_HEIGHT
+            ]);
+        }
+        for (y = LONG_TAB_Y) {
+     translate([LONG_TAB_X - SLOT_L / 2+5, y+30, H - LID_T - SLOT_H+2.25-20.5])rotate([90,0,0])cylinder(55,1.2,1.2);
+       }
+    }
+
+    // Existing short-side tab
+
+    translate([
+        SHORT_TAB_X,
+        SHORT_TAB_Y - TAB_L/2,
+        -TAB_HEIGHT
+    ])
+    cube([
+        WALL,
+        TAB_L,
+        TAB_HEIGHT
+    ]);
+}
 
 module bar(x=0, y=0){
     translate([x,y,H-LID_T+TRAVEL])
@@ -254,6 +495,30 @@ module assembly(){
             translate([0,0,2])bar(BAR_X[i],BAR_Y);
 }
 
+module assembly_oneswitch(){
+    color("DarkGrey",alpha=1.0) base();
+    color("Grey",alpha=1.0) translate([0,0,H-LID_T]) lid_oneswitch(); 
+    for(i=[0:2])
+        color(i==0?"blue":i==1?"green":"red")
+            translate([0,0,2])bar(BAR_X[i],BAR_Y);
+}
+
+module assembly_twoswitch(){
+    color("DarkGrey",alpha=1.0) base();
+    color("Grey",alpha=1.0) translate([0,0,H-LID_T]) lid_twoswitch();
+    for(i=[0:2])
+        color(i==0?"blue":i==1?"green":"red")
+            translate([0,0,2])bar(BAR_X[i],BAR_Y);
+}
+
+module assembly_fingertrap(){
+    color("DarkGrey",alpha=1.0) base();
+    color("Grey",alpha=1.0) translate([0,0,H-LID_T]) lid_fingertrap();
+    for(i=[0:2])
+        color(i==0?"blue":i==1?"green":"red")
+            translate([0,0,2])bar(BAR_X[i],BAR_Y);
+}
+
 module exploded_assembly() {
     color("DarkGrey",alpha=1.0) base();
     color("Grey",alpha=1.0) translate([0,0,H-LID_T+15]) lid();
@@ -262,8 +527,15 @@ module exploded_assembly() {
             translate([0,0,2+5])bar(BAR_X[i],BAR_Y);
 }
 
-exploded_assembly();
-translate([150,0,0])assembly();
+//exploded_assembly();
+translate([0,0,0])assembly();
+translate([150,75,0])assembly_oneswitch();
+translate([150,0,0])assembly_twoswitch();
+translate([0,75,0])assembly_fingertrap();
+
 //bar();
 //lid();
-//base();5
+//base();
+//lid_oneswitch();
+//lid_twoswitch();
+//lid_fingertrap();
