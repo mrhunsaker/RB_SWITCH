@@ -219,4 +219,4 @@ module stored_base_fingertrap_envelope() {
 // Main output
 // ---------------------------------------------------------------------
 translate([0,155,0])storage_box();
-lid_for_storage_box();
+//lid_for_storage_box();
