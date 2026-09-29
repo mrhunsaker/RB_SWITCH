@@ -50,6 +50,13 @@ BAR_L = 20; BAR_W = 16; BAR_H = 2.5;
 OPEN_L = 17.5; OPEN_W = 12.5;
 STEM_L = 15; STEM_W = 10; STEM_H = 3.0;
 FLANGE_L = 22; FLANGE_W = 18; FLANGE_T = 1.2;
+
+// Top cap is the only portion that passes through the lid opening.
+// 0.2 mm clearance is provided on each side.
+TOP_L = OPEN_L - 0.4;
+TOP_W = OPEN_W - 0.4;
+TOP_R = 2.0;
+
 TRAVEL = 0.8;
 
 // Long side tabs (top/bottom) ---
@@ -151,7 +158,7 @@ LID_NUT_H = 3.6;           // nut thickness + small print clearance
 LID_NUT_Z = H-LID_T-LID_NUT_H;
 LID_BOSS_X = 12;
 LID_BOSS_Y = 12;
-LID_SCREW_D = 4.3;         // M4 clearance
+LID_SCREW_D = 4;         // M4 clearance
 LID_RECESS_D = 8.5;        // accommodates typical M4 socket/button head
 LID_RECESS_H = 1.4;        // shallow counterbore; preserves 2.1mm lid floor
 
@@ -178,7 +185,7 @@ module base() {
         // Battery cutout
         translate([L - BAT_L - 7, (W - BAT_W) / 2, BOTTOM - 0.01])
             cube([BAT_L, BAT_W, BAT_H + BAT_CLR]);
-        // USB-C cutout (unchanged)
+        // USB-C cutout 
         translate([-0.1, CASE_USB_XY[1] - USB_CUT_W / 2, USB_CUT_Z - USB_CUT_H / 2])
             cube([WALL + 0.2, USB_CUT_W, USB_CUT_H]);
         hull() {
@@ -204,7 +211,7 @@ module base() {
 
     // Standoffs
     for (p = CASE_M4_XY)
-        standoff(p[0], p[1], pilot_d = 3.4);
+        standoff(p[0], p[1], pilot_d = 3);
     standoff(WALL + 6, W - WALL - 6);
     standoff(L - WALL - 6, W - WALL - 6);
 }
@@ -229,7 +236,7 @@ module lid() {
                 cube([STEM_L + 2, STEM_W + 2, LID_BOSS_H + 0.1]);
                      // Add text to lid
     translate([95,20,3])cube([25,25,1]);
-    translate([85,5,3])linear_extrude(h=5,center=false)text("Three Switch", size = 5, font=FONT);
+    translate([75,5,3])linear_extrude(h=5,center=false)text("Three Switch", size = 5, font=FONT);
     }
 
     // Add tabs as protrusions on the underside of the lid
@@ -269,7 +276,7 @@ module lid_oneswitch() {
         ])
             cube([STEM_L + 2, STEM_W + 2, LID_BOSS_H + 0.1]);
         translate([95,20,3])cube([25,25,1]);
-    translate([90,5,3])linear_extrude(h=5,center=false)text("One Switch", size = 5, font=FONT);
+    translate([80,5,3])linear_extrude(h=5,center=false)text("One Switch", size = 5, font=FONT);
     }
 
     // Existing tabs
@@ -308,7 +315,7 @@ module lid_twoswitch() {
                 cube([STEM_L + 2, STEM_W + 2, LID_BOSS_H + 0.1]);
         }
                 translate([95,20,3])cube([25,25,1]);
-        translate([90,5,3])linear_extrude(h=5,center=false)text("Two Switch", size = 5, font=FONT);
+        translate([80,5,3])linear_extrude(h=5,center=false)text("Two Switch", size = 5, font=FONT);
     }
 
     difference(){
@@ -397,7 +404,7 @@ module lid_fingertrap()
                     LID_BOSS_H + 0.1
                 ]);
                 translate([95,20,3])cube([25,25,1]);
-                translate([90,5,3])linear_extrude(h=5,center=false)text("Finger Trap", size = 5, font=FONT);
+                translate([75,5,3])linear_extrude(h=5,center=false)text("Finger Trap", size = 5, font=FONT);
         }
         // Outer Divider Switch 1
                 finger_divider(
@@ -456,14 +463,27 @@ module lid_fingertrap()
 // Buttons to Press
 // ---------------------------------------------------------------------
 module bar(x=0, y=0){
-    translate([x,y,H-LID_T+TRAVEL])
-        rounded_box(BAR_L,BAR_W,BAR_H,3);
-    translate([x+(BAR_L-STEM_L)/2,y+(BAR_W-STEM_W)/2,H-LID_T-STEM_H+TRAVEL])
+    // Common centerline for the entire button stack.
+    // x/y identify the BAR envelope; every functional part is centered
+    // on that same point so the button presses straight down.
+    cx = x + BAR_L/2;
+    cy = y + BAR_W/2;
+
+    // Top cap: only this part passes through the lid opening.
+    translate([cx-TOP_L/2, cy-TOP_W/2, H-LID_T+TRAVEL])
+        rounded_box(TOP_L,TOP_W,BAR_H,TOP_R);
+
+    // Stem: centered directly beneath the top cap.
+    translate([cx-STEM_L/2, cy-STEM_W/2, H-LID_T-STEM_H+TRAVEL])
         cube([STEM_L,STEM_W,STEM_H]);
-    translate([x+(BAR_L-FLANGE_L)/2,y+(BAR_W-FLANGE_W)/2,
+
+    // Flange: unchanged at 22 x 18 mm and centered on the same axis.
+    translate([cx-FLANGE_L/2, cy-FLANGE_W/2,
                H-LID_T-STEM_H-FLANGE_T+TRAVEL])
         rounded_box(FLANGE_L,FLANGE_W,FLANGE_T,2);
-    translate([x+BAR_L/2+7, y+BAR_W/2, H-LID_T-STEM_H-FLANGE_T-STOP_H+TRAVEL])
+
+    // Center the travel stop on the same vertical press axis.
+    translate([cx, cy, H-LID_T-STEM_H-FLANGE_T-STOP_H+TRAVEL])
         cylinder(d=STOP_D, h=STOP_H);
 }
 // ---------------------------------------------------------------------
@@ -552,4 +572,19 @@ translate([0,75,0])assembly_fingertrap();
 }
 
 //all_assemblies();
-all_exploded_assemblies();
+//all_exploded_assemblies();
+
+// ---------------------------------------------------------------------
+// INDIVIDUAL ITEMS FOR EXPORT AND CONTRUCTION
+// ---------------------------------------------------------------------
+// PARTS FOR EXPORT
+module printbar() {
+for(i=[0:2])
+   color(i==0?"blue":i==1?"green":"red")
+   translate([0,0,-17])bar(BAR_X[i],BAR_Y);}
+//printbar();
+base();
+//lid();
+//lid_oneswitch();
+//lid_twoswitch();
+//lid_fingertrap();

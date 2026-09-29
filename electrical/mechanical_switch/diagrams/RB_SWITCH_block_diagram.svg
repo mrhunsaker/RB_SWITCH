@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1800"
+   height="900"
+   viewBox="0 0 1800 900"
+   font-family="Helvetica,Arial,sans-serif"
+   version="1.1"
+   id="svg41"
+   sodipodi:docname="RB_SWITCH_block_diagram.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   inkscape:export-filename="RB_SWITCH_block_diagram.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:c2pa="http://c2pa.org/manifest">
+  <sodipodi:namedview
+     id="namedview41"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.89666667"
+     inkscape:cx="900.55762"
+     inkscape:cy="450"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg41" />
+  <metadata
+     id="metadata1">
+    <c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo3Y2QyNWY5OC0zMzhmLTRkZWUtYjdiZi0zYTc0ZTc2ZGY1YjIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaI5mrYvfx9edauuXt6+UjvAAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo3OWZhOGRhMy0wY2ZkLTQwMDQtOGE5Ny03MGQ4ZGI4ZDk2YWVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoiHeMPtGpQSxNrUTgh+kYEAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggKSPX7tFkET5KkozqyNsS6cyWJFW7Axc1NBwUvXMe2p2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGGkN2gRN7W6sqQ66/scuE0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDmSA6U50CiuAMnwwhhjr9TrGsS7cyxts4Z0LyQvP/XtmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjBZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjdjZDI1Zjk4LTMzOGYtNGRlZS1iN2JmLTNhNzRlNzZkZjViMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmMyZmIyNTNkLTY3N2ItNDNlZS1iYjgwLWMwYzhiNzgxYmUwMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCApI9fu0WQRPkqSjOrI2xLpzJYkVbsDFzU0HBS9cx7anaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggpVuyK12NwgcJsD7GnbX5PHqX3Xmo2vM/jTYj812bZpyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggQmhWBsymJgANB4pWqSZarnDBBoV8GmM5D3ojQYpNGiJ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQBpBXVuuNJ6aYd25Oex86E3s3/+PaxDyUKTp4dDSrpLXGBbxofZmEgiEr3UV5BnSJMJfSnYpkAg4EPvx8H1bPyc=</c2pa:manifest>
+  </metadata>
+  <defs
+     id="defs1">
+    <marker
+       id="a"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="5"
+       orient="auto">
+      <path
+         d="M0,0 L10,5 L0,10 z"
+         fill="#333"
+         id="path1" />
+    </marker>
+  </defs>
+  <rect
+     width="1800"
+     height="900"
+     fill="#fff"
+     id="rect1" />
+  <text
+     x="900"
+     y="50"
+     font-size="34px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text1">RB_SWITCH – Block Diagram</text>
+  <text
+     x="900"
+     y="82"
+     font-size="20"
+     text-anchor="middle"
+     fill="#555"
+     id="text2">Bluetooth LE switch interface for iOS / iPadOS / Android Switch Access · 115 × 38 mm, 4-layer PCB</text>
+  <rect
+     x="40"
+     y="140"
+     width="230"
+     height="110"
+     rx="12"
+     fill="#fde9c9"
+     stroke="#333"
+     stroke-width="2"
+     id="rect2" />
+  <text
+     x="155.0"
+     y="191.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text3">USB-C</text>
+  <text
+     x="155.0"
+     y="217.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text4">J_USB · USB4105-GF-A</text>
+  <rect
+     x="340"
+     y="140"
+     width="250"
+     height="110"
+     rx="12"
+     fill="#fde9c9"
+     stroke="#333"
+     stroke-width="2"
+     id="rect4" />
+  <text
+     x="465.0"
+     y="191.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text5">Li-Po charger</text>
+  <text
+     x="465.0"
+     y="217.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text6">U_CHG · MCP73831 (500 mA)</text>
+  <rect
+     x="660"
+     y="140"
+     width="200"
+     height="110"
+     rx="12"
+     fill="#fde9c9"
+     stroke="#333"
+     stroke-width="2"
+     id="rect6" />
+  <text
+     x="760.0"
+     y="191.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text7">Battery</text>
+  <text
+     x="760.0"
+     y="217.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text8">J_BAT · JST-PH 2-pin</text>
+  <rect
+     x="930"
+     y="140"
+     width="270"
+     height="110"
+     rx="12"
+     fill="#fde9c9"
+     stroke="#333"
+     stroke-width="2"
+     id="rect8" />
+  <text
+     x="1065.0"
+     y="191.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text9">Buck-boost 3.3 V</text>
+  <text
+     x="1065.0"
+     y="217.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text10">REG1 · TPS63001 + L1 2.2 µH</text>
+  <line
+     x1="270"
+     y1="195"
+     x2="340"
+     y2="195"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line10" />
+  <text
+     x="305.0"
+     y="185.0"
+     font-size="16"
+     text-anchor="middle"
+     fill="#222"
+     id="text11">VBUS</text>
+  <line
+     x1="590"
+     y1="195"
+     x2="660"
+     y2="195"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line11" />
+  <text
+     x="625.0"
+     y="185.0"
+     font-size="16"
+     text-anchor="middle"
+     fill="#222"
+     id="text12">VBAT</text>
+  <line
+     x1="860"
+     y1="195"
+     x2="930"
+     y2="195"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line12" />
+  <text
+     x="895.0"
+     y="185.0"
+     font-size="16"
+     text-anchor="middle"
+     fill="#222"
+     id="text13">VBAT</text>
+  <rect
+     x="340"
+     y="300"
+     width="250"
+     height="70"
+     rx="12"
+     fill="#fde9c9"
+     stroke="#333"
+     stroke-width="2"
+     id="rect13" />
+  <text
+     x="465.0"
+     y="331.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text14">Status LED</text>
+  <text
+     x="465.0"
+     y="357.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text15">D1 (red) + R2 · CHG_STAT</text>
+  <line
+     x1="465"
+     y1="250"
+     x2="465"
+     y2="300"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line15" />
+  <rect
+     x="1000"
+     y="380"
+     width="420"
+     height="300"
+     rx="12"
+     fill="#d9e8fb"
+     stroke="#333"
+     stroke-width="2"
+     id="rect15" />
+  <text
+     x="1210"
+     y="440"
+     font-size="24"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text16">ESP32-S3-MINI-1</text>
+  <text
+     x="1210"
+     y="470"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text17">U1 · Bluetooth LE · native USB</text>
+  <text
+     x="1210"
+     y="540"
+     font-size="17"
+     text-anchor="middle"
+     id="text18">Sends switch events over BLE</text>
+  <text
+     x="1210"
+     y="570"
+     font-size="17"
+     text-anchor="middle"
+     id="text19">USB D+/D− wired to the module (programming)</text>
+  <line
+     x1="1065"
+     y1="250"
+     x2="1065"
+     y2="380"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line19" />
+  <text
+     x="1091.0"
+     y="315.0"
+     font-size="16"
+     text-anchor="middle"
+     fill="#222"
+     id="text20">3V3</text>
+  <rect
+     x="40"
+     y="430"
+     width="250"
+     height="70"
+     rx="12"
+     fill="#dcf3dc"
+     stroke="#333"
+     stroke-width="2"
+     id="rect20" />
+  <text
+     x="165.0"
+     y="461.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text21">SW1</text>
+  <text
+     x="165.0"
+     y="487.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text22">B3F-1000 + C9 100 nF</text>
+  <rect
+     x="40"
+     y="520"
+     width="250"
+     height="70"
+     rx="12"
+     fill="#dcf3dc"
+     stroke="#333"
+     stroke-width="2"
+     id="rect22" />
+  <text
+     x="165.0"
+     y="551.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text23">SW2</text>
+  <text
+     x="165.0"
+     y="577.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text24">B3F-1000 + C10 100 nF</text>
+  <rect
+     x="40"
+     y="610"
+     width="250"
+     height="70"
+     rx="12"
+     fill="#dcf3dc"
+     stroke="#333"
+     stroke-width="2"
+     id="rect24" />
+  <text
+     x="165.0"
+     y="641.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text25">SW3</text>
+  <text
+     x="165.0"
+     y="667.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text26">B3F-1000 + C11 100 nF</text>
+  <line
+     x1="290"
+     y1="465"
+     x2="1000"
+     y2="450.0"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line26" />
+  <line
+     x1="290"
+     y1="555"
+     x2="1000"
+     y2="472.5"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line27" />
+  <line
+     x1="290"
+     y1="645"
+     x2="1000"
+     y2="495.0"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line28" />
+  <text
+     x="650"
+     y="420"
+     font-size="17"
+     text-anchor="middle"
+     fill="#222"
+     id="text28">3 switch inputs (100 nF debounce caps)</text>
+  <rect
+     x="340"
+     y="720"
+     width="250"
+     height="70"
+     rx="12"
+     fill="#dcf3dc"
+     stroke="#333"
+     stroke-width="2"
+     id="rect28" />
+  <text
+     x="465.0"
+     y="751.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text29">RESET / BOOT</text>
+  <text
+     x="465.0"
+     y="777.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text30">SW_RST · SW_BOOT · B3U-1000P</text>
+  <line
+     x1="590"
+     y1="755"
+     x2="1000"
+     y2="640"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line30" />
+  <text
+     x="775.0"
+     y="707.5"
+     font-size="16"
+     text-anchor="middle"
+     fill="#222"
+     id="text31">EN / BOOT</text>
+  <rect
+     x="700"
+     y="730"
+     width="240"
+     height="70"
+     rx="12"
+     fill="#dcf3dc"
+     stroke="#333"
+     stroke-width="2"
+     id="rect31" />
+  <text
+     x="820.0"
+     y="761.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text32">Battery sense</text>
+  <text
+     x="820.0"
+     y="787.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text33">R7/R8 divider + C8</text>
+  <line
+     x1="940"
+     y1="760"
+     x2="1000"
+     y2="660"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line33" />
+  <polyline
+     points="40,225 18,225 18,868 1210,868"
+     fill="none"
+     stroke="#333"
+     stroke-width="2.5"
+     stroke-dasharray="8,6"
+     id="polyline33" />
+  <line
+     x1="1210"
+     y1="868"
+     x2="1210"
+     y2="680"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     stroke-dasharray="8,6"
+     id="line34" />
+  <text
+     x="1270.0"
+     y="734.0"
+     font-size="16"
+     text-anchor="middle"
+     fill="#222"
+     id="text34">USB D+ / D−</text>
+  <rect
+     x="1500"
+     y="430"
+     width="260"
+     height="200"
+     rx="12"
+     fill="#fff6c2"
+     stroke="#333"
+     stroke-width="2"
+     id="rect34" />
+  <text
+     x="1630.0"
+     y="526.0"
+     font-size="22"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text35">Phone / Tablet</text>
+  <text
+     x="1630.0"
+     y="552.0"
+     font-size="17"
+     text-anchor="middle"
+     fill="#333"
+     id="text36">iOS · iPadOS · Android</text>
+  <text
+     x="1630"
+     y="595"
+     font-size="16"
+     text-anchor="middle"
+     id="text37">Switch Control / Switch Access</text>
+  <line
+     x1="1420"
+     y1="530"
+     x2="1500"
+     y2="530"
+     stroke="#333"
+     stroke-width="2.5"
+     marker-end="url(#a)"
+     id="line37" />
+  <text
+     x="1460.0"
+     y="520.0"
+     font-size="16"
+     text-anchor="middle"
+     fill="#222"
+     id="text38">BLE</text>
+  <rect
+     x="1500"
+     y="100"
+     width="20"
+     height="20"
+     fill="#fde9c9"
+     stroke="#333"
+     id="rect38" />
+  <text
+     x="70"
+     y="116"
+     font-size="16"
+     id="text39">Power</text>
+  <rect
+     x="1600"
+     y="100"
+     width="20"
+     height="20"
+     fill="#dcf3dc"
+     stroke="#333"
+     id="rect39" />
+  <text
+     x="160"
+     y="116"
+     font-size="16"
+     id="text40">User input</text>
+  <text
+     x="1770"
+     y="885"
+     font-size="14"
+     text-anchor="end"
+     fill="#777"
+     id="text41">Derived from net_table.json + BOM RevD</text>
+</svg>
