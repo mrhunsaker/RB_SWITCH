@@ -6529,6 +6529,34 @@
 		)
 		(uuid "b7c4f4c1-6a8e-4f7b-9e7f-7f4e0a0c8f2d")
 	)
+	(wire
+		(pts
+			(xy 215.27 44.45) (xy 210.19 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "f1b2c3d4-1111-4aaa-8bbb-000000000001")
+	)
+	(wire
+		(pts
+			(xy 235.27 44.45) (xy 230.19 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "f1b2c3d4-2222-4aaa-8bbb-000000000002")
+	)
+	(wire
+		(pts
+			(xy 255.27 44.45) (xy 250.19 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "f1b2c3d4-3333-4aaa-8bbb-000000000003")
+	)
+	(wire
+		(pts
+			(xy 83.82 160.02) (xy 83.82 162.56)
+		)
+		(stroke (width 0) (type default))
+		(uuid "f1b2c3d4-4444-4aaa-8bbb-000000000004")
+	)
 	(symbol
 		(lib_id "Device:C")
 		(at 154.47 125.09 0)
