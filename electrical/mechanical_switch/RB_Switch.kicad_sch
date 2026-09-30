@@ -3817,27 +3817,6 @@
 			)
 		)
 	)
-	(global_label "USB_DP"
-		(shape passive)
-		(at 83.82 160.02 0)
-		(effects
-			(font
-				(size 1 1)
-			)
-		)
-		(uuid "26cccea2-b46c-4aba-9b23-bcb3f6a1e7bb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 83.82 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "V3V3"
 		(shape passive)
 		(at 104.47 66.28 0)
