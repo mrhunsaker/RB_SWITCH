@@ -1,0 +1,447 @@
+ERC report (2026-09-30T13:06:41, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[label_dangling]: Label not connected
+    ; error
+    @(3300 mils, 6300 mils): Global Label 'USB_DP'
+[label_dangling]: Label not connected
+    ; error
+    @(3300 mils, 6400 mils): Global Label 'USB_DP'
+[label_dangling]: Label not connected
+    ; error
+    @(3300 mils, 6500 mils): Global Label 'USB_DM'
+[label_dangling]: Label not connected
+    ; error
+    @(3300 mils, 6600 mils): Global Label 'USB_DM'
+[label_dangling]: Label not connected
+    ; error
+    @(5500 mils, 3437 mils): Global Label 'USB_DM'
+[label_dangling]: Label not connected
+    ; error
+    @(5500 mils, 3537 mils): Global Label 'USB_DP'
+[label_dangling]: Label not connected
+    ; error
+    @(7113 mils, 3256 mils): Global Label 'VBAT'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1069 mils, 1428 mils): Vertical Wire, length 100 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(1069 mils, 1428 mils): Global Label 'VBAT_SENSE'
+    @(1069 mils, 1828 mils): Label 'VBAT_SENSE'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1069 mils, 1728 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1463 mils, 1428 mils): Horizontal Wire, length 394 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1463 mils, 1428 mils): Vertical Wire, length 1087 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1463 mils, 1428 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1463 mils, 2516 mils): Horizontal Wire, length 200 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1463 mils, 2516 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1519 mils, 6741 mils): Vertical Wire, length 200 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(1519 mils, 6841 mils): Global Label 'USB_CC2'
+    @(1519 mils, 7241 mils): Label 'USB_CC2'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1519 mils, 7141 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1663 mils, 2516 mils): Vertical Wire, length 1322 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1663 mils, 3837 mils): Horizontal Wire, length 2638 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1913 mils, 6841 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(1913 mils, 7141 mils): Vertical Wire, length 100 mils
+[multiple_net_names]: Both BOOT_NET and GND are attached to the same items; BOOT_NET will be used in the netlist
+    ; warning
+    @(4300 mils, 3337 mils): Global Label 'BOOT_NET'
+    @(1913 mils, 7141 mils): Global Label 'GND'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(1913 mils, 7141 mils): Global Label 'GND'
+    @(7413 mils, 2756 mils): Label 'GND'
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(2050 mils, 3250 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(2800 mils, 6841 mils): Horizontal Wire, length 887 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(2800 mils, 6000 mils): Vertical Wire, length 841 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(2900 mils, 6100 mils): Vertical Wire, length 841 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(2900 mils, 6941 mils): Horizontal Wire, length 1381 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(3126 mils, 1972 mils): Global Label 'BOOT_NET'
+    @(3326 mils, 2509 mils): Label 'BOOT_NET'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(3300 mils, 5800 mils): Global Label 'VBUS'
+    @(8663 mils, 6109 mils): Label 'VBUS'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(3300 mils, 6000 mils): Global Label 'USB_CC1'
+    @(1913 mils, 7241 mils): Label 'USB_CC1'
+[no_connect_dangling]: Unconnected "no connection" flag
+    ; warning
+    @(3300 mils, 6900 mils): No Connect
+[no_connect_dangling]: Unconnected "no connection" flag
+    ; warning
+    @(3300 mils, 7000 mils): No Connect
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3326 mils, 1972 mils): Horizontal Wire, length 200 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3326 mils, 1972 mils): Vertical Wire, length 1037 mils
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(4500 mils, 2756 mils): Horizontal Wire, length 1174 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3650 mils, 6500 mils): Vertical Wire, length 3063 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3650 mils, 3437 mils): Horizontal Wire, length 1850 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3737 mils, 2559 mils): Horizontal Wire, length 6113 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3737 mils, 4537 mils): Vertical Wire, length 1978 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3750 mils, 3537 mils): Horizontal Wire, length 1750 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3750 mils, 6400 mils): Vertical Wire, length 2863 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3837 mils, 2362 mils): Horizontal Wire, length 5226 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3837 mils, 4437 mils): Vertical Wire, length 2075 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3913 mils, 2362 mils): Vertical Wire, length 390 mils
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(3913 mils, 2362 mils): Vertical Wire, length 390 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3937 mils, 2165 mils): Horizontal Wire, length 4338 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(3937 mils, 4337 mils): Vertical Wire, length 2172 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4113 mils, 2362 mils): Vertical Wire, length 775 mils
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(4113 mils, 2362 mils): Vertical Wire, length 775 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(4113 mils, 2909 mils): Global Label 'EN_NET'
+    @(7013 mils, 3656 mils): Label 'EN_NET'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4300 mils, 3137 mils): Horizontal Wire, length 187 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4300 mils, 3337 mils): Horizontal Wire, length 200 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4300 mils, 4337 mils): Horizontal Wire, length 363 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4300 mils, 4437 mils): Horizontal Wire, length 463 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4300 mils, 4537 mils): Horizontal Wire, length 563 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4500 mils, 2756 mils): Horizontal Wire, length 1174 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(4500 mils, 3337 mils): Vertical Wire, length 581 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5688 mils, 3594 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5688 mils, 3894 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5688 mils, 4775 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5688 mils, 5075 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(6081 mils, 4775 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(6081 mils, 5075 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(6475 mils, 4775 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(6475 mils, 5075 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(6725 mils, 2716 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(6725 mils, 3016 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3056 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3056 mils): Wire, length 141 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(7113 mils, 3256 mils): Global Label 'VBAT'
+    @(1950 mils, 3350 mils): Label 'VBAT'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3456 mils): Vertical Wire, length 244 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3456 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3556 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3556 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3656 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3656 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3700 mils): Horizontal Wire, length 1187 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3756 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3756 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3856 mils): Vertical Wire, length 144 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3856 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 3856 mils): Wire, length 141 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(7113 mils, 3856 mils): Global Label 'L_B'
+    @(8300 mils, 3600 mils): Label 'L_B'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7113 mils, 4000 mils): Horizontal Wire, length 1187 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7413 mils, 2856 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7413 mils, 2856 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7513 mils, 2856 mils): Vertical Wire, length 100 mils
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(7513 mils, 2856 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7875 mils, 5166 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7875 mils, 5466 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7875 mils, 6150 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7875 mils, 6450 mils): Vertical Wire, length 100 mils
+[no_connect_dangling]: Unconnected "no connection" flag
+    ; warning
+    @(7913 mils, 3356 mils): No Connect
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7913 mils, 3856 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(7913 mils, 3856 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8263 mils, 5609 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8263 mils, 5609 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8263 mils, 5809 mils): Vertical Wire, length 341 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(8263 mils, 5809 mils): Global Label 'CHG_PROG'
+    @(7875 mils, 6550 mils): Label 'CHG_PROG'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8263 mils, 6150 mils): Horizontal Wire, length 387 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8275 mils, 1750 mils): Horizontal Wire, length 100 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(8275 mils, 1750 mils): Global Label 'SW1_NET'
+    @(8175 mils, 1750 mils): Label 'SW1_NET'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8275 mils, 2165 mils): Vertical Wire, length 415 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8300 mils, 2716 mils): Vertical Wire, length 100 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(8300 mils, 2716 mils): Global Label 'V3V3'
+    @(9450 mils, 5066 mils): Label 'V3V3'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8300 mils, 3016 mils): Vertical Wire, length 100 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(8300 mils, 3700 mils): Global Label 'L_A'
+    @(7013 mils, 3456 mils): Label 'L_A'
+[footprint_link_issues]: Footprint 'L_Bourns_SRN4026_4.0x4.0mm' not found in library 'Inductor_SMD'
+    ; warning
+    @(8300 mils, 3850 mils): Symbol L1 [L]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8475 mils, 713 mils): Vertical Wire, length 1037 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8475 mils, 1750 mils): Horizontal Wire, length 200 mils
+[footprint_link_issues]: Footprint 'SW_TH_Tactile_Omron_B3F-10xx' not found in library 'Button_Switch_THT'
+    ; warning
+    @(8475 mils, 1750 mils): Symbol SW1 [SW_Push]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8663 mils, 5409 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8663 mils, 6009 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(8675 mils, 1750 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 1750 mils): Horizontal Wire, length 100 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(9063 mils, 1750 mils): Global Label 'SW2_NET'
+    @(8963 mils, 1750 mils): Label 'SW2_NET'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 2362 mils): Vertical Wire, length 612 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 5609 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 5609 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 5809 mils): Vertical Wire, length 491 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 5809 mils): Horizontal Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 5809 mils): Wire, length 141 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9063 mils, 6300 mils): Horizontal Wire, length 237 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9263 mils, 713 mils): Vertical Wire, length 1037 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9263 mils, 1750 mils): Horizontal Wire, length 200 mils
+[footprint_link_issues]: Footprint 'SW_TH_Tactile_Omron_B3F-10xx' not found in library 'Button_Switch_THT'
+    ; warning
+    @(9263 mils, 1750 mils): Symbol SW2 [SW_Push]
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(9300 mils, 6300 mils): Global Label 'CHG_STAT'
+    @(9200 mils, 6300 mils): Label 'CHG_STAT'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9450 mils, 5166 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9450 mils, 5466 mils): Vertical Wire, length 100 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9463 mils, 1750 mils): Horizontal Wire, length 100 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(9600 mils, 6300 mils): Global Label 'STAT_LED_MID'
+    @(9450 mils, 5566 mils): Label 'STAT_LED_MID'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9750 mils, 6300 mils): Vertical Wire, length 1134 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9750 mils, 5166 mils): Horizontal Wire, length 300 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(9850 mils, 2559 mils): Vertical Wire, length 809 mils
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(10050 mils, 713 mils): Vertical Wire, length 1037 mils
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(10050 mils, 813 mils): Global Label 'SW3_NET'
+    @(9750 mils, 1750 mils): Label 'SW3_NET'
+[footprint_link_issues]: Footprint 'SW_TH_Tactile_Omron_B3F-10xx' not found in library 'Button_Switch_THT'
+    ; warning
+    @(10050 mils, 1750 mils): Symbol SW3 [SW_Push]
+
+ ** ERC messages: 139  Errors 7  Warnings 132
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

@@ -4,4 +4,4 @@ QRCode_branding.svg
 *.lock
 *.swp
 *.tmp
-
+.history/
