@@ -6519,6 +6519,16 @@
 		)
 		(uuid "79335897--5b6-21e5-2b4c-562d21c41346")
 	)
+	(wire
+		(pts
+			(xy 37.15 36.28) (xy 27.15 36.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7c4f4c1-6a8e-4f7b-9e7f-7f4e0a0c8f2d")
+	)
 	(symbol
 		(lib_id "Device:C")
 		(at 154.47 125.09 0)
