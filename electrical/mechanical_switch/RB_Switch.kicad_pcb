@@ -9042,7 +9042,7 @@
 		(uuid "87042d93-a5cb-43e8-ab0b-a7c7412c0f04")
 	)
 	(segment
-		(start 116 86)
+		(start 118 86)
 		(end 115.25 86)
 		(width 0.2)
 		(layer "B.Cu")
