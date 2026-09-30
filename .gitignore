@@ -1,3 +1,7 @@
 QRCodes/*
 QRCode_branding.svg
+*.lck
+*.lock
+*.swp
+*.tmp
 
