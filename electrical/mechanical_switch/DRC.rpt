@@ -1,8 +1,12 @@
 ** Drc report for RB_Switch.kicad_pcb **
-** Created on 2026-09-30T12:51:42 **
+** Created on 2026-09-30T13:03:05 **
 ** Report includes: Errors **
 
 ** Found 42 DRC violations **
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(104.8250 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(102.5000 mm, 113.5000 mm): Track [USB_CC1] on In1.Cu, length 9.0000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(110.7750 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
@@ -10,31 +14,27 @@
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(104.8250 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
-    @(102.5000 mm, 113.5000 mm): Track [USB_CC1] on In1.Cu, length 9.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(104.8250 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
     @(104.2500 mm, 112.5000 mm): Track [VBAT_SENSE] on In1.Cu, length 7.2500 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(141.2500 mm, 85.5000 mm): Track [CHG_PROG] on In2.Cu, length 2.7500 mm
-    @(139.2250 mm, 86.0000 mm): Via [V3V3] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0859 mm)
+    @(109.2250 mm, 113.0000 mm): Via [VBAT_SENSE] on F.Cu - B.Cu
+    @(102.5000 mm, 113.5000 mm): Track [USB_CC1] on In1.Cu, length 9.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(102.6000 mm, 85.0000 mm): Pad 1 [V3V3] of REG1 on F.Cu
-    @(102.6000 mm, 85.5000 mm): Track [L_B] on F.Cu, length 1.8868 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0919 mm)
+    @(170.7500 mm, 91.5000 mm): Track [SW2_NET] on In2.Cu, length 1.2500 mm
+    @(171.3500 mm, 92.0000 mm): Via [SW1_NET] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(105.4000 mm, 86.0000 mm): Pad 8 [VBAT] of REG1 on F.Cu
-    @(105.4000 mm, 86.5000 mm): Track [GND] on F.Cu, length 0.9647 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0859 mm)
+    @(104.2500 mm, 112.5000 mm): Track [VBAT_SENSE] on In1.Cu, length 7.2500 mm
+    @(110.7750 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(102.6000 mm, 87.0000 mm): Pad 5 [VBAT] of REG1 on F.Cu
-    @(102.6000 mm, 86.5000 mm): Track [L_A] on F.Cu, length 1.8868 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    @(163.2250 mm, 113.0000 mm): Via [SW2_NET] on F.Cu - B.Cu
+    @(158.2500 mm, 112.5000 mm): Track [SW1_NET] on In2.Cu, length 7.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(151.0000 mm, 99.0000 mm): PTH pad 1 [SW3_NET] of SW3
-    @(150.5000 mm, 97.7500 mm): Track [SW2_NET] on In2.Cu, length 0.2500 mm
+    @(103.1750 mm, 113.0000 mm): Via [VBAT_SENSE] on F.Cu - B.Cu
+    @(102.5000 mm, 113.5000 mm): Track [USB_CC1] on In1.Cu, length 9.0000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
     Local override; error
     @(151.0000 mm, 99.0000 mm): PTH pad 1 [SW3_NET] of SW3
@@ -42,11 +42,27 @@
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0919 mm)
     Local override; error
     @(105.4000 mm, 86.0000 mm): Pad 8 [VBAT] of REG1 on F.Cu
+    @(105.4000 mm, 86.5000 mm): Track [GND] on F.Cu, length 0.9647 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0919 mm)
+    Local override; error
+    @(105.4000 mm, 86.0000 mm): Pad 8 [VBAT] of REG1 on F.Cu
     @(105.4000 mm, 85.5000 mm): Track [GND] on F.Cu, length 0.9647 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(151.0000 mm, 99.0000 mm): PTH pad 1 [SW3_NET] of SW3
+    @(150.5000 mm, 97.7500 mm): Track [SW2_NET] on In2.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0859 mm)
+    Local override; error
+    @(102.6000 mm, 87.0000 mm): Pad 5 [VBAT] of REG1 on F.Cu
+    @(102.6000 mm, 86.5000 mm): Track [L_A] on F.Cu, length 1.8868 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(95.7000 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
     @(95.2500 mm, 112.5000 mm): Track [EN_NET] on B.Cu, length 1.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0859 mm)
+    Local override; error
+    @(102.6000 mm, 85.0000 mm): Pad 1 [V3V3] of REG1 on F.Cu
+    @(102.6000 mm, 85.5000 mm): Track [L_B] on F.Cu, length 1.8868 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1648 mm)
     Local override; error
     @(95.7000 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
@@ -57,20 +73,28 @@
     @(95.0000 mm, 112.7500 mm): Track [EN_NET] on B.Cu, length 0.2500 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(92.3000 mm, 113.0000 mm): Via [EN_NET] on F.Cu - B.Cu
-    @(91.7500 mm, 113.5000 mm): Track [USB_CC2] on B.Cu, length 4.5000 mm
+    @(180.7000 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(170.2500 mm, 113.5000 mm): Track [SW3_NET] on B.Cu, length 11.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(177.3000 mm, 113.0000 mm): Via [BOOT_NET] on F.Cu - B.Cu
+    @(170.2500 mm, 113.5000 mm): Track [SW3_NET] on B.Cu, length 11.0000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(184.0000 mm, 105.5000 mm): Track [SW3_NET] on B.Cu, length 14.0000 mm
     @(182.4000 mm, 106.0000 mm): Via [EN_NET] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(180.7000 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
-    @(170.2500 mm, 113.5000 mm): Track [SW3_NET] on B.Cu, length 11.0000 mm
+    @(172.0000 mm, 91.5000 mm): Track [SW2_NET] on In2.Cu, length 1.5000 mm
+    @(171.3500 mm, 92.0000 mm): Via [SW1_NET] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(171.2500 mm, 113.5000 mm): Track [SW2_NET] on In2.Cu, length 5.0000 mm
     @(169.2250 mm, 113.0000 mm): Via [SW3_NET] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1680 mm)
+    Local override; error
+    @(156.5000 mm, 104.0000 mm): Track [SW1_NET] on In2.Cu, length 0.5000 mm
+    @(157.5000 mm, 103.5000 mm): PTH pad 2 [GND] of SW3
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1680 mm)
     Local override; error
     @(156.5000 mm, 104.5000 mm): Track [SW1_NET] on In2.Cu, length 0.5000 mm
@@ -79,73 +103,49 @@
     Local override; error
     @(156.2500 mm, 104.0000 mm): Track [SW1_NET] on In2.Cu, length 0.2500 mm
     @(157.5000 mm, 103.5000 mm): PTH pad 2 [GND] of SW3
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(163.2250 mm, 113.0000 mm): Via [SW2_NET] on F.Cu - B.Cu
-    @(158.2500 mm, 112.5000 mm): Track [SW1_NET] on In2.Cu, length 7.2500 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1680 mm)
-    Local override; error
-    @(156.5000 mm, 104.0000 mm): Track [SW1_NET] on In2.Cu, length 0.5000 mm
-    @(157.5000 mm, 103.5000 mm): PTH pad 2 [GND] of SW3
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1680 mm)
     Local override; error
     @(157.0000 mm, 104.5000 mm): Track [SW1_NET] on In2.Cu, length 0.2500 mm
     @(157.5000 mm, 103.5000 mm): PTH pad 2 [GND] of SW3
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(104.2500 mm, 112.5000 mm): Track [VBAT_SENSE] on In1.Cu, length 7.2500 mm
-    @(110.7750 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(109.2250 mm, 113.0000 mm): Via [VBAT_SENSE] on F.Cu - B.Cu
-    @(102.5000 mm, 113.5000 mm): Track [USB_CC1] on In1.Cu, length 9.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(103.1750 mm, 113.0000 mm): Via [VBAT_SENSE] on F.Cu - B.Cu
-    @(102.5000 mm, 113.5000 mm): Track [USB_CC1] on In1.Cu, length 9.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1983 mm)
-    Local override; error
-    @(116.0000 mm, 86.0000 mm): PTH pad 1 [VBAT] of J_BAT
-    @(117.0000 mm, 85.0000 mm): Track [CHG_PROG] on In2.Cu, length 0.2500 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(140.7750 mm, 86.0000 mm): Via [GND] on F.Cu - B.Cu
-    @(141.2500 mm, 85.5000 mm): Track [CHG_PROG] on In2.Cu, length 2.7500 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(177.3000 mm, 113.0000 mm): Via [BOOT_NET] on F.Cu - B.Cu
-    @(170.2500 mm, 113.5000 mm): Track [SW3_NET] on B.Cu, length 11.0000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1868 mm)
     Local override; error
     @(140.7750 mm, 86.0000 mm): Via [GND] on F.Cu - B.Cu
     @(141.2500 mm, 85.7500 mm): Track [CHG_PROG] on In2.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(140.7750 mm, 86.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(141.2500 mm, 85.5000 mm): Track [CHG_PROG] on In2.Cu, length 2.7500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1983 mm)
+    Local override; error
+    @(116.0000 mm, 86.0000 mm): PTH pad 1 [VBAT] of J_BAT
+    @(117.0000 mm, 85.0000 mm): Track [CHG_PROG] on In2.Cu, length 0.2500 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1983 mm)
     Local override; error
     @(116.0000 mm, 86.0000 mm): PTH pad 1 [VBAT] of J_BAT
     @(116.7500 mm, 85.0000 mm): Track [CHG_PROG] on In2.Cu, length 0.2500 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(170.7500 mm, 91.5000 mm): Track [SW2_NET] on In2.Cu, length 1.2500 mm
-    @(171.3500 mm, 92.0000 mm): Via [SW1_NET] on F.Cu - B.Cu
+    @(141.2500 mm, 85.5000 mm): Track [CHG_PROG] on In2.Cu, length 2.7500 mm
+    @(139.2250 mm, 86.0000 mm): Via [V3V3] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1868 mm)
     Local override; error
     @(141.5000 mm, 85.7500 mm): Track [CHG_PROG] on In2.Cu, length 0.2500 mm
     @(140.7750 mm, 86.0000 mm): Via [GND] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(172.0000 mm, 91.5000 mm): Track [SW2_NET] on In2.Cu, length 1.5000 mm
-    @(171.3500 mm, 92.0000 mm): Via [SW1_NET] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1525 mm)
-    Local override; error
-    @(103.5000 mm, 87.0000 mm): Track [VBAT] on B.Cu, length 0.5000 mm
-    @(104.0000 mm, 86.9500 mm): PTH pad 11 [GND] of REG1
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1525 mm)
     Local override; error
     @(104.0000 mm, 86.9500 mm): PTH pad 11 [GND] of REG1
     @(102.5000 mm, 87.0000 mm): Track [VBAT] on B.Cu, length 1.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1525 mm)
+    Local override; error
+    @(103.5000 mm, 87.0000 mm): Track [VBAT] on B.Cu, length 0.5000 mm
+    @(104.0000 mm, 86.9500 mm): PTH pad 11 [GND] of REG1
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(95.7000 mm, 113.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(91.7500 mm, 113.5000 mm): Track [USB_CC2] on B.Cu, length 4.5000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(92.3000 mm, 113.0000 mm): Via [EN_NET] on F.Cu - B.Cu
     @(91.7500 mm, 113.5000 mm): Track [USB_CC2] on B.Cu, length 4.5000 mm
 [hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1944 mm)
     Rule: board setup constraints hole; error
@@ -172,7 +172,7 @@
     @(179.0000 mm, 99.0000 mm): Footprint U1
     @(182.0000 mm, 84.0000 mm): Footprint MH2
 
-** Found 22 unconnected pads **
+** Found 29 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
     @(87.6800 mm, 97.7500 mm): Track [USB_CC1] on In1.Cu, length 0.0700 mm
@@ -231,8 +231,8 @@
     @(87.6800 mm, 100.7500 mm): Track [USB_CC2] on F.Cu, length 0.5700 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(102.5000 mm, 87.0000 mm): Track [VBAT] on B.Cu, length 1.0000 mm
     @(102.6000 mm, 87.0000 mm): Track [VBAT] on F.Cu, length 1.7493 mm
+    @(102.5000 mm, 87.0000 mm): Track [VBAT] on B.Cu, length 1.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(105.4000 mm, 86.0000 mm): Track [VBAT] on B.Cu, length 0.6000 mm
@@ -241,6 +241,34 @@
     Local override; error
     @(105.4000 mm, 87.0000 mm): Track [VBAT] on B.Cu, length 0.1000 mm
     @(105.4000 mm, 87.0000 mm): Pad 6 [VBAT] of REG1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.0000 mm, 99.0000 mm): PTH pad 1 [SW1_NET] of SW1
+    @(107.5000 mm, 99.0000 mm): PTH pad 1 [SW1_NET] of SW1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(156.2500 mm, 104.0000 mm): Track [SW1_NET] on In2.Cu, length 0.2500 mm
+    @(107.5000 mm, 99.0000 mm): PTH pad 1 [SW1_NET] of SW1
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.0000 mm, 99.0000 mm): PTH pad 1 [SW2_NET] of SW2
+    @(132.5000 mm, 99.0000 mm): PTH pad 1 [SW2_NET] of SW2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(150.5000 mm, 98.0000 mm): Track [SW2_NET] on In2.Cu, length 0.5000 mm
+    @(132.5000 mm, 99.0000 mm): PTH pad 1 [SW2_NET] of SW2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(163.2250 mm, 113.0000 mm): Via [SW2_NET] on F.Cu - B.Cu
+    @(150.5000 mm, 98.0000 mm): Track [SW2_NET] on In2.Cu, length 0.5000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(157.5000 mm, 99.0000 mm): PTH pad 1 [SW3_NET] of SW3
+    @(151.0000 mm, 99.0000 mm): PTH pad 1 [SW3_NET] of SW3
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(168.7500 mm, 98.5000 mm): Track [SW3_NET] on B.Cu, length 0.5000 mm
+    @(157.5000 mm, 99.0000 mm): PTH pad 1 [SW3_NET] of SW3
 [unconnected_items]: Missing connection between items
     Local override; error
     @(87.6800 mm, 98.7500 mm): Track [USB_DM] on In1.Cu, length 12.0700 mm

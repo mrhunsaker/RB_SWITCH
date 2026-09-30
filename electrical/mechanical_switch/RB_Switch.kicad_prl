@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 4,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -63,7 +63,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "RB_Switch_rebuilt_DRC_fixed.kicad_prl",
+    "filename": "RB_Switch.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -98,12 +98,12 @@
     "col_widths": [
       162,
       147,
-      91,
-      67,
-      91,
-      91,
-      91,
-      71,
+      113,
+      92,
+      98,
+      115,
+      100,
+      98,
       91,
       91,
       91,
