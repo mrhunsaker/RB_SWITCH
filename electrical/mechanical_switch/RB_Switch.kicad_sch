@@ -6051,7 +6051,7 @@
 				)
 			)
 		)
-		(property "Value" "ESP32-S3-MINI-1"
+		(property "Value" "ESP32-S3-MINI-1-N4R2"
 			(at 124.47 113.09 0)
 			(show_name no)
 			(do_not_autoplace no)
