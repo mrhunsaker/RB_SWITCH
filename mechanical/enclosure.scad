@@ -89,6 +89,14 @@ TOP_R = 2.0;
 TRAVEL = 0.8;
 
 // ---------------------------------------------------------------------
+// QR CODE TO EMBED
+// ---------------------------------------------------------------------
+QR_PATH="../QRCodes/qr-code-processed.svg";
+module qr_code() {
+color("black")resize([24,24,1])linear_extrude(2)import(QR_PATH);
+
+}
+// ---------------------------------------------------------------------
 // LID RETENTION TABS
 // ---------------------------------------------------------------------
 
@@ -610,18 +618,23 @@ module lid() {
                 LID_BOSS_H + 0.1
             ]);
         }
-
+                   
         // -------------------------------------------------------------
-        // Lid text
+        // QR_Code Cutout
         // -------------------------------------------------------------
-
-        translate([95, 20, 3])
+                translate([95, 20, 3])
         color("LightGrey")
         cube([
             25,
             25,
             1
         ]);
+
+        // -------------------------------------------------------------
+        // Lid text
+        // -------------------------------------------------------------
+
+
 
         translate([75, 5, 3])
         linear_extrude(
@@ -635,6 +648,7 @@ module lid() {
             font = FONT
         );
     }
+    translate([95, 20, 3])qr_code();
 
     // -----------------------------------------------------------------
     // INSIDE-FACING LONG-SIDE TABS
@@ -745,7 +759,7 @@ module lid_oneswitch() {
             font = FONT
         );
     }
-
+    translate([95, 20, 3])qr_code();
     // -----------------------------------------------------------------
     // INSIDE-FACING LONG-SIDE TABS
     // -----------------------------------------------------------------
@@ -857,7 +871,7 @@ module lid_twoswitch() {
             font = FONT
         );
     }
-
+    translate([95, 20, 3])qr_code();
     // -----------------------------------------------------------------
     // INSIDE-FACING LONG-SIDE TABS
     // -----------------------------------------------------------------
@@ -1029,7 +1043,7 @@ module lid_fingertrap() {
                 font = FONT
             );
         }
-
+    translate([95, 20, 3])qr_code();
         // -------------------------------------------------------------
         // Outer Divider Switch 1
         // -------------------------------------------------------------
@@ -1144,7 +1158,7 @@ module bar(x = 0, y = 0) {
     rounded_box(
         TOP_L,
         TOP_W,
-        BAR_H,
+        BAR_H+1,
         TOP_R
     );
 
@@ -1219,7 +1233,7 @@ module assembly() {
         translate([
             -1,
             -1,
-            2
+            1
         ])
         bar(
             BAR_X[i],
@@ -1249,7 +1263,7 @@ module assembly_oneswitch() {
         translate([
             -1,
             -1,
-            2
+            1
         ])
         bar(
             BAR_X[i],
@@ -1279,7 +1293,7 @@ module assembly_twoswitch() {
         translate([
             -1,
             -1,
-            2
+            1
         ])
         bar(
             BAR_X[i],
@@ -1309,7 +1323,7 @@ module assembly_fingertrap() {
         translate([
             -1,
             -1,
-            2
+            1
         ])
         bar(
             BAR_X[i],
@@ -1504,7 +1518,9 @@ module printbar() {
 // Uncomment the desired item for export:
 // printbar();
 // base();
-//lid();
+ //lid();
 // lid_oneswitch();
 // lid_twoswitch();
 // lid_fingertrap();
+
+//qr_code();
