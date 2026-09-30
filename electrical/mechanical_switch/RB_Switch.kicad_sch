@@ -8764,6 +8764,1542 @@
 			)
 		)
 	)
+	(wire
+		(pts
+			(xy 52.07 85.09) (xy 49.53 85.09)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000001")
+	)
+	(label "VBAT"
+		(at 49.53 85.09 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000001")
+	)
+	(wire
+		(pts
+			(xy 52.07 82.55) (xy 49.53 82.55)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000002")
+	)
+	(label "GND"
+		(at 49.53 82.55 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000002")
+	)
+	(wire
+		(pts
+			(xy 230.19 142.48000000000002) (xy 232.73 139.94000000000003)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000003")
+	)
+	(label "CHG_STAT"
+		(at 232.73 139.94000000000003 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000003")
+	)
+	(wire
+		(pts
+			(xy 220.03 137.4) (xy 220.03 134.86)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000004")
+	)
+	(label "GND"
+		(at 220.03 134.86 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000004")
+	)
+	(wire
+		(pts
+			(xy 230.19 147.56) (xy 232.73 150.1)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000005")
+	)
+	(label "VBAT"
+		(at 232.73 150.1 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000005")
+	)
+	(wire
+		(pts
+			(xy 220.03 152.64000000000001) (xy 220.03 155.18)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000006")
+	)
+	(label "VBUS"
+		(at 220.03 155.18 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000006")
+	)
+	(wire
+		(pts
+			(xy 209.87 142.48000000000002) (xy 207.33 139.94000000000003)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000007")
+	)
+	(label "CHG_PROG"
+		(at 207.33 139.94000000000003 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000007")
+	)
+	(wire
+		(pts
+			(xy 200.98 97.95) (xy 203.51999999999998 100.49000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000008")
+	)
+	(label "V3V3"
+		(at 203.51999999999998 100.49000000000001 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000008")
+	)
+	(wire
+		(pts
+			(xy 180.66 77.63000000000001) (xy 178.12 75.09)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000009")
+	)
+	(label "L_B"
+		(at 178.12 75.09 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000009")
+	)
+	(wire
+		(pts
+			(xy 190.82 72.55000000000001) (xy 190.82 70.01)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000010")
+	)
+	(label "GND"
+		(at 190.82 70.01 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000010")
+	)
+	(wire
+		(pts
+			(xy 180.66 87.79) (xy 178.12 87.79)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000011")
+	)
+	(label "L_A"
+		(at 178.12 87.79 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000011")
+	)
+	(wire
+		(pts
+			(xy 180.66 97.95) (xy 178.12 100.49000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000012")
+	)
+	(label "VBAT"
+		(at 178.12 100.49000000000001 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000012")
+	)
+	(wire
+		(pts
+			(xy 180.66 92.87) (xy 178.12 95.41000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000013")
+	)
+	(label "EN_NET"
+		(at 178.12 95.41000000000001 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000013")
+	)
+	(wire
+		(pts
+			(xy 180.66 90.33000000000001) (xy 178.12 92.87000000000002)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000014")
+	)
+	(label "GND"
+		(at 178.12 92.87000000000002 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000014")
+	)
+	(wire
+		(pts
+			(xy 180.66 95.41000000000001) (xy 178.12 97.95000000000002)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000015")
+	)
+	(label "VBAT"
+		(at 178.12 97.95000000000002 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000015")
+	)
+	(wire
+		(pts
+			(xy 188.28 72.55000000000001) (xy 185.74 70.01)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000016")
+	)
+	(label "GND"
+		(at 185.74 70.01 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000016")
+	)
+	(wire
+		(pts
+			(xy 236.22 160.02) (xy 233.68 160.02)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000017")
+	)
+	(label "CHG_STAT"
+		(at 233.68 160.02 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000017")
+	)
+	(wire
+		(pts
+			(xy 243.84 160.02) (xy 246.38 160.02)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000018")
+	)
+	(label "STAT_LED_MID"
+		(at 246.38 160.02 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000018")
+	)
+	(wire
+		(pts
+			(xy 200.03 163.83) (xy 200.03 166.37)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000019")
+	)
+	(label "CHG_PROG"
+		(at 200.03 166.37 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000019")
+	)
+	(wire
+		(pts
+			(xy 200.03 156.21) (xy 200.03 153.67000000000002)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000020")
+	)
+	(label "GND"
+		(at 200.03 153.67000000000002 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000020")
+	)
+	(wire
+		(pts
+			(xy 240.03 138.83) (xy 240.03 141.37)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000021")
+	)
+	(label "STAT_LED_MID"
+		(at 240.03 141.37 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000021")
+	)
+	(wire
+		(pts
+			(xy 240.03 131.21) (xy 240.03 128.67000000000002)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000022")
+	)
+	(label "V3V3"
+		(at 240.03 128.67000000000002 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000022")
+	)
+	(wire
+		(pts
+			(xy 48.58 181.37) (xy 48.58 183.91)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000023")
+	)
+	(label "USB_CC1"
+		(at 48.58 183.91 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000023")
+	)
+	(wire
+		(pts
+			(xy 48.58 173.75) (xy 48.58 171.21)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000024")
+	)
+	(label "GND"
+		(at 48.58 171.21 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000024")
+	)
+	(wire
+		(pts
+			(xy 38.58 181.37) (xy 38.58 183.91)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000025")
+	)
+	(label "USB_CC2"
+		(at 38.58 183.91 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000025")
+	)
+	(wire
+		(pts
+			(xy 38.58 173.75) (xy 38.58 171.21)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000026")
+	)
+	(label "GND"
+		(at 38.58 171.21 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000026")
+	)
+	(wire
+		(pts
+			(xy 104.47 73.9) (xy 104.47 76.44000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000027")
+	)
+	(label "V3V3"
+		(at 104.47 76.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000027")
+	)
+	(wire
+		(pts
+			(xy 104.47 66.28) (xy 104.47 63.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000028")
+	)
+	(label "EN_NET"
+		(at 104.47 63.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000028")
+	)
+	(wire
+		(pts
+			(xy 84.47 73.9) (xy 84.47 76.44000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000029")
+	)
+	(label "V3V3"
+		(at 84.47 76.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000029")
+	)
+	(wire
+		(pts
+			(xy 84.47 66.28) (xy 84.47 63.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000030")
+	)
+	(label "BOOT_NET"
+		(at 84.47 63.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000030")
+	)
+	(wire
+		(pts
+			(xy 37.15 63.900000000000006) (xy 37.15 66.44000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000031")
+	)
+	(label "VBAT"
+		(at 37.15 66.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000031")
+	)
+	(wire
+		(pts
+			(xy 37.15 56.28) (xy 37.15 53.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000032")
+	)
+	(label "VBAT_SENSE"
+		(at 37.15 53.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000032")
+	)
+	(wire
+		(pts
+			(xy 37.15 43.900000000000006) (xy 37.15 46.440000000000005)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000033")
+	)
+	(label "VBAT_SENSE"
+		(at 37.15 46.440000000000005 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000033")
+	)
+	(wire
+		(pts
+			(xy 37.15 36.28) (xy 37.15 33.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000034")
+	)
+	(label "GND"
+		(at 37.15 33.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000034")
+	)
+	(wire
+		(pts
+			(xy 170.82 76.60000000000001) (xy 170.82 79.14000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000035")
+	)
+	(label "VBAT"
+		(at 170.82 79.14000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000035")
+	)
+	(wire
+		(pts
+			(xy 170.82 68.98) (xy 170.82 66.44)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000036")
+	)
+	(label "GND"
+		(at 170.82 66.44 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000036")
+	)
+	(wire
+		(pts
+			(xy 210.82 76.60000000000001) (xy 210.82 79.14000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000037")
+	)
+	(label "V3V3"
+		(at 210.82 79.14000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000037")
+	)
+	(wire
+		(pts
+			(xy 210.82 68.98) (xy 210.82 66.44)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000038")
+	)
+	(label "GND"
+		(at 210.82 66.44 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000038")
+	)
+	(wire
+		(pts
+			(xy 144.47 98.9) (xy 144.47 101.44000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000039")
+	)
+	(label "V3V3"
+		(at 144.47 101.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000039")
+	)
+	(wire
+		(pts
+			(xy 144.47 91.28) (xy 144.47 88.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000040")
+	)
+	(label "GND"
+		(at 144.47 88.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000040")
+	)
+	(wire
+		(pts
+			(xy 200.03 138.83) (xy 200.03 141.37)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000041")
+	)
+	(label "VBUS"
+		(at 200.03 141.37 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000041")
+	)
+	(wire
+		(pts
+			(xy 200.03 131.21) (xy 200.03 128.67000000000002)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000042")
+	)
+	(label "GND"
+		(at 200.03 128.67000000000002 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000042")
+	)
+	(wire
+		(pts
+			(xy 144.47 128.9) (xy 144.47 131.44)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000043")
+	)
+	(label "V3V3"
+		(at 144.47 131.44 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000043")
+	)
+	(wire
+		(pts
+			(xy 144.47 121.28) (xy 144.47 118.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000044")
+	)
+	(label "GND"
+		(at 144.47 118.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000044")
+	)
+	(wire
+		(pts
+			(xy 154.47 128.9) (xy 154.47 131.44)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000045")
+	)
+	(label "V3V3"
+		(at 154.47 131.44 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000045")
+	)
+	(wire
+		(pts
+			(xy 154.47 121.28) (xy 154.47 118.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000046")
+	)
+	(label "GND"
+		(at 154.47 118.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000046")
+	)
+	(wire
+		(pts
+			(xy 164.47 128.9) (xy 164.47 131.44)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000047")
+	)
+	(label "V3V3"
+		(at 164.47 131.44 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000047")
+	)
+	(wire
+		(pts
+			(xy 164.47 121.28) (xy 164.47 118.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000048")
+	)
+	(label "GND"
+		(at 164.47 118.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000048")
+	)
+	(wire
+		(pts
+			(xy 27.15 43.900000000000006) (xy 27.15 46.440000000000005)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000049")
+	)
+	(label "VBAT_SENSE"
+		(at 27.15 46.440000000000005 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000049")
+	)
+	(wire
+		(pts
+			(xy 27.15 36.28) (xy 27.15 33.74)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000050")
+	)
+	(label "GND"
+		(at 27.15 33.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000050")
+	)
+	(wire
+		(pts
+			(xy 215.27 28.259999999999998) (xy 215.27 30.799999999999997)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000051")
+	)
+	(label "SW1_NET"
+		(at 215.27 30.799999999999997 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000051")
+	)
+	(wire
+		(pts
+			(xy 215.27 20.64) (xy 215.27 18.1)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000052")
+	)
+	(label "GND"
+		(at 215.27 18.1 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000052")
+	)
+	(wire
+		(pts
+			(xy 235.27 28.259999999999998) (xy 235.27 30.799999999999997)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000053")
+	)
+	(label "SW2_NET"
+		(at 235.27 30.799999999999997 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000053")
+	)
+	(wire
+		(pts
+			(xy 235.27 20.64) (xy 235.27 18.1)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000054")
+	)
+	(label "GND"
+		(at 235.27 18.1 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000054")
+	)
+	(wire
+		(pts
+			(xy 255.27 28.259999999999998) (xy 255.27 30.799999999999997)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000055")
+	)
+	(label "SW3_NET"
+		(at 255.27 30.799999999999997 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000055")
+	)
+	(wire
+		(pts
+			(xy 255.27 20.64) (xy 255.27 18.1)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000056")
+	)
+	(label "GND"
+		(at 255.27 18.1 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000056")
+	)
+	(wire
+		(pts
+			(xy 210.82 101.60000000000001) (xy 210.82 104.14000000000001)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000057")
+	)
+	(label "L_A"
+		(at 210.82 104.14000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000057")
+	)
+	(wire
+		(pts
+			(xy 210.82 93.98) (xy 210.82 91.44)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000058")
+	)
+	(label "L_B"
+		(at 210.82 91.44 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000058")
+	)
+	(wire
+		(pts
+			(xy 210.19 44.45) (xy 207.65 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000059")
+	)
+	(label "SW1_NET"
+		(at 207.65 44.45 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000059")
+	)
+	(wire
+		(pts
+			(xy 220.35000000000002 44.45) (xy 222.89000000000001 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000060")
+	)
+	(label "GND"
+		(at 222.89000000000001 44.45 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000060")
+	)
+	(wire
+		(pts
+			(xy 230.19 44.45) (xy 227.65 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000061")
+	)
+	(label "SW2_NET"
+		(at 227.65 44.45 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000061")
+	)
+	(wire
+		(pts
+			(xy 240.35000000000002 44.45) (xy 242.89000000000001 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000062")
+	)
+	(label "GND"
+		(at 242.89000000000001 44.45 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000062")
+	)
+	(wire
+		(pts
+			(xy 250.19 44.45) (xy 247.65 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000063")
+	)
+	(label "SW3_NET"
+		(at 247.65 44.45 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000063")
+	)
+	(wire
+		(pts
+			(xy 260.35 44.45) (xy 262.89000000000004 44.45)
+		)
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-700000000064")
+	)
+	(label "GND"
+		(at 262.89000000000004 44.45 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-700000000064")
+	)
+	(wire
+		(pts (xy 52.07 85.09) (xy 49.53 85.09))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74001")
+	)
+	(label "VBAT"
+		(at 49.53 85.09 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74001")
+	)
+	(wire
+		(pts (xy 52.07 82.55) (xy 49.53 82.55))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74002")
+	)
+	(label "GND"
+		(at 49.53 82.55 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74002")
+	)
+	(wire
+		(pts (xy 230.19 142.48000000000002) (xy 232.73 142.48000000000002))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74003")
+	)
+	(label "CHG_STAT"
+		(at 232.73 142.48000000000002 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74003")
+	)
+	(wire
+		(pts (xy 220.03 137.4) (xy 220.03 134.86))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74004")
+	)
+	(label "GND"
+		(at 220.03 134.86 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74004")
+	)
+	(wire
+		(pts (xy 230.19 147.56) (xy 232.73 147.56))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74005")
+	)
+	(label "VBAT"
+		(at 232.73 147.56 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74005")
+	)
+	(wire
+		(pts (xy 220.03 152.64000000000001) (xy 220.03 155.18))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74006")
+	)
+	(label "VBUS"
+		(at 220.03 155.18 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74006")
+	)
+	(wire
+		(pts (xy 209.87 142.48000000000002) (xy 207.33 142.48000000000002))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74007")
+	)
+	(label "CHG_PROG"
+		(at 207.33 142.48000000000002 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74007")
+	)
+	(wire
+		(pts (xy 200.98 97.95) (xy 203.51999999999998 97.95))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74008")
+	)
+	(label "V3V3"
+		(at 203.51999999999998 97.95 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74008")
+	)
+	(wire
+		(pts (xy 180.66 77.63000000000001) (xy 178.12 77.63000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74009")
+	)
+	(label "L_B"
+		(at 178.12 77.63000000000001 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74009")
+	)
+	(wire
+		(pts (xy 190.82 72.55000000000001) (xy 190.82 70.01))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7400a")
+	)
+	(label "GND"
+		(at 190.82 70.01 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7400a")
+	)
+	(wire
+		(pts (xy 180.66 87.79) (xy 178.12 87.79))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7400b")
+	)
+	(label "L_A"
+		(at 178.12 87.79 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7400b")
+	)
+	(wire
+		(pts (xy 180.66 97.95) (xy 178.12 97.95))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7400c")
+	)
+	(label "VBAT"
+		(at 178.12 97.95 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7400c")
+	)
+	(wire
+		(pts (xy 180.66 92.87) (xy 178.12 92.87))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7400d")
+	)
+	(label "EN_NET"
+		(at 178.12 92.87 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7400d")
+	)
+	(wire
+		(pts (xy 180.66 90.33000000000001) (xy 178.12 90.33000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7400e")
+	)
+	(label "GND"
+		(at 178.12 90.33000000000001 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7400e")
+	)
+	(wire
+		(pts (xy 180.66 95.41000000000001) (xy 178.12 95.41000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7400f")
+	)
+	(label "VBAT"
+		(at 178.12 95.41000000000001 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7400f")
+	)
+	(wire
+		(pts (xy 188.28 72.55000000000001) (xy 188.28 70.01))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74010")
+	)
+	(label "GND"
+		(at 188.28 70.01 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74010")
+	)
+	(wire
+		(pts (xy 236.22 160.02) (xy 233.68 160.02))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74011")
+	)
+	(label "CHG_STAT"
+		(at 233.68 160.02 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74011")
+	)
+	(wire
+		(pts (xy 243.84 160.02) (xy 246.38 160.02))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74012")
+	)
+	(label "STAT_LED_MID"
+		(at 246.38 160.02 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74012")
+	)
+	(wire
+		(pts (xy 200.03 163.83) (xy 200.03 166.37))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74013")
+	)
+	(label "CHG_PROG"
+		(at 200.03 166.37 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74013")
+	)
+	(wire
+		(pts (xy 200.03 156.21) (xy 200.03 153.67000000000002))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74014")
+	)
+	(label "GND"
+		(at 200.03 153.67000000000002 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74014")
+	)
+	(wire
+		(pts (xy 240.03 138.83) (xy 240.03 141.37))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74015")
+	)
+	(label "STAT_LED_MID"
+		(at 240.03 141.37 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74015")
+	)
+	(wire
+		(pts (xy 240.03 131.21) (xy 240.03 128.67000000000002))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74016")
+	)
+	(label "V3V3"
+		(at 240.03 128.67000000000002 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74016")
+	)
+	(wire
+		(pts (xy 48.58 181.37) (xy 48.58 183.91))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74017")
+	)
+	(label "USB_CC1"
+		(at 48.58 183.91 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74017")
+	)
+	(wire
+		(pts (xy 48.58 173.75) (xy 48.58 171.21))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74018")
+	)
+	(label "GND"
+		(at 48.58 171.21 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74018")
+	)
+	(wire
+		(pts (xy 38.58 181.37) (xy 38.58 183.91))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74019")
+	)
+	(label "USB_CC2"
+		(at 38.58 183.91 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74019")
+	)
+	(wire
+		(pts (xy 38.58 173.75) (xy 38.58 171.21))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7401a")
+	)
+	(label "GND"
+		(at 38.58 171.21 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7401a")
+	)
+	(wire
+		(pts (xy 104.47 73.9) (xy 104.47 76.44000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7401b")
+	)
+	(label "V3V3"
+		(at 104.47 76.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7401b")
+	)
+	(wire
+		(pts (xy 104.47 66.28) (xy 104.47 63.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7401c")
+	)
+	(label "EN_NET"
+		(at 104.47 63.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7401c")
+	)
+	(wire
+		(pts (xy 84.47 73.9) (xy 84.47 76.44000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7401d")
+	)
+	(label "V3V3"
+		(at 84.47 76.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7401d")
+	)
+	(wire
+		(pts (xy 84.47 66.28) (xy 84.47 63.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7401e")
+	)
+	(label "BOOT_NET"
+		(at 84.47 63.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7401e")
+	)
+	(wire
+		(pts (xy 37.15 63.900000000000006) (xy 37.15 66.44000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7401f")
+	)
+	(label "VBAT"
+		(at 37.15 66.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7401f")
+	)
+	(wire
+		(pts (xy 37.15 56.28) (xy 37.15 53.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74020")
+	)
+	(label "VBAT_SENSE"
+		(at 37.15 53.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74020")
+	)
+	(wire
+		(pts (xy 37.15 43.900000000000006) (xy 37.15 46.440000000000005))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74021")
+	)
+	(label "VBAT_SENSE"
+		(at 37.15 46.440000000000005 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74021")
+	)
+	(wire
+		(pts (xy 37.15 36.28) (xy 37.15 33.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74022")
+	)
+	(label "GND"
+		(at 37.15 33.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74022")
+	)
+	(wire
+		(pts (xy 170.82 76.60000000000001) (xy 170.82 79.14000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74023")
+	)
+	(label "VBAT"
+		(at 170.82 79.14000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74023")
+	)
+	(wire
+		(pts (xy 170.82 68.98) (xy 170.82 66.44))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74024")
+	)
+	(label "GND"
+		(at 170.82 66.44 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74024")
+	)
+	(wire
+		(pts (xy 210.82 76.60000000000001) (xy 210.82 79.14000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74025")
+	)
+	(label "V3V3"
+		(at 210.82 79.14000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74025")
+	)
+	(wire
+		(pts (xy 210.82 68.98) (xy 210.82 66.44))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74026")
+	)
+	(label "GND"
+		(at 210.82 66.44 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74026")
+	)
+	(wire
+		(pts (xy 144.47 98.9) (xy 144.47 101.44000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74027")
+	)
+	(label "V3V3"
+		(at 144.47 101.44000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74027")
+	)
+	(wire
+		(pts (xy 144.47 91.28) (xy 144.47 88.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74028")
+	)
+	(label "GND"
+		(at 144.47 88.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74028")
+	)
+	(wire
+		(pts (xy 200.03 138.83) (xy 200.03 141.37))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74029")
+	)
+	(label "VBUS"
+		(at 200.03 141.37 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74029")
+	)
+	(wire
+		(pts (xy 200.03 131.21) (xy 200.03 128.67000000000002))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7402a")
+	)
+	(label "GND"
+		(at 200.03 128.67000000000002 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7402a")
+	)
+	(wire
+		(pts (xy 144.47 128.9) (xy 144.47 131.44))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7402b")
+	)
+	(label "V3V3"
+		(at 144.47 131.44 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7402b")
+	)
+	(wire
+		(pts (xy 144.47 121.28) (xy 144.47 118.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7402c")
+	)
+	(label "GND"
+		(at 144.47 118.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7402c")
+	)
+	(wire
+		(pts (xy 154.47 128.9) (xy 154.47 131.44))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7402d")
+	)
+	(label "V3V3"
+		(at 154.47 131.44 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7402d")
+	)
+	(wire
+		(pts (xy 154.47 121.28) (xy 154.47 118.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7402e")
+	)
+	(label "GND"
+		(at 154.47 118.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7402e")
+	)
+	(wire
+		(pts (xy 164.47 128.9) (xy 164.47 131.44))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7402f")
+	)
+	(label "V3V3"
+		(at 164.47 131.44 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7402f")
+	)
+	(wire
+		(pts (xy 164.47 121.28) (xy 164.47 118.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74030")
+	)
+	(label "GND"
+		(at 164.47 118.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74030")
+	)
+	(wire
+		(pts (xy 27.15 43.900000000000006) (xy 27.15 46.440000000000005))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74031")
+	)
+	(label "VBAT_SENSE"
+		(at 27.15 46.440000000000005 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74031")
+	)
+	(wire
+		(pts (xy 27.15 36.28) (xy 27.15 33.74))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74032")
+	)
+	(label "GND"
+		(at 27.15 33.74 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74032")
+	)
+	(wire
+		(pts (xy 215.27 28.259999999999998) (xy 215.27 30.799999999999997))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74033")
+	)
+	(label "SW1_NET"
+		(at 215.27 30.799999999999997 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74033")
+	)
+	(wire
+		(pts (xy 215.27 20.64) (xy 215.27 18.1))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74034")
+	)
+	(label "GND"
+		(at 215.27 18.1 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74034")
+	)
+	(wire
+		(pts (xy 235.27 28.259999999999998) (xy 235.27 30.799999999999997))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74035")
+	)
+	(label "SW2_NET"
+		(at 235.27 30.799999999999997 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74035")
+	)
+	(wire
+		(pts (xy 235.27 20.64) (xy 235.27 18.1))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74036")
+	)
+	(label "GND"
+		(at 235.27 18.1 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74036")
+	)
+	(wire
+		(pts (xy 255.27 28.259999999999998) (xy 255.27 30.799999999999997))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74037")
+	)
+	(label "SW3_NET"
+		(at 255.27 30.799999999999997 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74037")
+	)
+	(wire
+		(pts (xy 255.27 20.64) (xy 255.27 18.1))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74038")
+	)
+	(label "GND"
+		(at 255.27 18.1 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74038")
+	)
+	(wire
+		(pts (xy 210.82 101.60000000000001) (xy 210.82 104.14000000000001))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74039")
+	)
+	(label "L_A"
+		(at 210.82 104.14000000000001 90)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74039")
+	)
+	(wire
+		(pts (xy 210.82 93.98) (xy 210.82 91.44))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7403a")
+	)
+	(label "L_B"
+		(at 210.82 91.44 270)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7403a")
+	)
+	(wire
+		(pts (xy 210.19 44.45) (xy 207.65 44.45))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7403b")
+	)
+	(label "SW1_NET"
+		(at 207.65 44.45 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7403b")
+	)
+	(wire
+		(pts (xy 220.35000000000002 44.45) (xy 222.89000000000001 44.45))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7403c")
+	)
+	(label "GND"
+		(at 222.89000000000001 44.45 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7403c")
+	)
+	(wire
+		(pts (xy 230.19 44.45) (xy 227.65 44.45))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7403d")
+	)
+	(label "SW2_NET"
+		(at 227.65 44.45 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7403d")
+	)
+	(wire
+		(pts (xy 240.35000000000002 44.45) (xy 242.89000000000001 44.45))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7403e")
+	)
+	(label "GND"
+		(at 242.89000000000001 44.45 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7403e")
+	)
+	(wire
+		(pts (xy 250.19 44.45) (xy 247.65 44.45))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b7403f")
+	)
+	(label "SW3_NET"
+		(at 247.65 44.45 0)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b7403f")
+	)
+	(wire
+		(pts (xy 260.35 44.45) (xy 262.89000000000004 44.45))
+		(stroke (width 0) (type default))
+		(uuid "d6000000-0000-4000-8000-00ba43b74040")
+	)
+	(label "GND"
+		(at 262.89000000000004 44.45 180)
+		(fields_autoplaced yes)
+		(effects (font (size 1.27 1.27)))
+		(uuid "d6100000-0000-4000-8000-00ba43b74040")
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
