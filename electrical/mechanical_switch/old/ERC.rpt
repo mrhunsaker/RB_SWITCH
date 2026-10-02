@@ -1,0 +1,183 @@
+ERC report (2026-10-01T06:26:17, Encoding UTF8)
+Report includes: Errors
+
+***** Sheet /
+[label_dangling]: Label not connected
+    ; error
+    @(1050 mils, 1350 mils): Label 'VBAT_SENSE'
+[label_dangling]: Label not connected
+    ; error
+    @(1450 mils, 1350 mils): Label 'VBAT_SENSE'
+[label_dangling]: Label not connected
+    ; error
+    @(1450 mils, 2100 mils): Label 'VBAT'
+[label_dangling]: Label not connected
+    ; error
+    @(1450 mils, 2600 mils): Label 'VBAT_SENSE'
+[label_dangling]: Label not connected
+    ; error
+    @(1500 mils, 6750 mils): Label 'USB_CC2'
+[label_dangling]: Label not connected
+    ; error
+    @(1900 mils, 6750 mils): Label 'USB_CC1'
+[label_dangling]: Label not connected
+    ; error
+    @(1950 mils, 3350 mils): Label 'VBAT'
+[label_dangling]: Label not connected
+    ; error
+    @(3050 mils, 1950 mils): Label 'BOOT_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(3350 mils, 2500 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(3350 mils, 3000 mils): Label 'BOOT_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(3400 mils, 6000 mils): Label 'USB_CC1'
+[label_dangling]: Label not connected
+    ; error
+    @(3400 mils, 6100 mils): Label 'USB_CC2'
+[label_dangling]: Label not connected
+    ; error
+    @(3400 mils, 6300 mils): Label 'USB_DM'
+[label_dangling]: Label not connected
+    ; error
+    @(3400 mils, 6400 mils): Label 'USB_DM'
+[label_dangling]: Label not connected
+    ; error
+    @(3400 mils, 6500 mils): Label 'USB_DP'
+[label_dangling]: Label not connected
+    ; error
+    @(3400 mils, 6600 mils): Label 'USB_DP'
+[label_dangling]: Label not connected
+    ; error
+    @(3800 mils, 1950 mils): Label 'EN_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(4100 mils, 2500 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(4100 mils, 3000 mils): Label 'EN_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(4200 mils, 3150 mils): Label 'EN_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(4200 mils, 3350 mils): Label 'BOOT_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(4200 mils, 3850 mils): Label 'VBAT_SENSE'
+[label_dangling]: Label not connected
+    ; error
+    @(4200 mils, 4350 mils): Label 'SW1_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(4200 mils, 4450 mils): Label 'SW2_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(4200 mils, 4550 mils): Label 'SW3_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(4900 mils, 2850 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(5600 mils, 3450 mils): Label 'USB_DM'
+[label_dangling]: Label not connected
+    ; error
+    @(5600 mils, 3550 mils): Label 'USB_DP'
+[label_dangling]: Label not connected
+    ; error
+    @(5700 mils, 3500 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(5700 mils, 4650 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(6100 mils, 4650 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(6500 mils, 4650 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(6750 mils, 2600 mils): Label 'VBAT'
+[label_dangling]: Label not connected
+    ; error
+    @(7000 mils, 3050 mils): Label 'VBAT'
+[label_dangling]: Label not connected
+    ; error
+    @(7000 mils, 3150 mils): Label 'VBAT'
+[label_dangling]: Label not connected
+    ; error
+    @(7000 mils, 3250 mils): Label 'VBAT'
+[label_dangling]: Label not connected
+    ; error
+    @(7000 mils, 3450 mils): Label 'L_A'
+[label_dangling]: Label not connected
+    ; error
+    @(7000 mils, 3850 mils): Label 'L_B'
+[label_dangling]: Label not connected
+    ; error
+    @(7900 mils, 6050 mils): Label 'CHG_PROG'
+[label_dangling]: Label not connected
+    ; error
+    @(8000 mils, 3050 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(8000 mils, 3350 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(8150 mils, 5800 mils): Label 'CHG_PROG'
+[label_dangling]: Label not connected
+    ; error
+    @(8200 mils, 1750 mils): Label 'SW1_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(8300 mils, 2600 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(8300 mils, 3600 mils): Label 'L_A'
+[label_dangling]: Label not connected
+    ; error
+    @(8300 mils, 4100 mils): Label 'L_B'
+[label_dangling]: Label not connected
+    ; error
+    @(8500 mils, 700 mils): Label 'SW1_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(8950 mils, 1750 mils): Label 'SW2_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(9150 mils, 5600 mils): Label 'VBAT'
+[label_dangling]: Label not connected
+    ; error
+    @(9150 mils, 5800 mils): Label 'CHG_STAT'
+[label_dangling]: Label not connected
+    ; error
+    @(9200 mils, 6300 mils): Label 'CHG_STAT'
+[label_dangling]: Label not connected
+    ; error
+    @(9250 mils, 700 mils): Label 'SW2_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(9450 mils, 5050 mils): Label 'STAT_LED_MID'
+[label_dangling]: Label not connected
+    ; error
+    @(9450 mils, 5550 mils): Label 'V3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(9700 mils, 6300 mils): Label 'STAT_LED_MID'
+[label_dangling]: Label not connected
+    ; error
+    @(9750 mils, 1750 mils): Label 'SW3_NET'
+[label_dangling]: Label not connected
+    ; error
+    @(10050 mils, 700 mils): Label 'SW3_NET'
+
+ ** ERC messages: 57  Errors 57  Warnings 0
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

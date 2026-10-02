@@ -1,0 +1,38 @@
+** Drc report for RB_Switch.kicad_pcb **
+** Created on 2026-10-01T06:26:41 **
+** Report includes: Errors, Warnings **
+
+** Found 5 DRC violations **
+[shorting_items]: Items shorting two nets (nets L_A and VBUS)
+    Local override; error
+    @(98.6000 mm, 88.2750 mm): Pad 1 [L_A] of L1 on F.Cu
+    @(108.2000 mm, 89.9000 mm): Track [VBUS] on F.Cu, length 12.6500 mm
+[shorting_items]: Items shorting two nets (nets VBAT and GND)
+    Local override; error
+    @(105.0000 mm, 87.6000 mm): Track [VBAT] on F.Cu, length 2.0000 mm
+    @(104.0000 mm, 86.0000 mm): Pad 11 [GND] of REG1 on F.Cu
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; error
+    @(179.0000 mm, 99.0000 mm): Footprint U1
+    @(185.5000 mm, 113.5000 mm): Footprint SW_RST
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(108.2000 mm, 89.9000 mm): Track [VBUS] on F.Cu, length 12.6500 mm
+    @(98.6000 mm, 88.2750 mm): Pad 1 [L_A] of L1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(105.0000 mm, 87.6000 mm): Track [VBAT] on F.Cu, length 2.0000 mm
+    @(104.0000 mm, 86.0000 mm): Pad 11 [GND] of REG1 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
