@@ -1,7 +1,8 @@
 /*
  * RB_SWITCH_firmware.ino
  *
- * RB Switch - production firmware for the RevD/RevD2 mechanical-switch PCB.
+ * RB Switch - production firmware for the three-button mechanical-switch PCB
+ * (RevD/RevD2 hardware; pin map matches the current KiCad schematic and PCB).
  *
  * Hardware inputs:
  *   SW1 -> GPIO10 -> Left Arrow
@@ -37,10 +38,22 @@
 #include <NimBLEHIDDevice.h>
 
 // -----------------------------------------------------------------------------
-// Hardware pin map — derived from the RevD/RevD2 schematic and net table.
-// SW1_NET -> U1 pin 14 -> GPIO10
-// SW2_NET -> U1 pin 15 -> GPIO11
-// SW3_NET -> U1 pin 16 -> GPIO12
+// Hardware pin map: matches the KiCad schematic/PCB in
+// electrical/mechanical_switch/ (see docs/hardware.md).
+//
+//   /SW1_NET -> U1 pin 14 (IO10) -> GPIO10
+//   /SW2_NET -> U1 pin 15 (IO11) -> GPIO11
+//   /SW3_NET -> U1 pin 16 (IO12) -> GPIO12
+//
+// Other U1 connections on the board (not driven by this firmware):
+//   /BOOT_NET    -> U1 pin 4  (IO0)  BOOT button, 10 k pull-up to 3V3
+//   /EN_NET      -> U1 pin 45 (EN)   RESET button, 10 k pull-up to 3V3
+//   /USB_DM      -> U1 pin 23 (IO19) native USB D-
+//   /USB_DP      -> U1 pin 24 (IO20) native USB D+
+//   /VBAT_SENSE  -> U1 pin 9  (IO5)  VBAT / 2 divider (100 k + 100 k), 100 nF;
+//                                    not read yet, battery level is fixed
+//                                    at 100 below.
+// The charge-status LED (D1) is driven by the MCP73831, not by a GPIO.
 // -----------------------------------------------------------------------------
 
 static constexpr uint8_t SW1_PIN = 10;

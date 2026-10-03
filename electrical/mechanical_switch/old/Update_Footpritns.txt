@@ -1,0 +1,33 @@
+Updated footprint L1 (Inductor_SMD:L_Bourns-SRN4018): : OK
+Updated footprint C11 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint R1 (Resistor_SMD:R_0603_1608Metric): : OK
+Updated footprint C1 (Capacitor_SMD:C_0603_1608Metric): : OK
+Error: Updated footprint SW3 (Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx): *** library footprint not found ***
+Updated footprint C2 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint J_USB1 (Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal): : OK
+Updated footprint R5 (Resistor_SMD:R_0603_1608Metric): : OK
+Error: Updated footprint SW2 (Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx): *** library footprint not found ***
+Info: Updated footprint SW_BOOT1 (Button_Switch_SMD:SW_SPST_B3U-1000P): : (no changes)
+Updated footprint R6 (Resistor_SMD:R_0603_1608Metric): : OK
+Updated footprint R7 (Resistor_SMD:R_0603_1608Metric): : OK
+Info: Updated footprint REG1 (Package_SON:Texas_DRC0010J): : (no changes)
+Updated footprint C3 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint C4 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint C10 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint C5 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint J_BAT1 (Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal): : OK
+Updated footprint C8 (Capacitor_SMD:C_0603_1608Metric): : OK
+Info: Updated footprint SW_RST1 (Button_Switch_SMD:SW_SPST_B3U-1000P): : (no changes)
+Updated footprint R8 (Resistor_SMD:R_0603_1608Metric): : OK
+Updated footprint C6 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint MH2 (MountingHole:MountingHole_4.3mm_M4): : OK
+Error: Updated footprint SW1 (Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx): *** library footprint not found ***
+Updated footprint C9 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint C7 (Capacitor_SMD:C_0603_1608Metric): : OK
+Updated footprint U1 (RF_Module:ESP32-S2-MINI-1): : OK
+Updated footprint R2 (Resistor_SMD:R_0603_1608Metric): : OK
+Updated footprint MH1 (MountingHole:MountingHole_4.3mm_M4): : OK
+Updated footprint U_CHG1 (Package_TO_SOT_SMD:SOT-23-5): : OK
+Updated footprint R4 (Resistor_SMD:R_0603_1608Metric): : OK
+Updated footprint D1 (LED_SMD:LED_0603_1608Metric): : OK
+Updated footprint R3 (Resistor_SMD:R_0603_1608Metric): : OK

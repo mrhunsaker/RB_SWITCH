@@ -60,6 +60,11 @@ The current board uses:
 
 Hardware source files are in `electrical/`, `bom/`, and `mechanical/`.
 
+- `electrical/mechanical_switch/RB_Switch.kicad_sch` and `.kicad_pcb` are the current KiCad 10 schematic and 4-layer PCB. The schematic is fully wired, and its netlist matches the PCB.
+- `electrical/mechanical_switch/VERIFICATION.md` records how the board was checked against the firmware and what was not checked.
+- `docs/hardware.md` has the pin map and a part-by-part description of the connections.
+- **Before ordering boards:** the files in `electrical/mechanical_switch/gerbers/` and the PCB images in `electrical/mechanical_switch/diagrams/` come from an earlier layout. Re-export them with `create_gerber.ps1`.
+
 ## Production scope
 
 The production design has three mechanical switch inputs only. It does not implement touch sensors, proximity sensors, NeoPixel/RGB indicators, mono-jack inputs, or the earlier F-key input mapping.

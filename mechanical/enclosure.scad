@@ -32,6 +32,18 @@
  * base walls. The corresponding slots in the base are cut through
  * the wall thickness so the lid tabs can enter the slots when the
  * lid is installed.
+ *
+ * LONG-SIDE TAB SCREW HOLES:
+ * The long-side lid tabs now have a horizontal M2 clearance hole on
+ * the same axis as the cylinder cutout in the base walls, so a single
+ * M2 screw can pass through the wall and the installed tab. The axis
+ * is defined once (TAB_SCREW_*) and shared by base and lid so the
+ * holes always line up.
+ *
+ * SHORT-SIDE LAYOUT (updated):
+ * The USB-C cutout is now on the LEFT short side (x = 0).
+ * The short-side press-fit tab and its base slot are now on the
+ * RIGHT short side (x = L), opposite the USB-C cutout.
  */
 
 // ---------------------------------------------------------------------
@@ -102,8 +114,9 @@ TRAVEL = 0.8;
 // This places each tab immediately against the inside face of its
 // corresponding 2 mm wall.
 
-// The short/left-side tab is positioned on the inside face of the
-// left-hand wall, opposite the USB-C cutout.
+// The short/right-side tab is positioned on the inside face of the
+// right-hand wall, opposite the USB-C cutout (which is now on the
+// left-hand wall).
 
 TAB_L = 10;
 TAB_W_LONG = 1.0;
@@ -124,14 +137,37 @@ SLOT_L = TAB_L + 0.5;
 SLOT_W_LONG = TAB_W_LONG + 0.2;
 SLOT_H = TAB_HEIGHT + 0.5;
 
-// Vertical tab on left side, opposite USB-C
-SHORT_TAB_X = WALL;
+// Vertical tab on right side, opposite USB-C
+SHORT_TAB_X = L - WALL;
 SHORT_TAB_Y = 12.4;
 
 // Slot parameters for vertical tab
+// 0.2 mm vertical clearance provides a snug printable fit.
 SHORT_SLOT_W = 1.0;
 SHORT_SLOT_L = TAB_L + 0.5;
-SHORT_SLOT_H = TAB_HEIGHT + 0.5;
+SHORT_SLOT_H = TAB_HEIGHT + 0.2;
+
+// ---------------------------------------------------------------------
+// M2 SCREW HOLE THROUGH LONG-SIDE TABS
+// ---------------------------------------------------------------------
+
+// Axis of the horizontal M2 clearance hole that passes through the
+// long-side base walls and the installed long-side lid tabs.
+// These values are shared by the base cutout and the lid tab cutout
+// so the two holes are always concentric.
+
+// X position of the screw axis
+TAB_SCREW_X = LONG_TAB_X - SLOT_L / 2 + 5;
+
+// Z position of the screw axis in BASE coordinates
+TAB_SCREW_Z = H - LID_T - SLOT_H + 2.25;
+
+// Z position of the screw axis in LID-LOCAL coordinates
+// (the lid is placed at z = H - LID_T in the assembly)
+TAB_SCREW_Z_LID = TAB_SCREW_Z - (H - LID_T);
+
+// 2.4 mm clearance hole for an M2 screw
+TAB_SCREW_R = M2 + 0.2;
 
 // ---------------------------------------------------------------------
 // PCB REGISTRATION DATUM
@@ -229,7 +265,7 @@ STOP_D = 2.5;
 // ---------------------------------------------------------------------
 
 // Sized for a real plug + strain-relief boot
-// on the wall the connector actually faces (right, x=L).
+// on the wall the connector actually faces (left, x=0).
 
 USB_CUT_W = 12;
 USB_CUT_H = 6.5;
@@ -356,6 +392,69 @@ LID_CORNER_XY = [
 ];
 
 // ---------------------------------------------------------------------
+// SHARED LID TAB MODULES
+// ---------------------------------------------------------------------
+
+// Long-side retention tabs with the M2 clearance hole that matches
+// the horizontal cylinder cutout in the base walls.
+//
+// Each tab is a SOLID part of the lid. The tab overlaps the
+// underside of the lid by TAB_JOIN = 0.3 mm so F5/F6 render
+// produces one connected solid instead of a floating/coplanar part.
+module long_side_tabs() {
+    TAB_JOIN = 0.3;
+
+    difference() {
+        for (y = LONG_TAB_Y) {
+            translate([
+                LONG_TAB_X - TAB_L / 2,
+                y,
+                -TAB_HEIGHT
+            ])
+            color("LightGrey")
+            cube([
+                TAB_L,
+                TAB_W_LONG,
+                TAB_HEIGHT + TAB_JOIN
+            ]);
+        }
+
+        // M2 clearance hole on the same axis as the base wall
+        // cutout (TAB_SCREW_*), so the screw passes through the
+        // wall and the installed tab as one continuous bore.
+        translate([
+            TAB_SCREW_X,
+            W + 5,
+            TAB_SCREW_Z_LID
+        ])
+        rotate([90, 0, 0])
+        cylinder(
+            W + 10,
+            TAB_SCREW_R,
+            TAB_SCREW_R
+        );
+    }
+}
+
+// Right-side press-fit tab.
+// The tab's outside face is flush with the base's outside face
+// (X = L). It extends through the full 2 mm wall and 1 mm into
+// the enclosure cavity so the base slot positively captures the tab.
+module short_side_tab() {
+    translate([
+        SHORT_TAB_X - 1,
+        SHORT_TAB_Y - TAB_L / 2,
+        -TAB_HEIGHT
+    ])
+    color("LightGrey")
+    cube([
+        WALL + 1,
+        TAB_L,
+        TAB_HEIGHT + 0.3
+    ]);
+}
+
+// ---------------------------------------------------------------------
 // ENCLOSURE BASE
 // ---------------------------------------------------------------------
 
@@ -423,11 +522,11 @@ module base() {
         ]);
 
         // -------------------------------------------------------------
-        // USB-C cutout
+        // USB-C cutout (LEFT short side, x = 0)
         // -------------------------------------------------------------
 
         translate([
-            L - WALL - 0.1,
+            -0.1,
             CASE_USB_XY[1] - USB_CUT_W / 2,
             USB_CUT_Z - USB_CUT_H / 2
         ])
@@ -441,7 +540,7 @@ module base() {
         // USB-C funnel
         hull() {
             translate([
-                L - 0.1,
+                0,
                 CASE_USB_XY[1] - USB_CUT_W / 2,
                 USB_CUT_Z - USB_CUT_H / 2
             ])
@@ -453,7 +552,7 @@ module base() {
             ]);
 
             translate([
-                L - 0.1,
+                0,
                 CASE_USB_XY[1] -
                 USB_CUT_W / 2 -
                 USB_FUNNEL,
@@ -482,7 +581,7 @@ module base() {
         for (y = LONG_TAB_Y) {
             translate([
                 LONG_TAB_X - SLOT_L / 2,
-                y - 0.2,
+                y + (TAB_W_LONG - SLOT_W_LONG) / 2,
                 H - LID_T - SLOT_H
             ])
             color("DarkGrey")
@@ -494,11 +593,15 @@ module base() {
         }
 
         // -------------------------------------------------------------
-        // INSIDE-FACING LEFT-SIDE LID SLOT
+        // INSIDE-FACING RIGHT-SIDE LID SLOT
         // -------------------------------------------------------------
 
+        // Mirrored to the right-hand wall (x = L), opposite the
+        // USB-C cutout. Spans the full 2 mm wall plus clearance so
+        // the lid's right-side tab is positively captured.
+
         translate([
-            -0.2,
+            L - 2 * WALL - 0.3,
             SHORT_TAB_Y - SHORT_SLOT_L / 2,
             H - LID_T - SHORT_SLOT_H
         ])
@@ -510,23 +613,25 @@ module base() {
         ]);
 
         // -------------------------------------------------------------
-        // Original cylindrical geometry
+        // M2 CLEARANCE HOLE THROUGH LONG-SIDE WALLS
         // -------------------------------------------------------------
 
-        // Retained from the original design.
+        // Horizontal bore on the TAB_SCREW_* axis. With the lid
+        // installed, the long-side tabs fill these wall slots and
+        // this bore continues through the tab, capturing an M2 screw.
 
         for (y = LONG_TAB_Y) {
             translate([
-                LONG_TAB_X - SLOT_L / 2 + 5,
+                TAB_SCREW_X,
                 y + 30,
-                H - LID_T - SLOT_H + 2.25
+                TAB_SCREW_Z
             ])
             rotate([90, 0, 0])
             color("DarkGrey")
             cylinder(
                 55,
-                1.2,
-                1.2
+                TAB_SCREW_R,
+                TAB_SCREW_R
             );
         }
     }
@@ -637,51 +742,16 @@ module lid() {
     }
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LONG-SIDE TABS
+    // INSIDE-FACING LONG-SIDE TABS (with M2 screw clearance hole)
     // -----------------------------------------------------------------
 
-    for (y = LONG_TAB_Y) {
-        difference() {
-            translate([
-                LONG_TAB_X - TAB_L / 2,
-                y,
-                -TAB_HEIGHT
-            ])
-            color("LightGrey")
-            cube([
-                TAB_L,
-                TAB_W_LONG,
-                TAB_HEIGHT
-            ]);
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - TAB_L / 2, y, -TAB_HEIGHT])
-                color("LightGrey")
-                cube([TAB_L, TAB_W_LONG, TAB_HEIGHT]);
-            }
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - SLOT_L / 2 + 5, y + 30, H - LID_T - SLOT_H + 2.25 - 20.5])
-                rotate([90, 0, 0])
-                color("LightGrey")
-                cylinder(55, M2, M2);
-            }
-        }
-    }
+    long_side_tabs();
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LEFT-SIDE TAB
+    // INSIDE-FACING RIGHT-SIDE TAB
     // -----------------------------------------------------------------
 
-    translate([
-        SHORT_TAB_X,
-        SHORT_TAB_Y - TAB_L / 2,
-        -TAB_HEIGHT
-    ])
-    color("LightGrey")
-    cube([
-        WALL,
-        TAB_L,
-        TAB_HEIGHT
-    ]);
+    short_side_tab();
 }
 
 // ---------------------------------------------------------------------
@@ -747,51 +817,16 @@ module lid_oneswitch() {
     }
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LONG-SIDE TABS
+    // INSIDE-FACING LONG-SIDE TABS (with M2 screw clearance hole)
     // -----------------------------------------------------------------
 
-    for (y = LONG_TAB_Y) {
-        difference() {
-            translate([
-                LONG_TAB_X - TAB_L / 2,
-                y,
-                -TAB_HEIGHT
-            ])
-            color("LightGrey")
-            cube([
-                TAB_L,
-                TAB_W_LONG,
-                TAB_HEIGHT
-            ]);
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - TAB_L / 2, y, -TAB_HEIGHT])
-                color("LightGrey")
-                cube([TAB_L, TAB_W_LONG, TAB_HEIGHT]);
-            }
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - SLOT_L / 2 + 5, y + 30, H - LID_T - SLOT_H + 2.25 - 20.5])
-                rotate([90, 0, 0])
-                color("LightGrey")
-                cylinder(55, M2, M2);
-            }
-        }
-    }
+    long_side_tabs();
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LEFT-SIDE TAB
+    // INSIDE-FACING RIGHT-SIDE TAB
     // -----------------------------------------------------------------
 
-    translate([
-        SHORT_TAB_X,
-        SHORT_TAB_Y - TAB_L / 2,
-        -TAB_HEIGHT
-    ])
-    color("LightGrey")
-    cube([
-        WALL,
-        TAB_L,
-        TAB_HEIGHT
-    ]);
+    short_side_tab();
 }
 
 // ---------------------------------------------------------------------
@@ -859,51 +894,16 @@ module lid_twoswitch() {
     }
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LONG-SIDE TABS
+    // INSIDE-FACING LONG-SIDE TABS (with M2 screw clearance hole)
     // -----------------------------------------------------------------
 
-    for (y = LONG_TAB_Y) {
-        difference() {
-            translate([
-                LONG_TAB_X - TAB_L / 2,
-                y,
-                -TAB_HEIGHT
-            ])
-            color("LightGrey")
-            cube([
-                TAB_L,
-                TAB_W_LONG,
-                TAB_HEIGHT
-            ]);
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - TAB_L / 2, y, -TAB_HEIGHT])
-                color("LightGrey")
-                cube([TAB_L, TAB_W_LONG, TAB_HEIGHT]);
-            }
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - SLOT_L / 2 + 5, y + 30, H - LID_T - SLOT_H + 2.25 - 20.5])
-                rotate([90, 0, 0])
-                color("LightGrey")
-                cylinder(55, M2, M2);
-            }
-        }
-    }
+    long_side_tabs();
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LEFT-SIDE TAB
+    // INSIDE-FACING RIGHT-SIDE TAB
     // -----------------------------------------------------------------
 
-    translate([
-        SHORT_TAB_X,
-        SHORT_TAB_Y - TAB_L / 2,
-        -TAB_HEIGHT
-    ])
-    color("LightGrey")
-    cube([
-        WALL,
-        TAB_L,
-        TAB_HEIGHT
-    ]);
+    short_side_tab();
 }
 
 // ---------------------------------------------------------------------
@@ -1072,51 +1072,16 @@ module lid_fingertrap() {
     }
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LONG-SIDE TABS
+    // INSIDE-FACING LONG-SIDE TABS (with M2 screw clearance hole)
     // -----------------------------------------------------------------
 
-    for (y = LONG_TAB_Y) {
-        difference() {
-            translate([
-                LONG_TAB_X - TAB_L / 2,
-                y,
-                -TAB_HEIGHT
-            ])
-            color("LightGrey")
-            cube([
-                TAB_L,
-                TAB_W_LONG,
-                TAB_HEIGHT
-            ]);
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - TAB_L / 2, y, -TAB_HEIGHT])
-                color("LightGrey")
-                cube([TAB_L, TAB_W_LONG, TAB_HEIGHT]);
-            }
-            for (y = LONG_TAB_Y) {
-                translate([LONG_TAB_X - SLOT_L / 2 + 5, y + 30, H - LID_T - SLOT_H + 2.25 - 20.5])
-                rotate([90, 0, 0])
-                color("LightGrey")
-                cylinder(55, M2, M2);
-            }
-        }
-    }
+    long_side_tabs();
 
     // -----------------------------------------------------------------
-    // INSIDE-FACING LEFT-SIDE TAB
+    // INSIDE-FACING RIGHT-SIDE TAB
     // -----------------------------------------------------------------
 
-    translate([
-        SHORT_TAB_X,
-        SHORT_TAB_Y - TAB_L / 2,
-        -TAB_HEIGHT
-    ])
-    color("LightGrey")
-    cube([
-        WALL,
-        TAB_L,
-        TAB_HEIGHT
-    ]);
+    short_side_tab();
 }
 
 // ---------------------------------------------------------------------
@@ -1502,9 +1467,9 @@ module printbar() {
     }
 }
 // Uncomment the desired item for export:
-// printbar();
-// base();
-//lid();
+//printbar();
+//base();
+lid();
 // lid_oneswitch();
 // lid_twoswitch();
 // lid_fingertrap();

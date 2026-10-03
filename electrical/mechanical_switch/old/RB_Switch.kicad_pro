@@ -671,13 +671,18 @@
       {
         "filename": "RB_Switch.kicad_sch",
         "name": "RB_Switch",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "8b5f677f-3b57-4c41-8086-d6e392f742e0"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "8b5f677f-3b57-4c41-8086-d6e392f742e0",
+      "RB_Switch"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {

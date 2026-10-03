@@ -1,7 +1,0 @@
-Failed reason:
-
-Lack of the Soldermask layer.;
-
-The layout of some Gerber layers may not be clear enough.;
-
-Img1；https://pcb-files.s3.us-west-2.amazonaws.com/webfilemanage/26/09/30/0047547091388c79560ce4d12b77858a5dc199bc86117t.png

@@ -89,7 +89,7 @@ inside `sendKey()` controls how long the "key down" HID report is held before th
 
 The production PCB and firmware are deliberately three-switch. If you are prototyping an expansion (for example, testing a 4th mechanical input on a breadboard before considering a hardware revision):
 
-1. Pick an unused GPIO that is not one of GPIO10/11/12 and is not reserved for USB, flash, or strapping on the ESP32-S3-MINI-1-N4R2 module — check the module's datasheet before choosing.
+1. Pick an unused GPIO that is not one of GPIO10/11/12, is not already used on the board (GPIO0 BOOT, GPIO5 battery sense, GPIO19/20 USB, EN reset), and is not reserved for USB, flash, or strapping on the ESP32-S3-MINI-1-N4R2 module — check the module's datasheet before choosing.
 2. Add a new `SwitchState` instance following the existing `sw1`/`sw2`/`sw3` pattern.
 3. Add a matching `pinMode(..., INPUT_PULLUP)` call in `setup()`.
 4. Add a matching `updateSwitch(...)` call in `loop()`.

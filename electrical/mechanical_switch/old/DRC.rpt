@@ -1,32 +1,132 @@
 ** Drc report for RB_Switch.kicad_pcb **
-** Created on 2026-10-01T06:26:41 **
-** Report includes: Errors, Warnings **
+** Created on 2026-10-02T16:46:58 **
+** Report includes: Errors, Warnings, Exclusions **
 
-** Found 5 DRC violations **
-[shorting_items]: Items shorting two nets (nets L_A and VBUS)
-    Local override; error
-    @(98.6000 mm, 88.2750 mm): Pad 1 [L_A] of L1 on F.Cu
-    @(108.2000 mm, 89.9000 mm): Track [VBUS] on F.Cu, length 12.6500 mm
-[shorting_items]: Items shorting two nets (nets VBAT and GND)
-    Local override; error
-    @(105.0000 mm, 87.6000 mm): Track [VBAT] on F.Cu, length 2.0000 mm
-    @(104.0000 mm, 86.0000 mm): Pad 11 [GND] of REG1 on F.Cu
-[courtyards_overlap]: Courtyards overlap
-    Rule: board setup constraints courtyard; error
-    @(179.0000 mm, 99.0000 mm): Footprint U1
-    @(185.5000 mm, 113.5000 mm): Footprint SW_RST
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(108.2000 mm, 89.9000 mm): Track [VBUS] on F.Cu, length 12.6500 mm
-    @(98.6000 mm, 88.2750 mm): Pad 1 [L_A] of L1 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(105.0000 mm, 87.6000 mm): Track [VBAT] on F.Cu, length 2.0000 mm
-    @(104.0000 mm, 86.0000 mm): Pad 11 [GND] of REG1 on F.Cu
+** Found 3 DRC violations **
+[lib_footprint_issues]: Footprint 'SW_TH_Tactile_Omron_B3F-10xx' not found in library 'Button_Switch_THT'
+    Local override; warning
+    @(101.0000 mm, 99.0000 mm): Footprint SW1
+[lib_footprint_issues]: Footprint 'SW_TH_Tactile_Omron_B3F-10xx' not found in library 'Button_Switch_THT'
+    Local override; warning
+    @(126.0000 mm, 99.0000 mm): Footprint SW2
+[lib_footprint_issues]: Footprint 'SW_TH_Tactile_Omron_B3F-10xx' not found in library 'Button_Switch_THT'
+    Local override; warning
+    @(151.0000 mm, 99.0000 mm): Footprint SW3
 
 ** Found 0 unconnected pads **
 
-** Found 0 Footprint errors **
+** Found 37 Footprint errors **
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(108.5000 mm, 90.8000 mm): Footprint C1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(100.5000 mm, 91.8000 mm): Footprint C2
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(104.0000 mm, 91.8000 mm): Footprint C3
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(114.5000 mm, 89.5000 mm): Footprint C4
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(170.0000 mm, 109.8000 mm): Footprint C5
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(174.0000 mm, 109.8000 mm): Footprint C6
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(178.0000 mm, 109.8000 mm): Footprint C7
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(131.5000 mm, 91.5000 mm): Footprint C8
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(110.0000 mm, 107.0000 mm): Footprint C9
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(135.0000 mm, 107.0000 mm): Footprint C10
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Unpolarized capacitor')
+    Local override; warning
+    @(160.0000 mm, 107.0000 mm): Footprint C11
+[footprint_symbol_field_mismatch]: Missing symbol field 'Sim.Pins' in footprint
+    Local override; warning
+    @(158.0000 mm, 86.0000 mm): Footprint D1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)')
+    Local override; warning
+    @(122.0000 mm, 87.2000 mm): Footprint J_BAT1
+[footprint_symbol_field_mismatch]: Field 'Datasheet' differs (PCB: '', Schematic: 'https://www.usb.org/sites/default/files/documents/usb_type-c.zip')
+    Local override; warning
+    @(84.0000 mm, 99.0000 mm): Footprint J_USB1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Inductor')
+    Local override; warning
+    @(98.6000 mm, 86.0000 mm): Footprint L1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(114.5000 mm, 84.5000 mm): Footprint R1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(164.0000 mm, 86.0000 mm): Footprint R2
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(92.0000 mm, 96.0000 mm): Footprint R3
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(92.0000 mm, 102.0000 mm): Footprint R4
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(182.4000 mm, 109.8000 mm): Footprint R5
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(172.5000 mm, 113.5000 mm): Footprint R6
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(127.0000 mm, 90.5000 mm): Footprint R7
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Resistor')
+    Local override; warning
+    @(128.6500 mm, 93.0000 mm): Footprint R8
+[footprint_symbol_mismatch]: Package_SON:Texas_DRC0010J doesn't match footprint given by symbol (Package_SON:Texas_DRC0010J_ThermalVias)
+    Local override; warning
+    @(104.0000 mm, 86.0000 mm): Footprint REG1
+[footprint_symbol_field_mismatch]: Field 'Datasheet' differs (PCB: 'http://www.ti.com/lit/ds/symlink/tps63001.pdf', Schematic: 'http://www.ti.com/lit/ds/symlink/tps63000.pdf')
+    Local override; warning
+    @(104.0000 mm, 86.0000 mm): Footprint REG1
+[footprint_symbol_mismatch]: Value (SW1) doesn't match symbol value (B3F-100x)
+    Local override; warning
+    @(101.0000 mm, 99.0000 mm): Footprint SW1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Push button switch, generic, two pins')
+    Local override; warning
+    @(101.0000 mm, 99.0000 mm): Footprint SW1
+[footprint_symbol_mismatch]: Value (SW2) doesn't match symbol value (B3F-100x)
+    Local override; warning
+    @(126.0000 mm, 99.0000 mm): Footprint SW2
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Push button switch, generic, two pins')
+    Local override; warning
+    @(126.0000 mm, 99.0000 mm): Footprint SW2
+[footprint_symbol_mismatch]: Value (SW3) doesn't match symbol value (B3F-100x)
+    Local override; warning
+    @(151.0000 mm, 99.0000 mm): Footprint SW3
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Push button switch, generic, two pins')
+    Local override; warning
+    @(151.0000 mm, 99.0000 mm): Footprint SW3
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Push button switch, generic, two pins')
+    Local override; warning
+    @(179.0000 mm, 113.0000 mm): Footprint SW_BOOT1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Push button switch, generic, two pins')
+    Local override; warning
+    @(166.0000 mm, 113.5000 mm): Footprint SW_RST1
+[footprint_symbol_mismatch]: Value (U1) doesn't match symbol value (ESP32-S3-MINI-1-N4R2)
+    Local override; warning
+    @(179.0000 mm, 99.0000 mm): Footprint U1
+[footprint_symbol_field_mismatch]: Field 'Description' differs (PCB: '', Schematic: 'Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package')
+    Local override; warning
+    @(110.0000 mm, 86.0000 mm): Footprint U_CHG1
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(91.0000 mm, 84.0000 mm): Footprint MH1
+[extra_footprint]: Extra footprint
+    Local override; warning
+    @(179.5000 mm, 84.0000 mm): Footprint MH2
 
 ** Ignored checks **
     - Footprint has no courtyard defined

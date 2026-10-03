@@ -41,11 +41,15 @@ If it does, inspect the switch, solder joints, input capacitor, ground connectio
 
 ## USB powers the board but firmware upload fails
 
-Use a known data-capable USB-C cable. If necessary, use BOOT and RESET to enter the ESP32-S3 bootloader and retry.
+Use a known data-capable USB-C cable. If necessary, hold BOOT, press and release RESET, then release BOOT to enter the ESP32-S3 bootloader and retry.
+
+## Serial Monitor shows nothing
+
+The board uses the ESP32-S3's native USB rather than a USB-to-serial chip. In the Arduino IDE, set **Tools → USB CDC On Boot** to **Enabled**, re-upload, and reopen the Serial Monitor at 115200 baud.
 
 ## Charging LED
 
-D1 is controlled by the MCP73831 charger, not the BLE firmware.
+D1 is controlled by the MCP73831 charger, not the BLE firmware. It lights while the battery is charging from USB.
 
 ## Battery
 

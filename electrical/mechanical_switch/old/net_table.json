@@ -1,23 +1,23 @@
 {
   "VBUS": [
     [
-      "J_USB",
+      "J_USB1",
       "A4"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "A9"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "B4"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "B9"
     ],
     [
-      "U_CHG",
+      "U_CHG1",
       "4"
     ],
     [
@@ -27,23 +27,23 @@
   ],
   "GND": [
     [
-      "J_USB",
+      "J_USB1",
       "A1"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "B1"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "A12"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "B12"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "S1"
     ],
     [
@@ -55,11 +55,11 @@
       "2"
     ],
     [
-      "J_BAT",
+      "J_BAT1",
       "2"
     ],
     [
-      "U_CHG",
+      "U_CHG1",
       "2"
     ],
     [
@@ -111,11 +111,11 @@
       "2"
     ],
     [
-      "SW_RST",
+      "SW_RST1",
       "2"
     ],
     [
-      "SW_BOOT",
+      "SW_BOOT1",
       "2"
     ],
     [
@@ -247,9 +247,9 @@
       "65"
     ]
   ],
-  "USB_CC1": [
+  "/USB_CC1": [
     [
-      "J_USB",
+      "J_USB1",
       "A5"
     ],
     [
@@ -257,9 +257,9 @@
       "1"
     ]
   ],
-  "USB_CC2": [
+  "/USB_CC2": [
     [
-      "J_USB",
+      "J_USB1",
       "B5"
     ],
     [
@@ -267,41 +267,41 @@
       "1"
     ]
   ],
-  "USB_DM": [
+  "/USB_DM": [
     [
       "U1",
       "23"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "A7"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "B7"
     ]
   ],
-  "USB_DP": [
+  "/USB_DP": [
     [
       "U1",
       "24"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "A6"
     ],
     [
-      "J_USB",
+      "J_USB1",
       "B6"
     ]
   ],
   "VBAT": [
     [
-      "J_BAT",
+      "J_BAT1",
       "1"
     ],
     [
-      "U_CHG",
+      "U_CHG1",
       "3"
     ],
     [
@@ -325,9 +325,9 @@
       "6"
     ]
   ],
-  "CHG_PROG": [
+  "/CHG_PROG": [
     [
-      "U_CHG",
+      "U_CHG1",
       "5"
     ],
     [
@@ -335,9 +335,9 @@
       "1"
     ]
   ],
-  "CHG_STAT": [
+  "/CHG_STAT": [
     [
-      "U_CHG",
+      "U_CHG1",
       "1"
     ],
     [
@@ -345,7 +345,7 @@
       "1"
     ]
   ],
-  "STAT_LED_MID": [
+  "/STAT_LED_MID": [
     [
       "D1",
       "2"
@@ -401,7 +401,7 @@
       "10"
     ]
   ],
-  "VBAT_SENSE": [
+  "/VBAT_SENSE": [
     [
       "R7",
       "2"
@@ -419,7 +419,7 @@
       "9"
     ]
   ],
-  "L_A": [
+  "/L_A": [
     [
       "REG1",
       "4"
@@ -429,7 +429,7 @@
       "1"
     ]
   ],
-  "L_B": [
+  "/L_B": [
     [
       "REG1",
       "2"
@@ -439,7 +439,7 @@
       "2"
     ]
   ],
-  "EN_NET": [
+  "/EN_NET": [
     [
       "R5",
       "2"
@@ -449,11 +449,11 @@
       "45"
     ],
     [
-      "SW_RST",
+      "SW_RST1",
       "1"
     ]
   ],
-  "BOOT_NET": [
+  "/BOOT_NET": [
     [
       "R6",
       "2"
@@ -463,11 +463,11 @@
       "4"
     ],
     [
-      "SW_BOOT",
+      "SW_BOOT1",
       "1"
     ]
   ],
-  "SW1_NET": [
+  "/SW1_NET": [
     [
       "SW1",
       "1"
@@ -481,7 +481,7 @@
       "1"
     ]
   ],
-  "SW2_NET": [
+  "/SW2_NET": [
     [
       "SW2",
       "1"
@@ -495,7 +495,7 @@
       "1"
     ]
   ],
-  "SW3_NET": [
+  "/SW3_NET": [
     [
       "SW3",
       "1"
@@ -507,6 +507,210 @@
     [
       "C11",
       "1"
+    ]
+  ],
+  "unconnected-(U1-IO1-Pad5)": [
+    [
+      "U1",
+      "5"
+    ]
+  ],
+  "unconnected-(U1-IO2-Pad6)": [
+    [
+      "U1",
+      "6"
+    ]
+  ],
+  "unconnected-(U1-IO3-Pad7)": [
+    [
+      "U1",
+      "7"
+    ]
+  ],
+  "unconnected-(U1-IO4-Pad8)": [
+    [
+      "U1",
+      "8"
+    ]
+  ],
+  "unconnected-(U1-IO6-Pad10)": [
+    [
+      "U1",
+      "10"
+    ]
+  ],
+  "unconnected-(U1-IO7-Pad11)": [
+    [
+      "U1",
+      "11"
+    ]
+  ],
+  "unconnected-(U1-IO8-Pad12)": [
+    [
+      "U1",
+      "12"
+    ]
+  ],
+  "unconnected-(U1-IO9-Pad13)": [
+    [
+      "U1",
+      "13"
+    ]
+  ],
+  "unconnected-(U1-IO13-Pad17)": [
+    [
+      "U1",
+      "17"
+    ]
+  ],
+  "unconnected-(U1-IO14-Pad18)": [
+    [
+      "U1",
+      "18"
+    ]
+  ],
+  "unconnected-(U1-IO15-Pad19)": [
+    [
+      "U1",
+      "19"
+    ]
+  ],
+  "unconnected-(U1-IO16-Pad20)": [
+    [
+      "U1",
+      "20"
+    ]
+  ],
+  "unconnected-(U1-IO17-Pad21)": [
+    [
+      "U1",
+      "21"
+    ]
+  ],
+  "unconnected-(U1-IO18-Pad22)": [
+    [
+      "U1",
+      "22"
+    ]
+  ],
+  "unconnected-(U1-IO21-Pad25)": [
+    [
+      "U1",
+      "25"
+    ]
+  ],
+  "unconnected-(U1-IO26-Pad26)": [
+    [
+      "U1",
+      "26"
+    ]
+  ],
+  "unconnected-(U1-IO47-Pad27)": [
+    [
+      "U1",
+      "27"
+    ]
+  ],
+  "unconnected-(U1-IO33-Pad28)": [
+    [
+      "U1",
+      "28"
+    ]
+  ],
+  "unconnected-(U1-IO34-Pad29)": [
+    [
+      "U1",
+      "29"
+    ]
+  ],
+  "unconnected-(U1-IO48-Pad30)": [
+    [
+      "U1",
+      "30"
+    ]
+  ],
+  "unconnected-(U1-IO35-Pad31)": [
+    [
+      "U1",
+      "31"
+    ]
+  ],
+  "unconnected-(U1-IO36-Pad32)": [
+    [
+      "U1",
+      "32"
+    ]
+  ],
+  "unconnected-(U1-IO37-Pad33)": [
+    [
+      "U1",
+      "33"
+    ]
+  ],
+  "unconnected-(U1-IO38-Pad34)": [
+    [
+      "U1",
+      "34"
+    ]
+  ],
+  "unconnected-(U1-IO39-Pad35)": [
+    [
+      "U1",
+      "35"
+    ]
+  ],
+  "unconnected-(U1-IO40-Pad36)": [
+    [
+      "U1",
+      "36"
+    ]
+  ],
+  "unconnected-(U1-IO41-Pad37)": [
+    [
+      "U1",
+      "37"
+    ]
+  ],
+  "unconnected-(U1-IO42-Pad38)": [
+    [
+      "U1",
+      "38"
+    ]
+  ],
+  "unconnected-(U1-TXD0-Pad39)": [
+    [
+      "U1",
+      "39"
+    ]
+  ],
+  "unconnected-(U1-RXD0-Pad40)": [
+    [
+      "U1",
+      "40"
+    ]
+  ],
+  "unconnected-(U1-IO45-Pad41)": [
+    [
+      "U1",
+      "41"
+    ]
+  ],
+  "unconnected-(U1-IO46-Pad44)": [
+    [
+      "U1",
+      "44"
+    ]
+  ],
+  "unconnected-(J_USB1-SBU1-PadA8)": [
+    [
+      "J_USB1",
+      "A8"
+    ]
+  ],
+  "unconnected-(J_USB1-SBU2-PadB8)": [
+    [
+      "J_USB1",
+      "B8"
     ]
   ]
 }
