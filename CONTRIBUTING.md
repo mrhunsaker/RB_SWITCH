@@ -28,14 +28,15 @@ By participating, you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 | `bom/` | Bill of materials |
 | `docs/` | GitHub Pages documentation source (Jekyll, built by `.github/workflows/static.yml`) |
 | `documents/` | Packaging-friendly copy of the same documentation, for inclusion in offline exports or printed packets |
-| `RB_Switch_Paraprofessional_Setup_Guide.docx` | Printable classroom quick-reference, generated from the same source material as `docs/setup.md` |
+| `RB_Switch_Paraprofessional_Setup_Guide.docx` | Printable classroom quick-reference, generated from `docs/setup.md` by `tools/build_setup_docx.js` |
+| `tools/` | Scripts that keep `documents/` and the printable guide in sync with `docs/` |
 
-**`docs/` and `documents/` must stay synchronized.** If you change one, make the equivalent change in the other. The only intended differences are:
+**`docs/` and `documents/` must stay synchronized.** If you change one, make the equivalent change in the other (run `python3 tools/sync_documents.py` to do this automatically). The only intended differences are:
 
 - `docs/*.md` includes Jekyll front matter (`permalink: ...`) and uses `{{ '/page.html' | relative_url }}` links, because it is built and published by GitHub Pages.
 - `documents/*.md` omits the `permalink` line and uses plain `page.md` relative links, because it is meant to be read directly (for example, packaged into an offline handout) without a Jekyll build step.
 
-If a documentation change affects what's in `RB_Switch_Paraprofessional_Setup_Guide.docx` (setup steps, button mapping, troubleshooting), update the `.docx` as well, or note in your pull request that it still needs to be updated.
+If a documentation change affects what's in `RB_Switch_Paraprofessional_Setup_Guide.docx` (setup steps, button mapping, troubleshooting), rebuild the `.docx` with `node tools/build_setup_docx.js` (needs Node.js and `npm install docx`), or note in your pull request that it still needs to be updated.
 
 ## Making a firmware change
 

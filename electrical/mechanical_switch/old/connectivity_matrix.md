@@ -1,3 +1,5 @@
+> **Superseded (2026-10-03).** This note describes an earlier routing of the PCB. The current schematic, PCB and checks are in `electrical/mechanical_switch/` and `electrical/mechanical_switch/VERIFICATION.md`. Kept for history only.
+
 What each component connects to
 
 ## Power input and charging

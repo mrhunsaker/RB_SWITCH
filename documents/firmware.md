@@ -19,7 +19,7 @@ For firmware maintenance, install:
 
 - Arduino IDE
 - ESP32 Arduino core by Espressif
-- NimBLE-Arduino
+- NimBLE-Arduino, **version 2.x** (the sketch uses the 2.x callback signatures, so 1.x will not compile)
 
 No touch-sensor, proximity-sensor, NeoPixel, or separate project-specific HID library is required.
 
@@ -37,16 +37,20 @@ The board has no separate USB-to-serial chip. USB-C connects directly to the ESP
 
 1. Connect the PCB with a data-capable USB-C cable.
 2. Open `RB_SWITCH_firmware.ino`.
-3. Select the ESP32-S3 board.
+3. Select the ESP32-S3 board and set **USB CDC On Boot** to **Enabled**.
 4. Select the correct serial port.
 5. Click **Verify**.
 6. Click **Upload**.
 7. If necessary, enter the ESP32-S3 bootloader: hold BOOT, press and release RESET, then release BOOT.
 8. Reset the board after upload.
+9. Open the Serial Monitor at 115200 baud and confirm the startup banner appears.
+10. Pair with a host and run the three-button test from [Setup & Pairing](setup.md#4-test-the-three-buttons).
+
+If the upload fails or no serial port appears, see [Troubleshooting](troubleshooting.md#5-firmware-upload-and-serial-monitor).
 
 ## Serial diagnostics
 
-Open the Serial Monitor at **115200 baud**. The firmware reports the three button mappings and logs button activity with its GPIO and HID usage ID.
+Open the Serial Monitor at **115200 baud**. The firmware reports the three button mappings and logs button activity with its GPIO and HID usage ID. It also prints `BLE connected` and `BLE disconnected; restarting advertising`, and `Key ignored: BLE not connected` when a button is pressed with no host connected. The full expected output is in [Troubleshooting](troubleshooting.md#what-the-serial-monitor-should-show).
 
 ## Hardware the firmware does not use
 
@@ -60,9 +64,14 @@ The board also has a battery-voltage divider on GPIO5 (VBAT ÷ 2) and a charge-s
 | Right Arrow | `0x4F` |
 | Left Arrow | `0x50` |
 
-## Bluetooth name
+## Bluetooth behavior
 
-The advertised Bluetooth name is **RB Switch**.
+- The advertised Bluetooth name is **RB Switch** (the same on every unit).
+- The sketch advertises the standard HID service and presents a boot-compatible keyboard.
+- Bonding is enabled with no passkey. Pairing data is stored in flash. To clear it, erase flash while uploading (see [Troubleshooting](troubleshooting.md#clearing-the-rb-switchs-stored-pairings)).
+- After a disconnect, advertising restarts automatically.
+- Transmit power is set to the maximum the sketch requests (`ESP_PWR_LVL_P9`).
+- There is no sleep mode, so the device draws power continuously whenever it is powered.
 
 ## Modifying the firmware
 

@@ -6,7 +6,7 @@
 	(paper "USLetter")
 	(title_block
 		(title "RB SWITCH Schematic")
-		(date "2026-10-03")
+		(date "2026-09-29")
 		(company "Michael Ryan Hunsaker, M.Ed., Ph.D.")
 	)
 	(lib_symbols
@@ -11968,6 +11968,176 @@
 				)
 			)
 		)
+	)
+		(symbol
+		(lib_id "Device:C")
+		(at 205.74 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "345a0a89-7159-4cbc-948e-996459194346")
+		(property "Reference" "C12"
+			(at 201.93 85.09 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 201.93 87.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "020035c1-e19c-4909-b487-63b7834f032b")
+		)
+		(pin "2"
+			(uuid "1f036a54-9fcc-4e72-852b-7112dc9471a1")
+		)
+		(instances
+			(project "RB_Switch"
+				(path "/8b5f677f-3b57-4c41-8086-d6e392f742e0"
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 205.74 90.17) (xy 205.74 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1ccdd6b-4ffc-4326-81a9-093640ff687e")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 205.74 92.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "7f368d53-2e68-4cc1-8cb9-3ce59c81896e")
+		(property "Reference" "#PWR047"
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 205.74 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 205.74 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 205.74 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "81c78cbc-25c9-4468-8c04-1f4b13292943")
+		)
+		(instances
+			(project "RB_Switch"
+				(path "/8b5f677f-3b57-4c41-8086-d6e392f742e0"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(junction
+		(at 205.74 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7850873d-ca8b-4d5f-b79e-b16511563542")
 	)
 	(sheet_instances
 		(path "/"

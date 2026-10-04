@@ -14,10 +14,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **REG1 FB (pin 10) now connected to the 3.3 V output.** It was floating.
 - **REG1 footprint is now `Package_SON:Texas_DRC0010J`** (no thermal-via pads). Four GND vias sit in the exposed pad.
 - **Schematic and PCB parity.** Net names, reference designators, values, descriptions, datasheets and footprint links match. `J_BAT`, `J_USB`, `SW_BOOT`, `SW_RST`, `U_CHG` are now `J_BAT1`, `J_USB1`, `SW_BOOT1`, `SW_RST1`, `U_CHG1`. The 34 unused pins have `unconnected-(...)` nets. MH1/MH2 are marked "Not in schematic".
-- **SW1–SW3 footprint link** is now `Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x`. L1's schematic footprint now matches the PCB (`L_Bourns-SRN4018`).
+- **SW1–SW3 footprint link** is now `Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x`. L1's schematic footprint now matches the PCB (`L_Bourns-SRN4018`), and its pads were checked against the Bourns SRN4018 recommended layout.
 - **Project rule:** minimum hole clearance lowered from 0.25 mm to 0.15 mm because of the J_USB1 footprint.
+- **Added C12, 1 µF from EN to ground**, forming an RC reset delay with R5 (10 kΩ). C12 is an 0603 at (183.2, 113.6) on the front side, routed to R5 pad 2 with a ground via. BOM (C4, C12 are now a pair of 1 µF), CPL, net table and docs updated.
 - `electrical/mechanical_switch/VERIFICATION.md` added. `net_table.json`, the layout and schematic previews, and the CPL/BOM workbooks in `bom/` were regenerated or updated for the new design.
 - **Not yet regenerated:** `electrical/mechanical_switch/gerbers/` and the PCB images in `electrical/mechanical_switch/diagrams/` are from an earlier layout. Re-export with `create_gerber.ps1` before ordering.
+
+### Documentation polish (2026-10-03)
+
+- **README rewritten.** Adds an at-a-glance table, quick start, firmware build steps, a troubleshooting summary, a documentation-by-audience table, a repository layout table and the pre-order checklist.
+- **Troubleshooting page rewritten** (`docs/troubleshooting.md`, `documents/troubleshooting.md`). It now has a symptom table, a description of normal behavior, Bluetooth and pairing, buttons, iOS/Android, power and charging, firmware upload and Serial Monitor, board-level checks with expected voltages, switch input checks, and what to include when asking for help.
+- **Setup guide completed** (`docs/setup.md`, `documents/setup.md` and `RB_Switch_Paraprofessional_Setup_Guide.docx`). Adds an at-a-glance table, an expanded troubleshooting table, charging-light meanings, a daily checklist, a "Getting help" section and firmware prerequisites. The printable guide is now generated from `docs/setup.md`.
+- **Corrected the Bluetooth name.** The docs said the switch advertises as "RB Switch" plus a 3-digit number matching a sticker. The firmware advertises plain "RB Switch" on every unit. The docs now say so and explain how to tell units apart.
+- **Documented firmware behavior** that was not written down before: presses are ignored while disconnected, there is no power switch or sleep mode, battery level is fixed at 100%, bonding needs no passkey, and the sketch needs NimBLE-Arduino 2.x.
+- Fixed broken section links in `docs/firmware-customization.md` and `docs/switch-access-android.md`. Added a printing guide and the published URL to `docs/qr-code.md`, and a "Which page do I need?" table to `docs/index.md`.
+- **New `tools/` folder:** `sync_documents.py` rewrites `documents/` from `docs/`, and `build_setup_docx.js` rebuilds the printable guide from `docs/setup.md`.
 
 ### Documentation and firmware (2026-10-03)
 

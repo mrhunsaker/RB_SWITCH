@@ -76,7 +76,7 @@ hid->setManufacturer("RB Switch");
 advertisementData.setName("RB Switch");
 ```
 
-All three of these should be changed together (for example, to distinguish two units in the same classroom, such as `"RB Switch 2"`). If you change the name, also update the physical label/sticker on the enclosure and the [QR Code]({{ '/qr-code.html' | relative_url }}) destination if it references the device name, and re-pair any devices that had the old name saved.
+All three of these should be changed together (for example, to distinguish two units in the same classroom, such as `"RB Switch 2"`). Every unit advertises as plain "RB Switch" by default, so giving each classroom unit its own name is the simplest way to tell them apart. If you change the name, also update the physical label/sticker on the enclosure and the [QR Code]({{ '/qr-code.html' | relative_url }}) destination if it references the device name, and re-pair any devices that had the old name saved. Also forget the old name on each host and clear the stored pairings on the RB Switch (see [Troubleshooting]({{ '/troubleshooting.html#clearing-the-rb-switchs-stored-pairings' | relative_url }})).
 
 ## Changing the key-hold timing
 
@@ -96,7 +96,7 @@ The production PCB and firmware are deliberately three-switch. If you are protot
 4. Add a matching `updateSwitch(...)` call in `loop()`.
 5. Add the new HID Usage ID constant.
 
-This is firmware-only prototyping guidance. It does **not** reflect the production hardware described in [Hardware]({{ '/hardware.html' | relative_url }}), and a fourth input has no footprint on the current PCB. Do not describe a modified sketch as "the production firmware" in documentation, labels, or support conversations — see [Production scope](hardware.html) and the archived-firmware note in `firmware/BLE_ADAPTIVE_SWITCH_EXPANDED_SCAFFOLD/README.md` for why this distinction matters to this project.
+This is firmware-only prototyping guidance. It does **not** reflect the production hardware described in [Hardware]({{ '/hardware.html' | relative_url }}), and a fourth input has no footprint on the current PCB. Do not describe a modified sketch as "the production firmware" in documentation, labels, or support conversations — see the "Hardware not included" section of [Hardware]({{ '/hardware.html' | relative_url }}) and the archived-firmware note in `firmware/BLE_ADAPTIVE_SWITCH_EXPANDED_SCAFFOLD/README.md` for why this distinction matters to this project.
 
 ## Verifying a change
 
@@ -106,8 +106,10 @@ After any edit:
 2. **Upload** over a data-capable USB-C cable.
 3. Open **Serial Monitor** at 115200 baud. Confirm the startup banner still prints the mapping you expect.
 4. Press each physical button and confirm the Serial Monitor logs `SW GPIOx -> HID 0xYY` for the GPIO/key pair you intended.
-5. Pair with a real host device and repeat the plain-text-field test from [Setup & Pairing, Step 3]({{ '/setup.html#3-test-the-buttons' | relative_url }}).
+5. Pair with a real host device and repeat the plain-text-field test from [Setup & Pairing, Section 4]({{ '/setup.html#4-test-the-three-buttons' | relative_url }}).
 6. Only after that, re-test inside Switch Access or Switch Control if the change affects how the device should be scanned (see [Android Switch Access]({{ '/switch-access-android.html' | relative_url }}) or [iOS/iPadOS Switch Control]({{ '/switch-control-ios.html' | relative_url }})).
+
+If something goes wrong after a change, see [Troubleshooting]({{ '/troubleshooting.html#5-firmware-upload-and-serial-monitor' | relative_url }}).
 
 ## Keeping documentation in sync
 
@@ -116,6 +118,7 @@ If a firmware change alters the button mapping, debounce timing, or device name 
 - `README.md`
 - `docs/index.md` and `documents/index.md`
 - `docs/use.md` and `documents/use.md`
+- `docs/setup.md` and `documents/setup.md`, then rebuild `RB_Switch_Paraprofessional_Setup_Guide.docx` (see the README)
 - `docs/hardware.md` and `documents/hardware.md` (if the wiring itself changed)
 - The firmware's own header comment and `Serial.println()` startup banner
 

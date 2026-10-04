@@ -1,0 +1,35 @@
+** Drc report for RB_Switch.kicad_pcb **
+** Created on 2026-10-03T11:17:23 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 5 DRC violations **
+[lib_footprint_mismatch]: Footprint 'SW_TH_Tactile_Omron_B3F-100x' does not match copy in library 'Button_Switch_THT'
+    Local override; warning
+    @(101.0000 mm, 99.0000 mm): Footprint SW1
+[lib_footprint_mismatch]: Footprint 'SW_TH_Tactile_Omron_B3F-100x' does not match copy in library 'Button_Switch_THT'
+    Local override; warning
+    @(126.0000 mm, 99.0000 mm): Footprint SW2
+[lib_footprint_mismatch]: Footprint 'SW_TH_Tactile_Omron_B3F-100x' does not match copy in library 'Button_Switch_THT'
+    Local override; warning
+    @(151.0000 mm, 99.0000 mm): Footprint SW3
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(184.6300 mm, 113.6000 mm): Reference field of C12
+    @(183.2000 mm, 114.3750 mm): Pad 2 [GND] of C12 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(184.6300 mm, 113.6000 mm): Reference field of C12
+    @(183.2000 mm, 112.8250 mm): Pad 1 [/EN_NET] of C12 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

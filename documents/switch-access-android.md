@@ -70,7 +70,7 @@ If a student only needs two functions, it is entirely reasonable to stop after t
 - **Row-column scanning** scans by row first, then by item within the selected row. This is faster once a student is comfortable with two-step selection.
 - **Group selection** requires two or more switches and divides the screen into color-coded groups; each press narrows down the selection. This method benefits the most from having a third switch assigned, since more switches mean fewer presses per selection.
 
-Whichever method you choose, re-test all assigned buttons afterward (see [Setup & Pairing, Step 5](setup.md#5-confirm-the-configuration)).
+Whichever method you choose, re-test all assigned buttons afterward (see [Setup & Pairing, Section 4](setup.md#4-test-the-three-buttons)).
 
 ## 5. Adjusting timing and feedback
 

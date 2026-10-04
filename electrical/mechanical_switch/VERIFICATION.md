@@ -16,7 +16,7 @@ These checks were run with scripts that read the KiCad files directly. KiCad its
 | GPIO10–12 are not strapping pins (strapping pins are GPIO0, 3, 45, 46) | Pass |
 | 100 nF filter capacitor (C9–C11) from each switch net to ground | Pass |
 | USB D+ goes to U1 pin 24 (IO20) and D− to pin 23 (IO19), both from the USB-C pads | Pass |
-| EN (pin 45) has a 10 k pull-up to 3.3 V and the RESET switch to ground | Pass |
+| EN (pin 45) has a 10 k pull-up to 3.3 V, a 1 µF capacitor to ground (C12, about 10 ms RC delay) and the RESET switch to ground | Pass |
 | IO0 (pin 4) has a 10 k pull-up to 3.3 V and the BOOT switch to ground | Pass |
 | U1 3.3 V on pin 3; ground on pins 1, 2, 42, 43 and 46–65 | Pass |
 
@@ -37,7 +37,7 @@ These checks were run with scripts that read the KiCad files directly. KiCad its
 
 | Check | Result |
 |---|---|
-| 19 named nets: every pad on each net is identical in schematic and PCB | Pass |
+| 19 named nets: every pad on each net is identical in schematic and PCB (includes C12) | Pass |
 | 34 intentionally unused pins have `unconnected-(...)` nets on both sides | Pass |
 | Reference designators and Value fields identical | Pass |
 | Footprint links identical | Pass |
@@ -51,6 +51,8 @@ These checks were run with scripts that read the KiCad files directly. KiCad its
 | Copper-to-copper clearance ≥ 0.2 mm, board-edge clearance ≥ 0.5 mm, hole-to-hole, courtyards | Pass (scripted check) |
 | SW1–SW3, M4 holes and J_USB1 keep their original positions | Pass |
 | J_USB1 NPTH-hole-to-pad clearance (0.18–0.21 mm) is below the usual 0.25 mm | Known: built into the GCT footprint; the project's minimum hole clearance is 0.15 mm |
+| L1 pads (1.5 × 3.6 mm, 4.55 mm overall) match the Bourns SRN4018 recommended layout and the stock KiCad footprint | Pass |
+| L1 height: SRN4018-2R2M is 1.88 mm max; the enclosure allows for the 4.3 mm switches plus travel | Pass |
 | Routed lengths: USB D− 85.2 mm, D+ 84.0 mm | Full-speed USB tolerates this |
 
 ## 5. Things this verification did not cover
@@ -58,10 +60,8 @@ These checks were run with scripts that read the KiCad files directly. KiCad its
 - **Gerbers and diagrams:** `gerbers/` and the PCB images in `diagrams/` come from an earlier layout. Re-export with `create_gerber.ps1` before ordering.
 - **Firmware:** the pin map was checked against the board, but the sketch was not compiled or run here.
 - **No hardware testing.** Nothing here was measured on a built board.
-- **L1 footprint:** the PCB footprint's pad positions differ from the stock KiCad `L_Bourns-SRN4018` footprint. Compare with the Bourns datasheet before fabrication.
 - **Design notes, not errors:**
-  - EN has no RC delay; the ESP32-S3 hardware guide suggests one for clean power-up.
   - REG1 PS/SYNC is grounded, so power-save mode is enabled.
-  - The battery charger and load share VBAT with no power-path IC, so charging while running is allowed but the charge termination can be affected.
-  - VBAT and the L_A/L_B switching tracks are 0.25 mm wide; they are short but could be widened.
+  - The battery charger and load share VBAT with no power-path IC. While USB is plugged in and the switch is running, the load current can keep the charger from reaching its termination current, so D1 may stay lit and the cell may sit at 4.2 V. Acceptable for a classroom device that is charged between uses; a power-path part would be a redesign.
+  - VBAT and the L_A/L_B switching tracks are 0.25 mm wide. At the expected load (a few hundred mA peak) the drop and heating are negligible. Widening to 0.4 mm is optional.
   - The battery-sense divider draws about 21 µA continuously.

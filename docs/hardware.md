@@ -22,7 +22,7 @@ The schematic and PCB were checked against each other: all 19 named nets and all
 
 Each of SW1–SW3 connects its GPIO to ground when pressed, so the firmware uses `INPUT_PULLUP` and treats LOW as pressed. Each switch input has a 100 nF capacitor to ground (C9, C10, C11) for filtering. GPIO10–12 are not strapping pins, so a held button at boot does not change boot mode.
 
-Reset and boot use 10 kΩ pull-ups (R5 on EN, R6 on IO0) to 3.3 V, with the switch pulling the line to ground.
+Reset and boot use 10 kΩ pull-ups (R5 on EN, R6 on IO0) to 3.3 V, with the switch pulling the line to ground. C12 (1 µF) from EN to ground forms an RC delay with R5 (about 10 ms), so the module stays in reset until the 3.3 V rail has settled. This is the same arrangement Espressif uses on its development boards.
 
 ## Main electronics
 
@@ -36,6 +36,7 @@ Reset and boot use 10 kΩ pull-ups (R5 on EN, R6 on IO0) to 3.3 V, with the swit
 | J_BAT1 | JST-PH 2-pin | Battery connection |
 | D1 | 0603 red LED | Charge status |
 | R7, R8, C8 | 100 kΩ / 100 kΩ / 100 nF | Battery-voltage sense network |
+| R5, C12 | 10 kΩ / 1 µF | EN pull-up and reset-delay capacitor |
 
 Reference designators `J_BAT1`, `J_USB1`, `SW_RST1`, `SW_BOOT1` and `U_CHG1` end in a digit so KiCad treats them as annotated. Older documents and BOMs may show them without the `1`.
 
@@ -68,6 +69,7 @@ Reference designators `J_BAT1`, `J_USB1`, `SW_RST1`, `SW_BOOT1` and `U_CHG1` end
 
 - **U1:** 3.3 V on pin 3, ground on pins 1, 2, 42, 43 and 46–65 (including the exposed pad). Pins 4, 9, 14, 15, 16, 23, 24 and 45 are connected as described above. The other 32 pins are intentionally unused.
 - **C5, C6 (100 nF), C7 (10 µF):** 3.3 V rail to ground, decoupling for U1.
+- **C12 (1 µF):** EN (pin 45) to ground, the reset-delay capacitor described above.
 
 ## PCB summary
 
@@ -89,13 +91,17 @@ The J_USB1 footprint has a built-in clearance of about 0.18–0.21 mm between it
 
 - **U1 footprint:** the PCB uses `RF_Module:ESP32-S2-MINI-1`, the land pattern shared with the S3 module. The schematic symbol and BOM identify the part as an ESP32-S3-MINI-1-N4R2. Your KiCad library may report the S3 symbol as not found; this is a library naming issue and does not affect the board.
 - **SW1–SW3 footprint:** `Button_Switch_THT:SW_TH_Tactile_Omron_B3F-100x`. Pads 1 are the pair on the top edge and connect to the switch net; pads 2 are the pair on the bottom edge and connect to ground.
+- **L1 footprint:** `Inductor_SMD:L_Bourns-SRN4018`. Its pads (1.5 × 3.6 mm, 4.55 mm overall width) match the recommended layout in the Bourns SRN4018 datasheet. The SRN4018-2R2M is at most 1.88 mm tall, well under the enclosure's clearance above the board.
 - **REG1 footprint:** `Package_SON:Texas_DRC0010J`, without thermal-via pads. Four GND vias sit in the exposed pad.
+
+## Debugging a board
+
+Measurement points, expected voltages and a symptom guide are in [Troubleshooting, Section 6]({{ '/troubleshooting.html#6-board-level-checks-for-technicians' | relative_url }}).
 
 ## Before ordering a board
 
 - The files in `electrical/mechanical_switch/gerbers/` and the PCB images in `electrical/mechanical_switch/diagrams/` were exported from an earlier layout. Run `create_gerber.ps1` to export fresh gerbers and renders before ordering.
 - The CPL files in `bom/` were regenerated from the current PCB. Check U1, REG1, D1, J_USB1 and L1 orientation in the fab's placement preview, since no published rotation correction covers them.
-- Compare the L1 land pattern with the Bourns SRN4018 datasheet. The board footprint's pad positions differ from the stock KiCad footprint.
 - Verify battery polarity: J_BAT1 pin 1 is the positive terminal (VBAT).
 
 ## Hardware not included
