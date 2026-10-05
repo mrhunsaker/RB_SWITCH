@@ -20,6 +20,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `electrical/mechanical_switch/VERIFICATION.md` added. `net_table.json`, the layout and schematic previews, and the CPL/BOM workbooks in `bom/` were regenerated or updated for the new design.
 - **Not yet regenerated:** `electrical/mechanical_switch/gerbers/` and the PCB images in `electrical/mechanical_switch/diagrams/` are from an earlier layout. Re-export with `create_gerber.ps1` before ordering.
 
+### Switch Evaluation Package (2026-10-05)
+
+- **New page: Switch Evaluation Package** (`docs/evaluation-package.md`, `documents/evaluation-package.md`), published at `/evaluation-package.html`. It is the *Adaptive Switch Assistive Technology Evaluation Package* by Michael Ryan Hunsaker, M.Ed., Ph.D.: background and evidence base, student profile and SETT framework, observation checklists, motor and CVI assessment, five stage data sheets, a scanning comparison, progress graphing, summary report and signature page, and seven appendices (prompt hierarchy, CVI interface checklist, apps, IEP goal bank, natural-settings implementation, performance troubleshooting, safety and ethics).
+- **New download: `RB_Switch_Evaluation_Package.docx`**, a 49-page printable version generated from the page. The data sheets are in landscape. It is built the same way as the paraprofessional setup guide.
+- The web page adds a short, web-only note on using the RB Switch in the trials (which buttons to use at each stage, and its limits as a small-button switch). It is not part of the Word file.
+- **Changes to the source text:** the Markdown was converted for the website (alert boxes became labelled callouts, the contents list became a manual list with links, the cover-sheet "Assessments Completed" lines became a table) and two typos were fixed: "APPENCIDES" is now "APPENDICES" and "palmer grasp" is now "palmar grasp". A stray empty bullet in Appendix E was removed.
+- **`tools/build_docx.js` replaces `tools/build_setup_docx.js`.** It builds both Word documents (or one, with `setup` or `evaluation`) and adds landscape sections, colored callouts, handwriting lines, minimum column widths and taller rows in fill-in tables. `tools/README.md` documents the Markdown comments that control the output.
+- README, `docs/index.md`, `docs/qr-code.md`, CONTRIBUTING and `tools/README.md` updated to list the new page and download.
+
 ### Documentation polish (2026-10-03)
 
 - **README rewritten.** Adds an at-a-glance table, quick start, firmware build steps, a troubleshooting summary, a documentation-by-audience table, a repository layout table and the pre-order checklist.
@@ -28,7 +37,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - **Corrected the Bluetooth name.** The docs said the switch advertises as "RB Switch" plus a 3-digit number matching a sticker. The firmware advertises plain "RB Switch" on every unit. The docs now say so and explain how to tell units apart.
 - **Documented firmware behavior** that was not written down before: presses are ignored while disconnected, there is no power switch or sleep mode, battery level is fixed at 100%, bonding needs no passkey, and the sketch needs NimBLE-Arduino 2.x.
 - Fixed broken section links in `docs/firmware-customization.md` and `docs/switch-access-android.md`. Added a printing guide and the published URL to `docs/qr-code.md`, and a "Which page do I need?" table to `docs/index.md`.
-- **New `tools/` folder:** `sync_documents.py` rewrites `documents/` from `docs/`, and `build_setup_docx.js` rebuilds the printable guide from `docs/setup.md`.
+- **New `tools/` folder:** `sync_documents.py` rewrites `documents/` from `docs/`, and `build_docx.js` rebuilds the printable Word documents from `docs/`.
 
 ### Documentation and firmware (2026-10-03)
 

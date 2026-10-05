@@ -17,7 +17,7 @@ The QR code should point to the published home page, not a local development add
 
 ## Home page contents
 
-The home page links to Setup & Pairing, Switch Operation, Firmware, Hardware, Troubleshooting, and this QR Code page.
+The home page links to Setup & Pairing, Switch Operation, Firmware, Hardware, Troubleshooting, the Switch Evaluation Package, and this QR Code page.
 
 ## Enclosure label
 

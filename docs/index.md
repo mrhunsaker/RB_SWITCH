@@ -37,6 +37,7 @@ Something not working? Go to [Troubleshooting]({{ '/troubleshooting.html' | rela
 | Setting up an Android phone or tablet | [Android Switch Access]({{ '/switch-access-android.html' | relative_url }}) |
 | Looking for how the buttons behave | [Switch Operation]({{ '/use.html' | relative_url }}) |
 | Fixing a problem | [Troubleshooting]({{ '/troubleshooting.html' | relative_url }}) |
+| Evaluating a student for switch access, or teaching and documenting switch skills | [Switch Evaluation Package]({{ '/evaluation-package.html' | relative_url }}) (a printable Word version is available on that page) |
 | Programming the board | [Firmware]({{ '/firmware.html' | relative_url }}) and [Firmware Customization]({{ '/firmware-customization.html' | relative_url }}) |
 | Building, repairing, or ordering boards | [Hardware]({{ '/hardware.html' | relative_url }}) |
 | Printing the enclosure label | [QR Code]({{ '/qr-code.html' | relative_url }}) |
@@ -57,4 +58,5 @@ The production design has three mechanical switch inputs. Touch sensors, proximi
 - [Firmware Customization]({{ '/firmware-customization.html' | relative_url }})
 - [Hardware]({{ '/hardware.html' | relative_url }})
 - [Troubleshooting]({{ '/troubleshooting.html' | relative_url }})
+- [Switch Evaluation Package]({{ '/evaluation-package.html' | relative_url }})
 - [QR Code]({{ '/qr-code.html' | relative_url }})

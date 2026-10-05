@@ -66,13 +66,19 @@ See [Firmware](docs/firmware.md) for details.
 | Android phones and tablets | [Android Switch Access](docs/switch-access-android.md) |
 | How the buttons behave | [Switch Operation](docs/use.md) |
 | Something is not working | [Troubleshooting](docs/troubleshooting.md) |
+| Evaluating a student for switch access and teaching switch skills | [Switch Evaluation Package](docs/evaluation-package.md) |
 | Programming the board | [Firmware](docs/firmware.md), [Firmware Customization](docs/firmware-customization.md) |
 | Hardware reference | [Hardware](docs/hardware.md) |
 | Enclosure label | [QR Code](docs/qr-code.md) |
 
 Published documentation: <https://mrhunsaker.github.io/RB_SWITCH/>
 
-A printable classroom quick-reference is also available: [`RB_Switch_Paraprofessional_Setup_Guide.docx`](RB_Switch_Paraprofessional_Setup_Guide.docx). It is generated from `docs/setup.md`.
+Two printable Word documents are also available. Both are generated from the matching page in `docs/`.
+
+| Download | Source page | Use |
+|---|---|---|
+| [`RB_Switch_Paraprofessional_Setup_Guide.docx`](RB_Switch_Paraprofessional_Setup_Guide.docx) | `docs/setup.md` | Classroom quick-reference for pairing, setup and troubleshooting |
+| [`RB_Switch_Evaluation_Package.docx`](RB_Switch_Evaluation_Package.docx) | `docs/evaluation-package.md` | Fill-in package for evaluating, teaching and documenting adaptive switch access (checklists, five-stage data sheets, graphing sheet, summary report, IEP goal bank) |
 
 ## Troubleshooting at a glance
 
@@ -130,8 +136,9 @@ The charge-status LED (D1) is controlled by the battery charger and is not a pro
 | `mechanical/` | Enclosure and storage box models |
 | `docs/` | GitHub Pages source |
 | `documents/` | Packaging-friendly copy of `docs/` |
-| `tools/` | Scripts that keep `documents/` and the printable guide in sync with `docs/` |
+| `tools/` | Scripts that keep `documents/` and the printable Word documents in sync with `docs/` |
 | `RB_Switch_Paraprofessional_Setup_Guide.docx` | Printable classroom guide |
+| `RB_Switch_Evaluation_Package.docx` | Printable switch evaluation package |
 | `CHANGES.md` | Changelog |
 
 ## Documentation source
@@ -144,10 +151,10 @@ After editing `docs/`, run:
 
 ```
 python3 tools/sync_documents.py
-node tools/build_setup_docx.js
+node tools/build_docx.js
 ```
 
-The first script rewrites `documents/` from `docs/`. The second rebuilds `RB_Switch_Paraprofessional_Setup_Guide.docx` from `docs/setup.md`. The second needs Node.js and the `docx` package (`npm install docx`). See [tools/README.md](tools/README.md).
+The first script rewrites `documents/` from `docs/`. The second rebuilds both Word documents (`RB_Switch_Paraprofessional_Setup_Guide.docx` from `docs/setup.md` and `RB_Switch_Evaluation_Package.docx` from `docs/evaluation-package.md`). It needs Node.js and the `docx` package (`npm install docx`). Pass `setup` or `evaluation` to build just one. See [tools/README.md](tools/README.md).
 
 ## GitHub Pages and enclosure QR code
 

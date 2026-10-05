@@ -37,6 +37,7 @@ Something not working? Go to [Troubleshooting](troubleshooting.md).
 | Setting up an Android phone or tablet | [Android Switch Access](switch-access-android.md) |
 | Looking for how the buttons behave | [Switch Operation](use.md) |
 | Fixing a problem | [Troubleshooting](troubleshooting.md) |
+| Evaluating a student for switch access, or teaching and documenting switch skills | [Switch Evaluation Package](evaluation-package.md) (a printable Word version is available on that page) |
 | Programming the board | [Firmware](firmware.md) and [Firmware Customization](firmware-customization.md) |
 | Building, repairing, or ordering boards | [Hardware](hardware.md) |
 | Printing the enclosure label | [QR Code](qr-code.md) |
@@ -57,4 +58,5 @@ The production design has three mechanical switch inputs. Touch sensors, proximi
 - [Firmware Customization](firmware-customization.md)
 - [Hardware](hardware.md)
 - [Troubleshooting](troubleshooting.md)
+- [Switch Evaluation Package](evaluation-package.md)
 - [QR Code](qr-code.md)
