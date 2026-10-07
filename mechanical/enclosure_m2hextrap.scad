@@ -1557,7 +1557,7 @@ module printbar() {
 // Uncomment the desired item for export:
 //printbar();
 //base();
-lid();
+//lid();
 // lid_oneswitch();
-// lid_twoswitch();
+lid_twoswitch();
 // lid_fingertrap();

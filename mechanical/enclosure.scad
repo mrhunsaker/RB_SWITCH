@@ -40,6 +40,12 @@
  * is defined once (TAB_SCREW_*) and shared by base and lid so the
  * holes always line up.
  *
+ * LID NUT TRAPS:
+ * Each long-side tab carries a hex nut trap on its cavity side,
+ * fused into the lid underside. Press an M2 nut into the trap (with
+ * the lid off), then tighten the M2 screw from outside the case to
+ * clamp the wall and tab together.
+ *
  * SHORT-SIDE LAYOUT (updated):
  * The USB-C cutout is now on the LEFT short side (x = 0).
  * The short-side press-fit tab and its base slot are now on the
@@ -168,6 +174,27 @@ TAB_SCREW_Z_LID = TAB_SCREW_Z - (H - LID_T);
 
 // 2.4 mm clearance hole for an M2 screw
 TAB_SCREW_R = M2 + 0.2;
+
+// ---------------------------------------------------------------------
+// M2 NUT TRAP (LID SIDE)
+// ---------------------------------------------------------------------
+
+// Standard M2 hex nut.
+M2_NUT_AF = 4.0; // width across flats
+M2_NUT_T = 1.6;  // thickness
+
+// Hex pocket: 0.1 mm press fit so the nut stays seated in the lid
+// until the screw engages. The pocket opens toward the enclosure
+// cavity; the tab's inner face is the nut seat.
+NUT_POCKET_AF = M2_NUT_AF - 0.1;
+NUT_POCKET_R = NUT_POCKET_AF / sqrt(3); // hex circumradius
+NUT_POCKET_T = M2_NUT_T + 0.15;         // slight extra depth
+
+// Material around the hex pocket
+NUT_WALL = 1.5;
+
+// Lid underside overlap so tab-side parts fuse with the lid body
+TAB_JOIN = 0.3;
 
 // ---------------------------------------------------------------------
 // PCB REGISTRATION DATUM
@@ -399,11 +426,9 @@ LID_CORNER_XY = [
 // the horizontal cylinder cutout in the base walls.
 //
 // Each tab is a SOLID part of the lid. The tab overlaps the
-// underside of the lid by TAB_JOIN = 0.3 mm so F5/F6 render
-// produces one connected solid instead of a floating/coplanar part.
+// underside of the lid by TAB_JOIN so F5/F6 render produces one
+// connected solid instead of a floating/coplanar part.
 module long_side_tabs() {
-    TAB_JOIN = 0.3;
-
     difference() {
         for (y = LONG_TAB_Y) {
             translate([
@@ -432,6 +457,69 @@ module long_side_tabs() {
             W + 10,
             TAB_SCREW_R,
             TAB_SCREW_R
+        );
+    }
+
+    // Nut traps: a press-fit M2 nut in each trap lets the screw
+    // clamp the base wall and the installed tab together from
+    // outside the case.
+    for (y = LONG_TAB_Y) {
+        tab_nut_trap(y);
+    }
+}
+
+// Nut trap housing for one long-side tab. The housing hangs from
+// the lid underside on the cavity side of the tab and is fused into
+// both the lid body and the tab.
+//
+// Insert the nut with the lid off: it slides along the screw axis
+// from the cavity side until it seats against the tab's inner face.
+// The hex pocket keeps the nut from spinning while the M2 screw is
+// tightened from outside the case; the pocket opens sideways
+// (horizontally), so gravity never pulls the nut out.
+module tab_nut_trap(tab_y) {
+    near = tab_y < W / 2;
+
+    // y of the tab's cavity-facing face
+    face = near ? tab_y + TAB_W_LONG : tab_y;
+
+    // +1: pocket extends toward +y (near wall)
+    // -1: pocket extends toward -y (far wall)
+    dir = near ? 1 : -1;
+
+    block_w = 2 * (NUT_POCKET_R + NUT_WALL);
+    z_bot = TAB_SCREW_Z_LID - (NUT_POCKET_R + NUT_WALL);
+
+    difference() {
+        // Housing block. Starts exactly at the tab's inner face
+        // (which forms the nut seat) and overlaps the lid underside
+        // by TAB_JOIN so it prints as one solid part.
+        translate([
+            TAB_SCREW_X - block_w / 2,
+            near ? face : face - NUT_POCKET_T,
+            z_bot
+        ])
+        color("LightGrey")
+        cube([
+            block_w,
+            NUT_POCKET_T,
+            TAB_JOIN - z_bot
+        ]);
+
+        // Hex pocket along the screw axis. Overshoots the opening
+        // by 0.3 mm; the tab closes the far end.
+        // Flats land top/bottom (AF vertical) so the nut fits the
+        // tab height.
+        translate([
+            TAB_SCREW_X,
+            face,
+            TAB_SCREW_Z_LID
+        ])
+        rotate([dir == 1 ? -90 : 90, 0, 0])
+        cylinder(
+            h = NUT_POCKET_T + 0.3,
+            r = NUT_POCKET_R,
+            $fn = 6
         );
     }
 }
@@ -1442,7 +1530,7 @@ module all_assemblies() {
 }
 
 // Uncomment one of these for full enclosure visualization:
-all_assemblies();
+//all_assemblies();
 //all_exploded_assemblies();
 
 // ---------------------------------------------------------------------
@@ -1469,7 +1557,7 @@ module printbar() {
 // Uncomment the desired item for export:
 //printbar();
 //base();
-lid();
+//lid();
 // lid_oneswitch();
-// lid_twoswitch();
-// lid_fingertrap();
+//lid_twoswitch();
+ lid_fingertrap();
